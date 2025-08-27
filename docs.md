@@ -67,9 +67,17 @@ Documentation improvements are always welcome! If you find any issues or want to
 
 ## Documentation Status
 
-This documentation is a work in progress. Some projects may have more comprehensive documentation than others. If you'd like to help improve the documentation for a particular project, please let me know!
+This documentation is a work in progress. 
+Some projects may have more comprehensive documentation than others. 
+If you'd like to help improve the documentation for a particular project, please let me know!
 
-- [PySnoop](/docs/PySnoop/)
+- [3D Filament Manager](docs/3D_Filament_Manager)
+- [CDE550 Simulator](docs/CDE550-sim)
+- [MSR605](docs/MSR605)
+- [Nidec Commander CDE](docs/Nidec_CommanderCDE)
+- [NFC Tools](docs/NFC)
+- [OpenPGP Tools](docs/OpenPGP)
+- [PDF Finder](docs/PDF_Finder)
 - [Raspberry Pi Utilities](/docs/raspy_utility/)
 - [Weather App](/docs/weather/)
 

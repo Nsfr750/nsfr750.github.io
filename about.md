@@ -43,23 +43,5 @@ I believe in the power of open-source software to make technology accessible to 
 - Receiving feedback and suggestions
 
 Feel free to [contact me](/contact) if you'd like to get in touch!
-- **MSR605**: Software for working with the MSR605 magnetic stripe reader
-- **NFC**: A collection of tools for working with NFC technology
-- **Nidec Commander CDE**: A tool for controlling Nidec CDE motor controllers
-- **OpenPGP**: Tools and utilities for OpenPGP encryption
-- **PDF Finder**: A utility to search and organize PDF files
-- **PySnoop**: A Python debugging tool
-- **Raspberry Pi Utilities**: Various tools for Raspberry Pi
-- **Weather**: A simple weather application
-
-## Get in Touch
-
-Feel free to reach out to me through any of these channels:
-
-- **Email**: [nsfr750@yandex.com](mailto:nsfr750@yandex.com)
-- **GitHub**: [github.com/Nsfr750](https://github.com/Nsfr750)
-- **Discord**: [Join my Discord](https://discord.gg/ryqNeuRYjD)
-
-Thank you for visiting my site.
 
 Last updated: {{ site.time | date: "%B %-d, %Y" }}

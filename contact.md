@@ -28,7 +28,7 @@ I try to respond to all messages within 48 hours. If you're reaching out about a
 - Any relevant error messages
 - Your environment details
 
-Looking forward to hearing from you!
+Looking forward to hearing from you.
 
 ---
 
