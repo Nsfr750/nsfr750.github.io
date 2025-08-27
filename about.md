@@ -26,6 +26,16 @@ I've created several open-source projects that I'm proud of:
 - [3D Filament Manager](https://github.com/Nsfr750/3D_Filament_Manager) - A tool to manage your 3D printing filaments
 - [CDE550 Simulator](https://github.com/Nsfr750/CDE550-sim) - Simulator for Nidec CDE550 motor controller
 - [Email Duplicate Cleaner](https://github.com/Nsfr750/EmailDuplicateCleaner) - Clean up your email by removing duplicates
+- [Images Deduplicator](https://github.com/Nsfr750/Images-Deduplicator) - A tool to remove duplicate images from your computer
+- [MSR605](https://github.com/Nsfr750/MSR605) - Software for working with the MSR605 magnetic stripe reader
+- [NFC](https://github.com/Nsfr750/NFC) - A collection of tools for working with NFC technology
+- [Nidec Commander CDE](https://github.com/Nsfr750/Nidec_CommanderCDE) - A tool for controlling Nidec CDE motor controllers
+- [OpenPGP](https://github.com/Nsfr750/OpenPGP) - Tools and utilities for OpenPGP encryption
+- [PDF Finder](https://github.com/Nsfr750/PDF_Finder) - A utility to search and organize PDF files
+- [PySnoop](https://github.com/Nsfr750/PySnoop) - A Python debugging tool
+- [Raspberry Pi Utilities](https://github.com/Nsfr750/raspy_utility) - Various tools for Raspberry Pi
+- [Weather](https://github.com/Nsfr750/weather) - A simple weather application
+- [Credit Card Stripe Parser](https://github.com/Nsfr750/credit_card_stripe_parser) - A tool to parse credit card stripe data
 
 ## Philosophy
 
@@ -49,14 +59,6 @@ Feel free to reach out to me through any of these channels:
 - **Email**: [nsfr750@yandex.com](mailto:nsfr750@yandex.com)
 - **GitHub**: [github.com/Nsfr750](https://github.com/Nsfr750)
 - **Discord**: [Join my Discord](https://discord.gg/ryqNeuRYjD)
-
-## Support My Work
-
-If you find my work valuable, consider supporting me:
-
-- [Patreon](https://www.patreon.com/Nsfr750)
-- [PayPal](https://paypal.me/3dmega)
-- Monero: `47Jc6MC47WJVFhiQFYwHyBNQP5BEsjUPG6tc8R37FwcTY8K5Y3LvFzveSXoGiaDQSxDrnCUBJ5WBj6Fgmsfix8VPD4w3gXF`
 
 Thank you for visiting my site.
 

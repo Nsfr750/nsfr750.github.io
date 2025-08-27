@@ -19,14 +19,6 @@ I'd love to hear from you! Whether you have a question, suggestion, or just want
 
 - **Patreon**: [patreon.com/Nsfr750](https://www.patreon.com/Nsfr750)
 
-## Support My Work
-
-If you find my open-source projects valuable, consider supporting me:
-
-- [Become a Patron](https://www.patreon.com/Nsfr750)
-- [One-time donation via PayPal](https://paypal.me/3dmega)
-- Monero: `47Jc6MC47WJVFhiQFYwHyBNQP5BEsjUPG6tc8R37FwcTY8K5Y3LvFzveSXoGiaDQSxDrnCUBJ5WBj6Fgmsfix8VPD4w3gXF`
-
 ## Response Time
 
 I try to respond to all messages within 48 hours. If you're reaching out about a bug or issue in one of my projects, please include:

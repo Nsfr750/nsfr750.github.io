@@ -7,7 +7,8 @@ permalink: /support/
 
 ## Support My Work
 
-Thank you for considering supporting my open-source projects! Your support helps me continue developing and maintaining high-quality software for the community.
+Thank you for considering supporting my open-source projects.
+Your support helps me continue developing and maintaining high-quality software for the community.
 
 ## Why Support?
 
@@ -31,11 +32,6 @@ Join my Patreon community to get early access to new features, exclusive updates
 ### Cryptocurrency
 
 - **Monero (XMR)**:
-
-  ```text
-  47Jc6MC47WJVFhiQFYwHyBNQP5BEsjUPG6tc8R37FwcTY8K5Y3LvFzveSXoGiaDQSxDrnCUBJ5WBj6Fgmsfix8VPD4w3gXF
-  ```
-
   ![Monero QR Code](https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=monero:47Jc6MC47WJVFhiQFYwHyBNQP5BEsjUPG6tc8R37FwcTY8K5Y3LvFzveSXoGiaDQSxDrnCUBJ5WBj6Fgmsfix8VPD4w3gXF)
 
 ## Other Ways to Contribute
