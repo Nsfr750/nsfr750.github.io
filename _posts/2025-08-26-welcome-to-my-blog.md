@@ -5,9 +5,8 @@ date:   2025-08-26 23:59:00 +0200
 categories: blog
 ---
 
-Hello and welcome to my blog!
+Hello and welcome
 
-This is my first post. 
 I'll be using this space to share my projects, tutorials, and thoughts on technology and development.
 
 ## What to Expect
@@ -17,5 +16,3 @@ I'll be using this space to share my projects, tutorials, and thoughts on techno
 - Tech insights and opinions
 
 Stay tuned for more content. In the meantime, feel free to check out my [GitHub](https://github.com/Nsfr750) or join my [Discord](https://discord.gg/ryqNeuRYjD) community.
-
-Thanks for reading!
