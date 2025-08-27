@@ -11,9 +11,27 @@ show_downloads: false
 
 # Build settings
 remote_theme: pages-themes/slate@v0.2.0
-# theme: jekyll-theme-slate
 
-# Sass configuration
+# Theme settings
+slate:
+  # Main navigation links
+  navigation:
+    - title: "Home"
+      url: "/"
+    - title: "Blog"
+      url: "/blog"
+    - title: "Projects"
+      url: "/projects"
+    - title: "Documentation"
+      url: "/docs"
+    - title: "About"
+      url: "/about"
+    - title: "Support"
+      url: "/support"
+    - title: "Contact"
+      url: "/contact"
+
+# SASS configuration
 sass:
   sass_dir: _sass
   style: compressed
