@@ -1,0 +1,134 @@
+# Site Settings
+title: Nsfr750's Blog
+description: Personal blog and projects by Nsfr750
+tagline: Open Source Enthusiast & Developer
+email: nsfr750@yandex.com
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://nsfr750.github.io" # the base hostname & protocol for your site
+timezone: Europe/Rome
+lang: en
+show_downloads: false
+
+# Build settings
+remote_theme: pages-themes/slate@v0.2.1
+theme: jekyll-theme-slate
+
+# Plugins
+plugins:
+  - jekyll-remote-theme
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE
+  - .gitignore
+  - .git
+  - vendor
+  - node_modules
+  - .sass-cache
+  - .jekyll-cache
+  - .bundle
+
+# Author settings
+author:
+  name: "Nsfr750"
+  email: "nsfr750@yandex.com"
+  description: "Open Source Enthusiast & Developer"
+  avatar: "/assets/images/avatar.png"
+  links:
+    - label: "GitHub"
+      icon: "github"
+      url: "https://github.com/Nsfr750"
+    - label: "Discord"
+      icon: "discord"
+      url: "https://discord.gg/ryqNeuRYjD"
+    - label: "Patreon"
+      icon: "patreon"
+      url: "https://www.patreon.com/Nsfr750"
+    - label: "PayPal"
+      icon: "paypal"
+      url: "https://paypal.me/3dmega"
+
+# Social usernames
+github_username: Nsfr750
+patreon_username: nsfr750
+twitter_username: 
+linkedin_username: 
+paypal_username: 3dmega
+
+# Theme settings
+slate:
+  # Main navigation links
+  navigation:
+    - title: "Home"
+      url: "/"
+    - title: "Blog"
+      url: "/blog"
+    - title: "Projects"
+      url: "/projects"
+    - title: "Documentations"
+      url: "/docs"  
+    - title: "About"
+      url: "/about"
+    - title: "Support"
+      url: "/support"
+    - title: "Contact"
+      url: "/contact"
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Nsfr750"
+      comments: true
+      share: true
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+# SASS settings
+sass:
+  style: compressed
+
+# Markdown settings
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      css: class
+    span:
+      css: class
+
+# SEO settings
+description: "Personal blog and projects by Nsfr750 - Open Source Enthusiast & Developer"
+keywords: "Nsfr750, blog, projects, open source, development"
+
+twitter:
+  username: ""
+
+# Google Analytics (uncomment and replace with your tracking ID)
+# google_analytics: UA-XXXXX-X
+
+# RSS feed settings
+feed:
+  path: atom.xml
+
+# Sitemap settings
+sitemap:
+  sitemap_ignore: true
+  changefreq: weekly
+  priority: 0.8
+      

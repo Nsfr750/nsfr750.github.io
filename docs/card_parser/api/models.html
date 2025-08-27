@@ -1,0 +1,585 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Models &mdash; Credit Card Stripe Parser 1.2.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=6efca38a"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/custom.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Exceptions" href="exceptions.html" />
+    <link rel="prev" title="FullTrackParser" href="full_track_parser.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #2980B9" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Credit Card Stripe Parser
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Quickstart Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage.html">Usage Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gui.html">Graphical User Interface</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../api.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="full_track_parser.html">FullTrackParser</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Data Models</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#basemodel">BaseModel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#track-data-models">Track Data Models</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#track1data">Track1Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#track2data">Track2Data</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#pydantic-models">Pydantic Models</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#trackonemodel">TrackOneModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tracktwomodel">TrackTwoModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fulltrackdatamodel">FullTrackDataModel</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#example-usage">Example Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#see-also">See Also</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="exceptions.html">Exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gui.html">GUI Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">API Reference</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Project Info</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing to Credit Card Stripe Parser</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">Frequently Asked Questions (FAQ)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #2980B9" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Credit Card Stripe Parser</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Data Models</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/models.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="data-models">
+<span id="models"></span><h1>Data Models<a class="headerlink" href="#data-models" title="Link to this heading"></a></h1>
+<p>This module contains the data models used throughout the Credit Card Stripe Parser.</p>
+<section id="basemodel">
+<h2>BaseModel<a class="headerlink" href="#basemodel" title="Link to this heading"></a></h2>
+</section>
+<section id="track-data-models">
+<h2>Track Data Models<a class="headerlink" href="#track-data-models" title="Link to this heading"></a></h2>
+<section id="track1data">
+<h3>Track1Data<a class="headerlink" href="#track1data" title="Link to this heading"></a></h3>
+</section>
+<section id="track2data">
+<h3>Track2Data<a class="headerlink" href="#track2data" title="Link to this heading"></a></h3>
+</section>
+</section>
+<section id="pydantic-models">
+<h2>Pydantic Models<a class="headerlink" href="#pydantic-models" title="Link to this heading"></a></h2>
+<section id="trackonemodel">
+<h3>TrackOneModel<a class="headerlink" href="#trackonemodel" title="Link to this heading"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">credit_card_stripe_parser.models.track_one_model.</span></span><span class="sig-name descname"><span class="pre">TrackOneModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">format_code</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pan</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">card_holder_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expiration_date</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">service_code</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">discretionary_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source_string</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/credit_card_stripe_parser/models/track_one_model.html#TrackOneModel"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A data class that holds the parsed data from Track 1 of a credit card.</p>
+<p>ISO 7811-2 track one character encoding definition:
+SS FC PAN FS Name FS Date Discretionary Data ES LRC</p>
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">format_code</span></span></dt>
+<dd><p>The format code (FC) from the track data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">pan</span></span></dt>
+<dd><p>The Primary Account Number (PAN).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">card_holder_name</span></span></dt>
+<dd><p>The cardholder’s name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">expiration_date</span></span></dt>
+<dd><p>The card’s expiration date in YYMM format.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">service_code</span></span></dt>
+<dd><p>The service code from the track data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">discretionary_data</span></span></dt>
+<dd><p>Any additional discretionary data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">source_string</span></span></dt>
+<dd><p>The original track data string that was parsed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p>Pydantic model for Track 1 data with validation.</p>
+<p>This model is returned by <a class="reference internal" href="../api.html#credit_card_stripe_parser.full_track_parser.FullTrackParser.parse_track1" title="credit_card_stripe_parser.full_track_parser.FullTrackParser.parse_track1"><code class="xref py py-meth docutils literal notranslate"><span class="pre">parse_track1()</span></code></a>
+and contains all the fields from Track 1 of a magnetic stripe.</p>
+<p>Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">credit_card_stripe_parser</span><span class="w"> </span><span class="kn">import</span> <span class="n">FullTrackParser</span>
+
+<span class="n">parser</span> <span class="o">=</span> <span class="n">FullTrackParser</span><span class="p">()</span>
+<span class="n">track1</span> <span class="o">=</span> <span class="s2">&quot;%B4111111111111111^CARDHOLDER/NAME^2512101000000000000000000000000?&quot;</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_track1</span><span class="p">(</span><span class="n">track1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Cardholder: </span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">cardholder_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;PAN: </span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">primary_account_number</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">format_code</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">pan</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">card_holder_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">expiration_date</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">service_code</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">discretionary_data</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">source_string</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">format_code</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pan</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">card_holder_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expiration_date</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">service_code</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">discretionary_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source_string</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="tracktwomodel">
+<h3>TrackTwoModel<a class="headerlink" href="#tracktwomodel" title="Link to this heading"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">credit_card_stripe_parser.models.track_two_model.</span></span><span class="sig-name descname"><span class="pre">TrackTwoModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pan</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expiration_date</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">service_code</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">discretionary_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source_string</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/credit_card_stripe_parser/models/track_two_model.html#TrackTwoModel"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A data class that holds the parsed data from Track 2 of a credit card.</p>
+<p>ISO 7811-2 Track Two encoding definition:
+SS PAN FS Date SVC CD Discretionary Data ES LRC</p>
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">pan</span></span></dt>
+<dd><p>The Primary Account Number (PAN).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">expiration_date</span></span></dt>
+<dd><p>The card’s expiration date in YYMM format.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">service_code</span></span></dt>
+<dd><p>The service code from the track data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">discretionary_data</span></span></dt>
+<dd><p>Any additional discretionary data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">source_string</span></span></dt>
+<dd><p>The original track data string that was parsed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p>Pydantic model for Track 2 data with validation.</p>
+<p>This model is returned by <a class="reference internal" href="../api.html#credit_card_stripe_parser.full_track_parser.FullTrackParser.parse_track2" title="credit_card_stripe_parser.full_track_parser.FullTrackParser.parse_track2"><code class="xref py py-meth docutils literal notranslate"><span class="pre">parse_track2()</span></code></a>
+and contains all the fields from Track 2 of a magnetic stripe.</p>
+<p>Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">credit_card_stripe_parser</span><span class="w"> </span><span class="kn">import</span> <span class="n">FullTrackParser</span>
+
+<span class="n">parser</span> <span class="o">=</span> <span class="n">FullTrackParser</span><span class="p">()</span>
+<span class="n">track2</span> <span class="o">=</span> <span class="s2">&quot;;4111111111111111=25121010000000000000?&quot;</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_track2</span><span class="p">(</span><span class="n">track2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;PAN: </span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">primary_account_number</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Expiry: </span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">expiration_date</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">pan</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">expiration_date</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">service_code</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">discretionary_data</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">source_string</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pan</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expiration_date</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">service_code</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">discretionary_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source_string</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="fulltrackdatamodel">
+<h3>FullTrackDataModel<a class="headerlink" href="#fulltrackdatamodel" title="Link to this heading"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">credit_card_stripe_parser.models.full_track_data_model.</span></span><span class="sig-name descname"><span class="pre">FullTrackDataModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">is_track_one_valid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">track_one</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../api.html#credit_card_stripe_parser.models.track_one_model.TrackOneModel" title="credit_card_stripe_parser.models.track_one_model.TrackOneModel"><span class="pre">TrackOneModel</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_track_two_valid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">track_two</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../api.html#credit_card_stripe_parser.models.track_two_model.TrackTwoModel" title="credit_card_stripe_parser.models.track_two_model.TrackTwoModel"><span class="pre">TrackTwoModel</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/credit_card_stripe_parser/models/full_track_data_model.html#FullTrackDataModel"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A data class that holds the parsed data from both Track 1 and Track 2 of a credit card.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">is_track_one_valid</span></span></dt>
+<dd><p>Indicates if Track 1 data is valid.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">track_one</span></span></dt>
+<dd><p>The parsed Track 1 data, or None if invalid.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Optional[<a class="reference internal" href="../api.html#credit_card_stripe_parser.models.track_one_model.TrackOneModel" title="credit_card_stripe_parser.models.track_one_model.TrackOneModel">TrackOneModel</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">is_track_two_valid</span></span></dt>
+<dd><p>Indicates if Track 2 data is valid.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">track_two</span></span></dt>
+<dd><p>The parsed Track 2 data, or None if invalid.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Optional[<a class="reference internal" href="../api.html#credit_card_stripe_parser.models.track_two_model.TrackTwoModel" title="credit_card_stripe_parser.models.track_two_model.TrackTwoModel">TrackTwoModel</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p>Pydantic model that combines both Track 1 and Track 2 data.</p>
+<p>This model is returned by <a class="reference internal" href="../api.html#id0" title="credit_card_stripe_parser.full_track_parser.FullTrackParser.parse"><code class="xref py py-meth docutils literal notranslate"><span class="pre">parse()</span></code></a>
+when both tracks are provided. It contains all fields from both tracks with proper validation.</p>
+<p>Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">credit_card_stripe_parser</span><span class="w"> </span><span class="kn">import</span> <span class="n">FullTrackParser</span>
+
+<span class="n">parser</span> <span class="o">=</span> <span class="n">FullTrackParser</span><span class="p">()</span>
+<span class="n">full_track</span> <span class="o">=</span> <span class="s2">&quot;%B4111111111111111^CARDHOLDER/NAME^2512101000000000000000000000000?;4111111111111111=25121010000000000000?&quot;</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">full_track</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Cardholder: </span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">track1</span><span class="o">.</span><span class="n">cardholder_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;PAN: </span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">track1</span><span class="o">.</span><span class="n">primary_account_number</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Expiry: </span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">track2</span><span class="o">.</span><span class="n">expiration_date</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">is_track_one_valid</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">track_one</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../api.html#credit_card_stripe_parser.models.track_one_model.TrackOneModel" title="credit_card_stripe_parser.models.track_one_model.TrackOneModel"><span class="pre">TrackOneModel</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">is_track_two_valid</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">track_two</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../api.html#credit_card_stripe_parser.models.track_two_model.TrackTwoModel" title="credit_card_stripe_parser.models.track_two_model.TrackTwoModel"><span class="pre">TrackTwoModel</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">is_track_one_valid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">track_one</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../api.html#credit_card_stripe_parser.models.track_one_model.TrackOneModel" title="credit_card_stripe_parser.models.track_one_model.TrackOneModel"><span class="pre">TrackOneModel</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_track_two_valid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">track_two</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../api.html#credit_card_stripe_parser.models.track_two_model.TrackTwoModel" title="credit_card_stripe_parser.models.track_two_model.TrackTwoModel"><span class="pre">TrackTwoModel</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+<section id="example-usage">
+<h2>Example Usage<a class="headerlink" href="#example-usage" title="Link to this heading"></a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">credit_card_stripe_parser.models</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+    <span class="n">Track1Data</span><span class="p">,</span>
+    <span class="n">Track2Data</span><span class="p">,</span>
+    <span class="n">TrackOneModel</span><span class="p">,</span>
+    <span class="n">TrackTwoModel</span><span class="p">,</span>
+    <span class="n">FullTrackDataModel</span>
+<span class="p">)</span>
+
+<span class="c1"># Create a Track1Data instance</span>
+<span class="n">track1</span> <span class="o">=</span> <span class="n">Track1Data</span><span class="p">(</span>
+    <span class="n">format_code</span><span class="o">=</span><span class="s1">&#39;B&#39;</span><span class="p">,</span>
+    <span class="n">primary_account_number</span><span class="o">=</span><span class="s1">&#39;4111111111111111&#39;</span><span class="p">,</span>
+    <span class="n">cardholder_name</span><span class="o">=</span><span class="s1">&#39;CARDHOLDER/NAME&#39;</span><span class="p">,</span>
+    <span class="n">expiration_date</span><span class="o">=</span><span class="s1">&#39;2512&#39;</span><span class="p">,</span>
+    <span class="n">service_code</span><span class="o">=</span><span class="s1">&#39;101&#39;</span><span class="p">,</span>
+    <span class="n">discretionary_data</span><span class="o">=</span><span class="s1">&#39;000000000000000000000000000&#39;</span><span class="p">,</span>
+    <span class="n">lrc</span><span class="o">=</span><span class="s1">&#39;?&#39;</span>
+<span class="p">)</span>
+
+<span class="c1"># Create a Track2Data instance</span>
+<span class="n">track2</span> <span class="o">=</span> <span class="n">Track2Data</span><span class="p">(</span>
+    <span class="n">primary_account_number</span><span class="o">=</span><span class="s1">&#39;4111111111111111&#39;</span><span class="p">,</span>
+    <span class="n">expiration_date</span><span class="o">=</span><span class="s1">&#39;2512&#39;</span><span class="p">,</span>
+    <span class="n">service_code</span><span class="o">=</span><span class="s1">&#39;101&#39;</span><span class="p">,</span>
+    <span class="n">pvki</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span>
+    <span class="n">pvv</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span>
+    <span class="n">discretionary_data</span><span class="o">=</span><span class="s1">&#39;0000000000000000&#39;</span><span class="p">,</span>
+    <span class="n">lrc</span><span class="o">=</span><span class="s1">&#39;?&#39;</span>
+<span class="p">)</span>
+
+<span class="c1"># Create a TrackOneModel instance</span>
+<span class="n">track1_model</span> <span class="o">=</span> <span class="n">TrackOneModel</span><span class="p">(</span>
+    <span class="n">format_code</span><span class="o">=</span><span class="s1">&#39;B&#39;</span><span class="p">,</span>
+    <span class="n">primary_account_number</span><span class="o">=</span><span class="s1">&#39;4111111111111111&#39;</span><span class="p">,</span>
+    <span class="n">cardholder_name</span><span class="o">=</span><span class="s1">&#39;CARDHOLDER/NAME&#39;</span><span class="p">,</span>
+    <span class="n">expiration_date</span><span class="o">=</span><span class="s1">&#39;2512&#39;</span><span class="p">,</span>
+    <span class="n">service_code</span><span class="o">=</span><span class="s1">&#39;101&#39;</span><span class="p">,</span>
+    <span class="n">discretionary_data</span><span class="o">=</span><span class="s1">&#39;000000000000000000000000000&#39;</span><span class="p">,</span>
+    <span class="n">lrc</span><span class="o">=</span><span class="s1">&#39;?&#39;</span>
+<span class="p">)</span>
+
+<span class="c1"># Create a TrackTwoModel instance (needed for FullTrackDataModel)</span>
+<span class="n">track2_model</span> <span class="o">=</span> <span class="n">TrackTwoModel</span><span class="p">(</span>
+    <span class="n">primary_account_number</span><span class="o">=</span><span class="s1">&#39;4111111111111111&#39;</span><span class="p">,</span>
+    <span class="n">expiration_date</span><span class="o">=</span><span class="s1">&#39;2512&#39;</span><span class="p">,</span>
+    <span class="n">service_code</span><span class="o">=</span><span class="s1">&#39;101&#39;</span><span class="p">,</span>
+    <span class="n">pvki</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span>
+    <span class="n">pvv</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span>
+    <span class="n">discretionary_data</span><span class="o">=</span><span class="s1">&#39;0000000000000000&#39;</span><span class="p">,</span>
+    <span class="n">lrc</span><span class="o">=</span><span class="s1">&#39;?&#39;</span>
+<span class="p">)</span>
+
+<span class="c1"># Create a FullTrackDataModel instance</span>
+<span class="n">full_track</span> <span class="o">=</span> <span class="n">FullTrackDataModel</span><span class="p">(</span>
+    <span class="n">track1</span><span class="o">=</span><span class="n">track1_model</span><span class="p">,</span>
+    <span class="n">track2</span><span class="o">=</span><span class="n">track2_model</span><span class="p">,</span>
+    <span class="n">is_track1_valid</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">is_track2_valid</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">validation_errors</span><span class="o">=</span><span class="p">[],</span>
+    <span class="n">validation_warnings</span><span class="o">=</span><span class="p">[]</span>
+<span class="p">)</span>
+
+<span class="c1"># Access data</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Cardholder: </span><span class="si">{</span><span class="n">full_track</span><span class="o">.</span><span class="n">track1</span><span class="o">.</span><span class="n">cardholder_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Expires: </span><span class="si">{</span><span class="n">full_track</span><span class="o">.</span><span class="n">track2</span><span class="o">.</span><span class="n">expiration_date</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="see-also">
+<h2>See Also<a class="headerlink" href="#see-also" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="full_track_parser.html#module-credit-card-stripe-parser-full-track-parser"><span class="std std-ref">FullTrackParser</span></a> - The main parser class that uses these models</p></li>
+<li><p><a class="reference internal" href="exceptions.html#exceptions"><span class="std std-ref">Exceptions</span></a> - Exceptions related to model validation</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="full_track_parser.html" class="btn btn-neutral float-left" title="FullTrackParser" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="exceptions.html" class="btn btn-neutral float-right" title="Exceptions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Nsfr750.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

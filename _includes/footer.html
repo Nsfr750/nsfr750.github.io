@@ -1,0 +1,76 @@
+<footer class="site-footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
+  <div class="wrapper">
+    <div class="footer-grid">
+      <!-- About Section -->
+      <div class="footer-section">
+        <h2 class="footer-heading">About</h2>
+        <p>{{ site.description | escape }}</p>
+        <div class="footer-subscribe">
+          <a href="{{ 'feed.xml' | relative_url }}" class="subscribe-link" aria-label="Subscribe to RSS feed">
+            <svg class="svg-icon" aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24">
+              <path d="M19,3H5A2,2 0 0,0 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3M7.5,15A1.5,1.5 0 0,1 6,13.5A1.5,1.5 0 0,1 7.5,12A1.5,1.5 0 0,1 9,13.5A1.5,1.5 0 0,1 7.5,15M6,10V8A6,6 0 0,1 12,6H13V8H12A4,4 0 0,0 8,12H6M18,15H10V13H18V15Z" />
+            </svg>
+            <span>Subscribe via RSS</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-section">
+        <h2 class="footer-heading">Quick Links</h2>
+        <ul class="footer-links">
+          <li><a href="{{ '/' | relative_url }}" class="footer-link">Home</a></li>
+          <li><a href="{{ '/about' | relative_url }}" class="footer-link">About</a></li>
+          <li><a href="{{ '/blog' | relative_url }}" class="footer-link">Blog</a></li>
+          <li><a href="{{ '/projects' | relative_url }}" class="footer-link">Projects</a></li>
+          <li><a href="{{ '/contact' | relative_url }}" class="footer-link">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="footer-section">
+        <h2 class="footer-heading">Contact</h2>
+        <ul class="contact-list">
+          <li class="contact-item" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-name" itemprop="name">
+              {%- if site.author -%}
+                {{ site.author | escape }}
+              {%- else -%}
+                {{ site.title | escape }}
+              {%- endif -%}
+            </span>
+          </li>
+          {%- if site.email -%}
+            <li class="contact-item">
+              <a class="u-email" href="mailto:{{ site.email }}" itemprop="email">
+                <svg class="contact-icon" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24">
+                  <path d="M20,4H4C2.9,4 2,4.9 2,6V18C2,19.1 2.9,20 4,20H20C21.1,20 22,19.1 22,18V6C22,4.9 21.1,4 20,4M20,18H4V8L12,13L20,8V18M20,6L12,11L4,6H20Z" />
+                </svg>
+                <span>{{ site.email }}</span>
+              </a>
+            </li>
+          {%- endif -%}
+        </ul>
+        
+        <!-- Social Links -->
+        <div class="social-links" aria-label="Social media links">
+          {%- include social.html -%}
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyright and Legal -->
+    <div class="footer-bottom">
+      <div class="copyright" role="contentinfo">
+        <p>&copy; {{ 'now' | date: "%Y" }} {{ site.author | default: site.title }}. All rights reserved.</p>
+      </div>
+      <div class="footer-legal">
+        <a href="{{ '/privacy' | relative_url }}" class="legal-link">Privacy Policy</a>
+        <span class="divider">•</span>
+        <a href="{{ '/terms' | relative_url }}" class="legal-link">Terms of Use</a>
+        <span class="divider">•</span>
+        <a href="{{ '/sitemap.xml' | relative_url }}" class="legal-link">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>

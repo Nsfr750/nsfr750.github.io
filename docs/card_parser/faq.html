@@ -1,0 +1,409 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frequently Asked Questions (FAQ) &mdash; Credit Card Stripe Parser 1.2.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=6efca38a"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/custom.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="License" href="license.html" />
+    <link rel="prev" title="Contributing to Credit Card Stripe Parser" href="contributing.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #2980B9" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Credit Card Stripe Parser
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gui.html">Graphical User Interface (GUI)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api/modules.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/full_track_parser.html">FullTrackParser</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/models.html">Data Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/exceptions.html">Exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/constants.html">Constants</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Project Information</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing to Credit Card Stripe Parser</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Frequently Asked Questions (FAQ)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#general-questions">General Questions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#what-is-the-credit-card-stripe-parser">What is the Credit Card Stripe Parser?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#is-this-tool-legal-to-use">Is this tool legal to use?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#is-this-tool-pci-dss-compliant">Is this tool PCI DSS compliant?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#installation-issues">Installation Issues</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#i-m-getting-a-modulenotfounderror-no-module-named-tkinter-error">I’m getting a “ModuleNotFoundError: No module named ‘tkinter’” error</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-do-i-install-a-specific-version-of-the-package">How do I install a specific version of the package?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#usage-questions">Usage Questions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#what-s-the-difference-between-track-1-and-track-2">What’s the difference between Track 1 and Track 2?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-do-i-handle-different-character-encodings">How do I handle different character encodings?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#error-messages">Error Messages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#invalid-track-format-error">“Invalid track format” error</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lrc-validation-failed-error">“LRC validation failed” error</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#checksum-validation-failed-error">“Checksum validation failed” error</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#performance">Performance</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#is-this-library-fast-enough-for-high-volume-processing">Is this library fast enough for high-volume processing?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-can-i-improve-parsing-performance">How can I improve parsing performance?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#security">Security</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#is-it-safe-to-log-parsed-card-data">Is it safe to log parsed card data?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-should-i-store-parsed-card-data">How should I store parsed card data?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#troubleshooting">Troubleshooting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#the-parser-works-for-some-cards-but-not-others">The parser works for some cards but not others</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#i-m-getting-inconsistent-results">I’m getting inconsistent results</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#feature-requests">Feature Requests</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#can-you-add-support-for-feature">Can you add support for [feature]?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-can-i-contribute">How can I contribute?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#see-also">See Also</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #2980B9" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Credit Card Stripe Parser</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Frequently Asked Questions (FAQ)</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/faq.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="frequently-asked-questions-faq">
+<span id="faq"></span><h1>Frequently Asked Questions (FAQ)<a class="headerlink" href="#frequently-asked-questions-faq" title="Link to this heading"></a></h1>
+<p>This page answers common questions about the Credit Card Stripe Parser.</p>
+<nav class="contents local" id="table-of-contents">
+<p class="topic-title">Table of Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#general-questions" id="id1">General Questions</a></p>
+<ul>
+<li><p><a class="reference internal" href="#what-is-the-credit-card-stripe-parser" id="id2">What is the Credit Card Stripe Parser?</a></p></li>
+<li><p><a class="reference internal" href="#is-this-tool-legal-to-use" id="id3">Is this tool legal to use?</a></p></li>
+<li><p><a class="reference internal" href="#is-this-tool-pci-dss-compliant" id="id4">Is this tool PCI DSS compliant?</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#installation-issues" id="id5">Installation Issues</a></p>
+<ul>
+<li><p><a class="reference internal" href="#i-m-getting-a-modulenotfounderror-no-module-named-tkinter-error" id="id6">I’m getting a “ModuleNotFoundError: No module named ‘tkinter’” error</a></p></li>
+<li><p><a class="reference internal" href="#how-do-i-install-a-specific-version-of-the-package" id="id7">How do I install a specific version of the package?</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#usage-questions" id="id8">Usage Questions</a></p>
+<ul>
+<li><p><a class="reference internal" href="#what-s-the-difference-between-track-1-and-track-2" id="id9">What’s the difference between Track 1 and Track 2?</a></p></li>
+<li><p><a class="reference internal" href="#how-do-i-handle-different-character-encodings" id="id10">How do I handle different character encodings?</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#error-messages" id="id11">Error Messages</a></p>
+<ul>
+<li><p><a class="reference internal" href="#invalid-track-format-error" id="id12">“Invalid track format” error</a></p></li>
+<li><p><a class="reference internal" href="#lrc-validation-failed-error" id="id13">“LRC validation failed” error</a></p></li>
+<li><p><a class="reference internal" href="#checksum-validation-failed-error" id="id14">“Checksum validation failed” error</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#performance" id="id15">Performance</a></p>
+<ul>
+<li><p><a class="reference internal" href="#is-this-library-fast-enough-for-high-volume-processing" id="id16">Is this library fast enough for high-volume processing?</a></p></li>
+<li><p><a class="reference internal" href="#how-can-i-improve-parsing-performance" id="id17">How can I improve parsing performance?</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#security" id="id18">Security</a></p>
+<ul>
+<li><p><a class="reference internal" href="#is-it-safe-to-log-parsed-card-data" id="id19">Is it safe to log parsed card data?</a></p></li>
+<li><p><a class="reference internal" href="#how-should-i-store-parsed-card-data" id="id20">How should I store parsed card data?</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#troubleshooting" id="id21">Troubleshooting</a></p>
+<ul>
+<li><p><a class="reference internal" href="#the-parser-works-for-some-cards-but-not-others" id="id22">The parser works for some cards but not others</a></p></li>
+<li><p><a class="reference internal" href="#i-m-getting-inconsistent-results" id="id23">I’m getting inconsistent results</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#feature-requests" id="id24">Feature Requests</a></p>
+<ul>
+<li><p><a class="reference internal" href="#can-you-add-support-for-feature" id="id25">Can you add support for [feature]?</a></p></li>
+<li><p><a class="reference internal" href="#how-can-i-contribute" id="id26">How can I contribute?</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#see-also" id="id27">See Also</a></p></li>
+</ul>
+</nav>
+<section id="general-questions">
+<h2><a class="toc-backref" href="#table-of-contents" role="doc-backlink">General Questions</a><a class="headerlink" href="#general-questions" title="Link to this heading"></a></h2>
+<section id="what-is-the-credit-card-stripe-parser">
+<h3><a class="toc-backref" href="#table-of-contents" role="doc-backlink">What is the Credit Card Stripe Parser?</a><a class="headerlink" href="#what-is-the-credit-card-stripe-parser" title="Link to this heading"></a></h3>
+<p>The Credit Card Stripe Parser is a Python library and command-line tool for parsing and analyzing
+magnetic stripe data from credit and debit cards. It supports both Track 1 and Track 2 formats as
+specified in ISO/IEC 7811-2 and ISO/IEC 7813 standards.</p>
+</section>
+<section id="is-this-tool-legal-to-use">
+<h3><a class="toc-backref" href="#table-of-contents" role="doc-backlink">Is this tool legal to use?</a><a class="headerlink" href="#is-this-tool-legal-to-use" title="Link to this heading"></a></h3>
+<p>Yes, the tool itself is legal to use. However, how you use it must comply with all applicable laws
+and regulations. Always ensure you have proper authorization before accessing or processing
+payment card data.</p>
+</section>
+<section id="is-this-tool-pci-dss-compliant">
+<h3><a class="toc-backref" href="#table-of-contents" role="doc-backlink">Is this tool PCI DSS compliant?</a><a class="headerlink" href="#is-this-tool-pci-dss-compliant" title="Link to this heading"></a></h3>
+<p>This tool can be used as part of a PCI DSS compliant environment, but proper security measures must
+be in place. The tool does not store or transmit card data, but you are responsible for ensuring
+that your usage complies with PCI DSS requirements.</p>
+</section>
+</section>
+<section id="installation-issues">
+<h2><a class="toc-backref" href="#table-of-contents" role="doc-backlink">Installation Issues</a><a class="headerlink" href="#installation-issues" title="Link to this heading"></a></h2>
+<section id="i-m-getting-a-modulenotfounderror-no-module-named-tkinter-error">
+<h3><a class="toc-backref" href="#table-of-contents" role="doc-backlink">I’m getting a “ModuleNotFoundError: No module named ‘tkinter’” error</a><a class="headerlink" href="#i-m-getting-a-modulenotfounderror-no-module-named-tkinter-error" title="Link to this heading"></a></h3>
+<p>This error occurs when Tkinter is not installed on your system. To fix it:</p>
+<ul class="simple">
+<li><p>On Ubuntu/Debian: <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">python3-tk</span></code></p></li>
+<li><p>On RHEL/CentOS: <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">yum</span> <span class="pre">install</span> <span class="pre">python3-tkinter</span></code></p></li>
+<li><p>On macOS: Tkinter is usually included with the Python installation from python.org</p></li>
+</ul>
+</section>
+<section id="how-do-i-install-a-specific-version-of-the-package">
+<h3><a class="toc-backref" href="#table-of-contents" role="doc-backlink">How do I install a specific version of the package?</a><a class="headerlink" href="#how-do-i-install-a-specific-version-of-the-package" title="Link to this heading"></a></h3>
+<p>You can install a specific version using pip:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>credit-card-stripe-parser<span class="o">==</span><span class="m">1</span>.2.0
+</pre></div>
+</div>
+</section>
+</section>
+<section id="usage-questions">
+<h2><a class="toc-backref" href="#table-of-contents" role="doc-backlink">Usage Questions</a><a class="headerlink" href="#usage-questions" title="Link to this heading"></a></h2>
+<section id="what-s-the-difference-between-track-1-and-track-2">
+<h3><a class="toc-backref" href="#table-of-contents" role="doc-backlink">What’s the difference between Track 1 and Track 2?</a><a class="headerlink" href="#what-s-the-difference-between-track-1-and-track-2" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>Track 1</strong>: Contains more information including the cardholder’s name, but is less commonly used.
+Format: <code class="docutils literal notranslate"><span class="pre">%B[PAN]^[NAME]^[YYMM]...?</span></code></p></li>
+<li><p><strong>Track 2</strong>: More commonly used, contains essential card data in a more compact format.
+Format: <code class="docutils literal notranslate"><span class="pre">;[PAN]=[YYMM]...?</span></code></p></li>
+</ul>
+</section>
+<section id="how-do-i-handle-different-character-encodings">
+<h3><a class="toc-backref" href="#table-of-contents" role="doc-backlink">How do I handle different character encodings?</a><a class="headerlink" href="#how-do-i-handle-different-character-encodings" title="Link to this heading"></a></h3>
+<p>The parser assumes UTF-8 encoding by default. If you’re working with different encodings, you can
+convert the track data to UTF-8 before parsing:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example: Convert from Latin-1 to UTF-8</span>
+<span class="n">track_data</span> <span class="o">=</span> <span class="n">track_data_latin1</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;latin-1&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">track_data</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="error-messages">
+<h2><a class="toc-backref" href="#table-of-contents" role="doc-backlink">Error Messages</a><a class="headerlink" href="#error-messages" title="Link to this heading"></a></h2>
+<section id="invalid-track-format-error">
+<h3><a class="toc-backref" href="#table-of-contents" role="doc-backlink">“Invalid track format” error</a><a class="headerlink" href="#invalid-track-format-error" title="Link to this heading"></a></h3>
+<p>This error occurs when the track data doesn’t match the expected format. Check that:</p>
+<ol class="arabic simple">
+<li><p>The track starts with the correct start sentinel (<code class="docutils literal notranslate"><span class="pre">%</span></code> for Track 1, <code class="docutils literal notranslate"><span class="pre">;</span></code> for Track 2)</p></li>
+<li><p>The track ends with a question mark (<code class="docutils literal notranslate"><span class="pre">?</span></code>)</p></li>
+<li><p>The data between matches the expected format for the track type</p></li>
+</ol>
+</section>
+<section id="lrc-validation-failed-error">
+<h3><a class="toc-backref" href="#table-of-contents" role="doc-backlink">“LRC validation failed” error</a><a class="headerlink" href="#lrc-validation-failed-error" title="Link to this heading"></a></h3>
+<p>The Longitudinal Redundancy Check (LRC) is a simple checksum used to verify the integrity of the
+track data. This error suggests that the data may be corrupted or the LRC character is missing.</p>
+</section>
+<section id="checksum-validation-failed-error">
+<h3><a class="toc-backref" href="#table-of-contents" role="doc-backlink">“Checksum validation failed” error</a><a class="headerlink" href="#checksum-validation-failed-error" title="Link to this heading"></a></h3>
+<p>This indicates that the Luhn checksum for the Primary Account Number (PAN) is invalid. This could
+mean:</p>
+<ol class="arabic simple">
+<li><p>The PAN is incorrect or mistyped</p></li>
+<li><p>The track data is corrupted</p></li>
+<li><p>The card is not following the standard Luhn algorithm (rare)</p></li>
+</ol>
+</section>
+</section>
+<section id="performance">
+<h2><a class="toc-backref" href="#table-of-contents" role="doc-backlink">Performance</a><a class="headerlink" href="#performance" title="Link to this heading"></a></h2>
+<section id="is-this-library-fast-enough-for-high-volume-processing">
+<h3><a class="toc-backref" href="#table-of-contents" role="doc-backlink">Is this library fast enough for high-volume processing?</a><a class="headerlink" href="#is-this-library-fast-enough-for-high-volume-processing" title="Link to this heading"></a></h3>
+<p>Yes, the library is designed to be efficient. For very high volumes (millions of tracks), consider:</p>
+<ol class="arabic simple">
+<li><p>Using the command-line interface for batch processing</p></li>
+<li><p>Processing tracks in parallel using Python’s multiprocessing</p></li>
+<li><p>Using a more performant language for the core parsing if needed</p></li>
+</ol>
+</section>
+<section id="how-can-i-improve-parsing-performance">
+<h3><a class="toc-backref" href="#table-of-contents" role="doc-backlink">How can I improve parsing performance?</a><a class="headerlink" href="#how-can-i-improve-parsing-performance" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Reuse the parser instance instead of creating a new one for each track</p></li>
+<li><p>Process tracks in batches</p></li>
+<li><p>Use the <code class="docutils literal notranslate"><span class="pre">parse_track1</span></code> or <code class="docutils literal notranslate"><span class="pre">parse_track2</span></code> methods if you only need one track</p></li>
+<li><p>Disable validation for known-good data (use with caution)</p></li>
+</ol>
+</section>
+</section>
+<section id="security">
+<h2><a class="toc-backref" href="#table-of-contents" role="doc-backlink">Security</a><a class="headerlink" href="#security" title="Link to this heading"></a></h2>
+<section id="is-it-safe-to-log-parsed-card-data">
+<h3><a class="toc-backref" href="#table-of-contents" role="doc-backlink">Is it safe to log parsed card data?</a><a class="headerlink" href="#is-it-safe-to-log-parsed-card-data" title="Link to this heading"></a></h3>
+<p>No, you should never log full track data or sensitive card information. If you need to log for
+debugging purposes, make sure to mask sensitive data:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">mask_pan</span><span class="p">(</span><span class="n">pan</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">pan</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">4</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">pan</span>
+    <span class="k">return</span> <span class="s2">&quot;*&quot;</span> <span class="o">*</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">pan</span><span class="p">)</span> <span class="o">-</span> <span class="mi">4</span><span class="p">)</span> <span class="o">+</span> <span class="n">pan</span><span class="p">[</span><span class="o">-</span><span class="mi">4</span><span class="p">:]</span>
+</pre></div>
+</div>
+</section>
+<section id="how-should-i-store-parsed-card-data">
+<h3><a class="toc-backref" href="#table-of-contents" role="doc-backlink">How should I store parsed card data?</a><a class="headerlink" href="#how-should-i-store-parsed-card-data" title="Link to this heading"></a></h3>
+<p>In general, you should avoid storing card data unless absolutely necessary. If you must store it:</p>
+<ol class="arabic simple">
+<li><p>Use strong encryption</p></li>
+<li><p>Ensure your storage is PCI DSS compliant</p></li>
+<li><p>Implement proper access controls</p></li>
+<li><p>Consider using a tokenization service</p></li>
+</ol>
+</section>
+</section>
+<section id="troubleshooting">
+<h2><a class="toc-backref" href="#table-of-contents" role="doc-backlink">Troubleshooting</a><a class="headerlink" href="#troubleshooting" title="Link to this heading"></a></h2>
+<section id="the-parser-works-for-some-cards-but-not-others">
+<h3><a class="toc-backref" href="#table-of-contents" role="doc-backlink">The parser works for some cards but not others</a><a class="headerlink" href="#the-parser-works-for-some-cards-but-not-others" title="Link to this heading"></a></h3>
+<p>This could be due to:</p>
+<ol class="arabic simple">
+<li><p>Non-standard card formats</p></li>
+<li><p>Custom encoding or encryption</p></li>
+<li><p>Corrupted track data</p></li>
+</ol>
+<p>Try using the <code class="docutils literal notranslate"><span class="pre">--debug</span></code> flag to see more detailed information about the parsing process.</p>
+</section>
+<section id="i-m-getting-inconsistent-results">
+<h3><a class="toc-backref" href="#table-of-contents" role="doc-backlink">I’m getting inconsistent results</a><a class="headerlink" href="#i-m-getting-inconsistent-results" title="Link to this heading"></a></h3>
+<p>Make sure that:</p>
+<ol class="arabic simple">
+<li><p>The track data is being read correctly (no extra spaces or characters)</p></li>
+<li><p>The encoding is consistent</p></li>
+<li><p>You’re using the latest version of the library</p></li>
+</ol>
+<p>If the issue persists, please open an issue with a sample of the track data (with sensitive
+information redacted).</p>
+</section>
+</section>
+<section id="feature-requests">
+<h2><a class="toc-backref" href="#table-of-contents" role="doc-backlink">Feature Requests</a><a class="headerlink" href="#feature-requests" title="Link to this heading"></a></h2>
+<section id="can-you-add-support-for-feature">
+<h3><a class="toc-backref" href="#table-of-contents" role="doc-backlink">Can you add support for [feature]?</a><a class="headerlink" href="#can-you-add-support-for-feature" title="Link to this heading"></a></h3>
+<p>We welcome feature requests! Please open an issue on the GitHub repository with details about the
+feature you’d like to see.</p>
+</section>
+<section id="how-can-i-contribute">
+<h3><a class="toc-backref" href="#table-of-contents" role="doc-backlink">How can I contribute?</a><a class="headerlink" href="#how-can-i-contribute" title="Link to this heading"></a></h3>
+<p>Contributions are welcome! See the <a class="reference internal" href="contributing.html#contributing"><span class="std std-ref">Contributing to Credit Card Stripe Parser</span></a> guide for more information.</p>
+</section>
+</section>
+<section id="see-also">
+<h2><a class="toc-backref" href="#table-of-contents" role="doc-backlink">See Also</a><a class="headerlink" href="#see-also" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="quickstart.html#quickstart"><span class="std std-ref">Quickstart Guide</span></a> - Getting started guide</p></li>
+<li><p><a class="reference internal" href="examples.html#examples"><span class="std std-ref">Examples</span></a> - Code examples</p></li>
+<li><p><a class="reference internal" href="api/modules.html#api-reference"><span class="std std-ref">API Reference</span></a> - Complete API reference</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="contributing.html" class="btn btn-neutral float-left" title="Contributing to Credit Card Stripe Parser" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="license.html" class="btn btn-neutral float-right" title="License" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Nsfr750.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
