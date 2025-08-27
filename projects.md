@@ -11,7 +11,7 @@ Here are some of the projects I've been working on. All of them are open-source 
 
 ## 3D Printing
 
-- [**3D Filament Manager**](https://github.com/Nsfr750/3D-Filament-Manager) - A tool to manage your 3D printing filaments and track usage.
+- [**3D Filament Manager**](https://github.com/Nsfr750/3D_Filament_Manager) - A tool to manage your 3D printing filaments and track usage.
   
   ![GitHub stars](https://img.shields.io/github/stars/Nsfr750/3D-Filament-Manager?style=social)
 
@@ -21,11 +21,11 @@ Here are some of the projects I've been working on. All of them are open-source 
   
   ![GitHub stars](https://img.shields.io/github/stars/Nsfr750/CDE550-sim?style=social)
 
-- [**MSR605 Tool**](https://github.com/Nsfr750/msr605-tool) - A tool for working with MSR605 magnetic stripe readers.
+- [**MSR605 Tool**](https://github.com/Nsfr750/MSR605) - A tool for working with MSR605 magnetic stripe readers.
   
   ![GitHub stars](https://img.shields.io/github/stars/Nsfr750/msr605-tool?style=social)
 
-- [**Nidec Commander CDE**](https://github.com/Nsfr750/Nidec-CommanderCDE) - Control software for Nidec CDE motors.
+- [**Nidec Commander CDE**](https://github.com/Nsfr750/Nidec_CommanderCDE) - Control software for Nidec CDE motors.
   
   ![GitHub stars](https://img.shields.io/github/stars/Nsfr750/Nidec-CommanderCDE?style=social)
 
@@ -47,7 +47,7 @@ Here are some of the projects I've been working on. All of them are open-source 
   
   ![GitHub stars](https://img.shields.io/github/stars/Nsfr750/PDF_Finder?style=social)
 
-- [**Credit Card Stripe Parser**](https://github.com/Nsfr750/card_parser) - Parse credit card stripe data.
+- [**Credit Card Stripe Parser**](https://github.com/Nsfr750/credit_card_stripe_parser) - Parse credit card stripe data.
   
   ![GitHub stars](https://img.shields.io/github/stars/Nsfr750/card_parser?style=social)
 
