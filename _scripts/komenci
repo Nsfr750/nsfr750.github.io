@@ -21,7 +21,7 @@ if [ x$LABORLINGVO != x ] ; then
   cat _config.yml |sed "s/^laborlingvo:.*/laborlingvo: $LABORLINGVO/" >_config.$$
   mv _config.$$ _config.yml
 else
-  LABORLINGVO=eo
+  LABORLINGVO=eneo
 fi
 
 

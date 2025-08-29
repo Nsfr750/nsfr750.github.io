@@ -3,7 +3,7 @@ lang: en
 lang-niv: fonto
 lang-ref: 007-jbk
 layout: page
-title: 'support'
+title: 'Support'
 ---
 
 ## Support My Work
