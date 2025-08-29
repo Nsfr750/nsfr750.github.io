@@ -1,7 +1,7 @@
 ---
 lang: zh
 lang-niv: fonto
-lang-ref: 001-jbk
+lang-ref: 000-jbk
 layout: index
 title: '首页'
 ---
