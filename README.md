@@ -8,4 +8,4 @@ Welcome to my personal project hub! This site serves as a central location for d
 
 ---
 
-Last updated: {{ site.time | date: "%B %-d, %Y" }}
+Last updated: Aug 29, 2025.
