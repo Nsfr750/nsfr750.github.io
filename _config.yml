@@ -1,14 +1,14 @@
 # Setup
-baseurl:          ""
-auxtoro: Auxtoro
-# ŝanĝu eo al via lingvo se vi ne laboras rekte en esperanto
-laborlingvo: it
-# malkomentigu la sekvan linion por forigi la menuon "ĉiuj afiŝoj"
+baseurl: ""
+auxtoro: Nsfr750
+# cambia nella tua lingua
+laborlingvo: en
+# rimuovi il commento dalla seguente per rimuovere il menu "tutti i post"
 #ne_afisxoj: "true"
-# malkomentigu la sekvan linion por forigi la menuon "serĉu per google"
+# rimuovi il commento dalla seguente riga per rimuovere il menu "cerca con google"
 #ne_googlesearch: "true"
-# github uzanto por komentoj
-gh_uzanto: ""
+# utente github per i commenti
+gh_uzanto: "Nsfr750"
 # Google Analytics tag
 # ga_tag: "X-XXXXXX000X"
 
