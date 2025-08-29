@@ -6,7 +6,7 @@ layout: index
 title: 'Home'
 ---
 
-# Welcome to My Digital Space
+# Welcome to My Project Hub
 
 Hi there! I'm Nsfr750, a passionate developer and open-source enthusiast. This is where I share my projects, thoughts, and discoveries with the world.
 
