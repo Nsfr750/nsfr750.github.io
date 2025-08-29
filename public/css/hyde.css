@@ -296,11 +296,11 @@ a svg{
 
 /* Cyan */
 .theme-base-0c .sidebar {
-  background-color: ##202020;
+  background-color: #181818;
 }
 .theme-base-0c .content a,
 .theme-base-0c .related-posts li a:hover {
-  color: #75b5aa;
+  color: #181818;
 }
 
 /* Blue */
