@@ -1,3 +1,11 @@
+# Site Settings
+title: Nsfr750's Project Hub
+description: Personal blog and projects by Nsfr750
+tagline: Open Source Enthusiast & Developer
+email: nsfr750@yandex.com
+url: "https://nsfr750.github.io" # the base hostname & protocol for your site
+timezone: Europe/Rome
+
 # Setup
 baseurl: ""
 auxtoro: Nsfr750
@@ -11,7 +19,6 @@ laborlingvo: en
 gh_uzanto: "Nsfr750"
 # Google Analytics tag
 # ga_tag: "X-XXXXXX000X"
-
 
 # Dependencies
 highlighter:      rouge
