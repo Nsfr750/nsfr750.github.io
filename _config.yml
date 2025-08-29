@@ -7,7 +7,7 @@ url: "https://nsfr750.github.io" # the base hostname & protocol for your site
 timezone: Europe/Rome
 
 # Setup
-baseurl: "/en"
+baseurl: ""
 auxtoro: Nsfr750
 # cambia nella tua lingua
 laborlingvo: en
