@@ -1,43 +1,20 @@
-<header class="site-header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
-  <div class="wrapper">
-    <!-- Site Title / Logo -->
-    <div class="site-branding">
-      <a class="site-title" rel="author" href="{{ "/" | relative_url }}" aria-label="{{ site.title | escape }} - Home">
-        <span itemprop="headline">{{ site.title | escape }}</span>
-      </a>
-      <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="menu-icon">
-          <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
-            <path class="menu-icon-line-1" d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
-            <path class="menu-icon-line-2" d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" style="display: none;"/>
-          </svg>
-        </span>
-      </button>
+{% if page.layout != 'index' %}
+    {% assign posts=site.posts | where:"lang-ref", page.lang-ref | sort: 'lang' %}
+    {% if posts.size == 0 %}
+        {% assign posts=site.pages | where:"lang-ref", page.lang-ref | sort: 'lang' %}
+    {% endif %}
+    {% if posts.size > 1 %}
+    <div>
+    <header class="lang-options">
+        <em>{{ site.data.translations[page.lang]['malsamaLingvo'] }}:</em>
+        <div class="dropdown">
+         <button class="dropbtn">{{ site.data.languages[page.lang].icon }} {{ site.data.languages[page.lang].label }} 🔽</button>
+         <div class="dropdown-content">
+           {% for post in posts %}
+             <a href="{{ site.baseurl }}{{ post.url }}">{{ site.data.languages[post.lang].icon }} {{ site.data.languages[post.lang].label }}</a>
+           {% endfor %}
+         </div>
+        </div>
     </div>
-
-    <!-- Main Navigation -->
-    <nav class="site-nav" role="navigation" aria-label="Main Navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
-      {%- assign default_paths = site.pages | map: "path" -%}
-      {%- assign page_paths = site.header_pages | default: default_paths -%}
-      
-      {%- if page_paths -%}
-        <ul class="nav-menu" role="menubar">
-          {%- for path in page_paths -%}
-            {%- assign my_page = site.pages | where: "path", path | first -%}
-            {%- if my_page.title -%}
-              <li class="menu-item" role="none">
-                <a class="page-link" 
-                   href="{{ my_page.url | relative_url }}" 
-                   role="menuitem" 
-                   itemprop="url"
-                   {% if page.url == my_page.url %}aria-current="page"{% endif %}>
-                  <span itemprop="name">{{ my_page.title | escape }}</span>
-                </a>
-              </li>
-            {%- endif -%}
-          {%- endfor -%}
-        </ul>
-      {%- endif -%}
-    </nav>
-  </div>
-</header>
+    {% endif %}
+{% endif %}

@@ -1,61 +1,27 @@
-# Nsfr750's Project Hub
 
-[![GitHub](https://img.shields.io/badge/GitHub-Nsfr750-181717?style=for-the-badge&logo=github)](https://github.com/Nsfr750)
-[![Website](https://img.shields.io/website?down_message=offline&style=for-the-badge&up_color=blue&up_message=online&url=https%3A%2F%2Fnsfr750.github.io)](https://nsfr750.github.io)
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg?style=for-the-badge)](https://www.gnu.org/licenses/gpl-3.0)
+ _Jekyll-plurlingva_ is a skeleton for the creation of multilingual static websites, based on jekyll.
+Its purpose is to keep it light and simple.
 
-Welcome to my personal project hub! This site serves as a central location for documentation and information about my various open-source projects.
+Its most striking features:
 
-## 📚 Featured Projects
+ * design on two columns:
+   * left drop-down menu, with: the choice of language, Google search on the site and the menu of the site.
+   * on the right the main content.
+ * adapted to websites _Github Pages_ .
+ * all possibilities of jekyll.
+ * can be used to create a blog.
+ * Scripts allow you to automatically translate the pages to all languages of the site.
+ * the translations are managed by po files:
+   * if you edit or add a paragraph on a page, only that paragraph needs to be retranslated.
+   * you can send this file to a human translator for correction.
+ * Automatically translated texts are indicated by a section that offers the document in the human-corrected languages.
+ * The translations use Esperanto as a pivotal language. This choice may seem strange at first glance, but it has several advantages:
+   * it is a language with a simple grammar and no exceptions, so it is easier to manage for software translators. .
+   * it is a very precise language, generating less ambiguity than English.
+   * it is very easy to learn, whatever the language of the learner.
 
-### 3D Printing
+**[Consult the documentation for more information.](https://jmichault.github.io/jekyll-plurlingva-dok/)**
 
-- [3D Filament Manager](docs/3D_Filament_Manager/) - Manage your 3D printing filaments and track usage
+Software licensed under GNU GPL version 3 or any later version.
+Documentation licensed under CC BY-SA 4.0.
 
-### Hardware Tools
-
-- [CDE550 Simulator](docs/CDE550-sim/) - Simulator for CDE550 motor controllers
-- [MSR605 Tool](docs/MSR605/) - Utility for working with MSR605 magnetic stripe readers
-- [Nidec Commander CDE](docs/Nidec_CommanderCDE/) - Control software for Nidec CDE drives
-- [NFC Tools](docs/NFC/) - Collection of NFC-related utilities
-
-### File Management
-
-- [Email Duplicate Cleaner](docs/EmailDuplicateCleaner/) - Clean up duplicate emails
-- [Images Deduplicator](docs/Images-Deduplicator/) - Find and remove duplicate images
-- [PDF Finder](docs/PDF_Finder/) - Locate and organize PDF files
-
-### Development Tools
-
-- [PySnoop](docs/PySnoop/) - Python debugging tool
-- [Raspberry Pi Utilities](docs/raspy_utility/) - Collection of Raspberry Pi tools
-
-## 📖 Documentation
-
-Comprehensive documentation for all projects is available in the [Documentation](https://nsfr750.github.io/docs/) section.
-
-## 🤝 Contributing
-
-Contributions are welcome! Feel free to submit issues and pull requests for any of my projects.
-
-## 📝 License
-
-All projects are licensed under the [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.html).
-
-## 📫 Contact
-
-- GitHub: [@Nsfr750](https://github.com/Nsfr750)
-- Email: [nsfr750@yandex.com](mailto:nsfr750@yandex.com)
-- Discord: [Join my server](https://discord.gg/ryqNeuRYjD)
-
-## 🙏 Support
-
-If you find my work useful, consider supporting me:
-
-- [Become a Patron](https://www.patreon.com/Nsfr750)
-- [One-time donation via PayPal](https://paypal.me/3dmega)
-- Monero: `47Jc6MC47WJVFhiQFYwHyBNQP5BEsjUPG6tc8R37FwcTY8K5Y3LvFzveSXoGiaDQSxDrnCUBJ5WBj6Fgmsfix8VPD4w3gXF`
-
----
-
-Last updated: {{ site.time | date: "%B %-d, %Y" }}

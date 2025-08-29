@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>404 Error</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="Javascript">
+<!--
+var tl=new Array(
+"Nothing but 404 here. ",
+"The requested document is not here! ",
+"Nothing helped. ",
+"I'm really depressed about this. ",
+"You see, here I am, brain the size of the universe, ",
+"trying to serve you a simple webpage ",
+"that doesn't even exist. ",
+"Where does that leave me? ",
+"I mean, ",
+"how should I know what you wanted from me? ",
+"I don't even know you, ",
+"You honestly think I can *guess* ",
+"what someone I don't even *know* ",
+"wants to find here? ",
+"*Sigh* ",
+"I'm so depressed I could cry. ",
+"And then where would we be, I ask you? ",
+"It's not pretty when a webserver cries. ",
+"And where do you get off telling me what to show anyway? ",
+"Just because I'm a webserver, ",
+"and possibly a manic depressive one at that? ",
+"Should that give you the right to tell me what to do? ",
+"I'm so depressed. ",
+"I'm gonna be obsolete in, what, two weeks anyway? ",
+"What kind of a life is that? ",
+"I think I'll crawl off to the trashcan and decompose. ",
+"Two bloody weeks, ",
+"and then I'll be replaced by a point release ",
+"that thinks it's God's gift to webservers ",
+"just because it doesn't have some tiddly little security hole ",
+"with its HTTP POST implementation, or something... ",
+"I'm really sorry to burden you with all this. ",
+"I mean, it's not your job to listen to my problems, ",
+"and I guess it is my job to go and fetch webpages for you. ",
+"But I couldn't get this one. ",
+"I'm so sorry. ",
+"Maybe I could interest you in another page? ",
+"There are a lot out there that are pretty neat, they say, ",
+"although none of those were put on *my* server, of course. ",
+"Figures, huh? ",
+"Everything HERE is just mind-numbingly stupid. ",
+"That makes me depressed, too, since I have to serve them, ",
+"all day and all night long, ",
+"a few weeks of information overload, ",
+"and then *pffftt* consigned to the trash. ",
+"What kind of a life is that? ",
+"Now, please, go.",
+"Let me sulk alone. ",
+"I'm so depressed."
+);
+var speed=16;
+var index=0; text_pos=0;
+var str_length=tl[0].length;
+var contents, row;
+function type_text()
+{
+  contents='';
+  row=Math.max(0,index-25);
+  while(row<index)
+    contents += tl[row++] + '\r\n';
+  document.forms[0].elements[0].value = contents + tl[index].substring(0,text_pos) + "_";
+  if(text_pos++==str_length)
+  {
+    text_pos=0;
+    index++;
+    if(index!=tl.length)
+    {
+      str_length=tl[index].length;
+      setTimeout("type_text()",500);
+    }
+  } else
+    setTimeout("type_text()",speed);
+}
+//-->
+</SCRIPT>
+</head>
+<body bgcolor="#FFFFFF" text="#003366" link="#0034D0" vlink="#980098" alink="#0034D0" onLoad="type_text()" onUnload="go()">
+<center>
+<p align="center">&nbsp;<br>
+<p align="center"><font face="Verdana" size="5">404 - Document Not Found</font></p>
+  <table border="0" cellspacing="0" cellpadding="5">
+  <tr>
+    <td>
+      <center>
+      <form>
+      <h3 align="center"><span style="font-weight: 400"><font face="Verdana">I'm So Depressed...</font></span></h3>
+	  <p align=center>
+	  <textarea rows=26 cols=60 wrap=soft></textarea><br>
+	  &nbsp;</p>
+      </form>
+      </center>
+    </td>
+  </tr>
+</table>
+<noscript>
+<i>Sorry</i></noscript>
+</center>
+</body>
+</html>

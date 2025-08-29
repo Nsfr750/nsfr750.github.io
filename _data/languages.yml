@@ -1,0 +1,30 @@
+ar:
+  label: <span class="lang-ar" dir="rtl" lang="ar">العربية</span>
+  icon: 🇦🇪
+de:
+  label: Deutsch
+  icon: 🇩🇪
+en:
+  label: English
+  icon: 🇺🇸
+es:
+  label: Español
+  icon: 🇪🇸
+fr:
+  label: Français
+  icon: 🇫🇷
+it:
+  label: Italiano
+  icon: 🇮🇹
+ja:
+  label: <span class="lang-ja-hani" dir="ltr" lang="ja-hani">日本語</span> (<span class="lang-ja-hira" dir="ltr" lang="ja-hira">にほんご</span>)
+  icon: 🇯🇵
+pt:
+  label: Portugues
+  icon: 🇧🇷
+ru:
+  label: <span class="lang-ru" dir="ltr" lang="ru">русский язык</span>
+  icon: 🇷🇺
+zh:
+  label: <span class="lang-zh-hani" dir="ltr" lang="zh-hani">中文</span>, <span class="lang-zh-hans" dir="ltr" lang="zh-hans">汉语</span>, <span class="lang-zh-hant" dir="ltr" lang="zh-hant">漢語</span>
+  icon: 🏳️
