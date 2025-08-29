@@ -7,7 +7,7 @@
     {% if posts.size == 0 %}
         {% assign posts=site.pages | where:"lang-ref", page.lang-ref | sort: 'lang' %}
     {% endif %}
-    {% if posts.size > 1 %}
+    
     <div>
       <header class="lang-options">
         <div class="dropdown" >
@@ -20,7 +20,7 @@
         </div>
       </header>
     </div>
-    {% endif %}
+    
 
     {% if site.ne_googlesearch != "true" %}
     <div>
