@@ -11,7 +11,6 @@ baseurl: ""
 auxtoro: Nsfr750
 # cambia nella tua lingua
 laborlingvo: en
-posts.size: 10
 # rimuovi il commento dalla seguente per rimuovere il menu "tutti i post"
 #ne_afisxoj: "true"
 # rimuovi il commento dalla seguente riga per rimuovere il menu "cerca con google"

@@ -16,16 +16,10 @@ Welcome to the documentation hub for my projects. Here you'll find detailed guid
 ### 3D Printing
 
 - [3D Filament Manager](/docs/3D_Filament_Manager/)
-  - [User Guide](/docs/3D_Filament_Manager/)
-  - [API Reference](/docs/3D_Filament_Manager/api)
-  - [FAQ](/docs/3D_Filament_Manager/faq)
 
 ### Hardware Tools
 
 - [CDE550 Simulator](/docs/CDE550-sim/)
-  - [Getting Started](/docs/CDE550-sim/getting-started)
-  - [User Guide](/docs/CDE550-sim/guide)
-  - [API Reference](/docs/CDE550-sim/api)
 - [MSR605 Tool](/docs/MSR605/)
 - [Nidec Commander CDE](/docs/Nidec_CommanderCDE/)
 - [NFC Tools](/docs/NFC/)
@@ -33,9 +27,6 @@ Welcome to the documentation hub for my projects. Here you'll find detailed guid
 ### File Management
 
 - [Email Duplicate Cleaner](/docs/EmailDuplicateCleaner/)
-  - [Installation Guide](/docs/EmailDuplicateCleaner/installation)
-  - [User Guide](/docs/EmailDuplicateCleaner/guide)
-  - [Troubleshooting](/docs/EmailDuplicateCleaner/troubleshooting)
 - [Images Deduplicator](/docs/Images-Deduplicator/)
 - [PDF Finder](/docs/PDF_Finder/)
 - [Credit Card Stripe Parser](/docs/card_parser/)
