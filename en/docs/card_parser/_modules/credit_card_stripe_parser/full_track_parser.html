@@ -1,0 +1,517 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>credit_card_stripe_parser.full_track_parser &mdash; Credit Card Stripe Parser 1.2.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=6efca38a"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/custom.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #2980B9" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Credit Card Stripe Parser
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../quickstart.html">Quickstart Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../gui.html">Graphical User Interface (GUI)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../api/modules.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/full_track_parser.html">FullTrackParser</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/models.html">Data Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/exceptions.html">Exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/constants.html">Constants</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Project Information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing to Credit Card Stripe Parser</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq.html">Frequently Asked Questions (FAQ)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../license.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #2980B9" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Credit Card Stripe Parser</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">credit_card_stripe_parser.full_track_parser</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for credit_card_stripe_parser.full_track_parser</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">FullTrackParser class for parsing credit card magnetic stripe data.</span>
+
+<span class="sd">This module provides functionality to parse Track 1 and Track 2 data from</span>
+<span class="sd">magnetic stripe cards according to ISO 7811-2 standards.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Tuple</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">FullTrackDataModel</span><span class="p">,</span> <span class="n">TrackOneModel</span><span class="p">,</span> <span class="n">TrackTwoModel</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.exceptions</span><span class="w"> </span><span class="kn">import</span> <span class="n">InvalidTrackOneError</span><span class="p">,</span> <span class="n">InvalidTrackTwoError</span>
+
+
+<div class="viewcode-block" id="FullTrackParser">
+<a class="viewcode-back" href="../../api/full_track_parser.html#credit_card_stripe_parser.full_track_parser.FullTrackParser">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">FullTrackParser</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A parser for credit card magnetic stripe data that can parse both Track 1 and Track 2.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="c1"># Constants for track parsing</span>
+    <span class="n">_SS1</span> <span class="o">=</span> <span class="s1">&#39;%&#39;</span>  <span class="c1"># Start sentinel for Track 1</span>
+    <span class="n">_FS1</span> <span class="o">=</span> <span class="s1">&#39;^&#39;</span>  <span class="c1"># Field separator for Track 1</span>
+    <span class="n">_ES1</span> <span class="o">=</span> <span class="s1">&#39;?&#39;</span>  <span class="c1"># End sentinel for Track 1</span>
+    <span class="n">_SS2</span> <span class="o">=</span> <span class="s1">&#39;;&#39;</span>  <span class="c1"># Start sentinel for Track 2</span>
+    <span class="n">_FS2</span> <span class="o">=</span> <span class="s1">&#39;=&#39;</span>  <span class="c1"># Field separator for Track 2</span>
+    <span class="n">_ES2</span> <span class="o">=</span> <span class="s1">&#39;?&#39;</span>  <span class="c1"># End sentinel for Track 2</span>
+
+<div class="viewcode-block" id="FullTrackParser.parse_full_track">
+<a class="viewcode-back" href="../../api/full_track_parser.html#credit_card_stripe_parser.full_track_parser.FullTrackParser.parse_full_track">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">parse_full_track</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">track1</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">track2</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">FullTrackDataModel</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Parse both Track 1 and Track 2 data from separate track strings.</span>
+<span class="sd">        </span>
+<span class="sd">        Args:</span>
+<span class="sd">            track1: The Track 1 data string to parse.</span>
+<span class="sd">            track2: The Track 2 data string to parse (optional).</span>
+<span class="sd">            </span>
+<span class="sd">        Returns:</span>
+<span class="sd">            FullTrackDataModel: An object containing the parsed track data.</span>
+<span class="sd">            </span>
+<span class="sd">        Raises:</span>
+<span class="sd">            InvalidTrackOneError: If there&#39;s an error parsing Track 1 data.</span>
+<span class="sd">            InvalidTrackTwoError: If there&#39;s an error parsing Track 2 data.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">track1_model</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">track2_model</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">is_track1_valid</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="n">is_track2_valid</span> <span class="o">=</span> <span class="kc">False</span>
+        
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">track1</span><span class="p">:</span>
+                <span class="n">is_track1_valid</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_validate_track_one</span><span class="p">(</span><span class="n">track1</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">is_track1_valid</span><span class="p">:</span>
+                    <span class="n">track1_model</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">parse_track_one</span><span class="p">(</span><span class="n">track1</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">InvalidTrackOneError</span><span class="p">(</span><span class="s2">&quot;Failed to parse Track 1 data&quot;</span><span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">e</span>
+            
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">track2</span><span class="p">:</span>
+                <span class="n">is_track2_valid</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_validate_track_two</span><span class="p">(</span><span class="n">track2</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">is_track2_valid</span><span class="p">:</span>
+                    <span class="n">track2_model</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">parse_track_two</span><span class="p">(</span><span class="n">track2</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">InvalidTrackTwoError</span><span class="p">(</span><span class="s2">&quot;Failed to parse Track 2 data&quot;</span><span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">e</span>
+            
+        <span class="k">return</span> <span class="n">FullTrackDataModel</span><span class="p">(</span>
+            <span class="n">is_track_one_valid</span><span class="o">=</span><span class="n">is_track1_valid</span><span class="p">,</span>
+            <span class="n">track_one</span><span class="o">=</span><span class="n">track1_model</span><span class="p">,</span>
+            <span class="n">is_track_two_valid</span><span class="o">=</span><span class="n">is_track2_valid</span><span class="p">,</span>
+            <span class="n">track_two</span><span class="o">=</span><span class="n">track2_model</span>
+        <span class="p">)</span></div>
+
+    
+<div class="viewcode-block" id="FullTrackParser.parse">
+<a class="viewcode-back" href="../../api/full_track_parser.html#credit_card_stripe_parser.full_track_parser.FullTrackParser.parse">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">parse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">full_track</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">FullTrackDataModel</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Parse both Track 1 and Track 2 data from a full track string.</span>
+<span class="sd">        </span>
+<span class="sd">        Args:</span>
+<span class="sd">            full_track: The full track data string to parse.</span>
+<span class="sd">            </span>
+<span class="sd">        Returns:</span>
+<span class="sd">            FullTrackDataModel: An object containing the parsed track data.</span>
+<span class="sd">            </span>
+<span class="sd">        Raises:</span>
+<span class="sd">            InvalidTrackOneError: If there&#39;s an error parsing Track 1 data.</span>
+<span class="sd">            InvalidTrackTwoError: If there&#39;s an error parsing Track 2 data.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">track1</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">track2</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">is_track1_valid</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="n">is_track2_valid</span> <span class="o">=</span> <span class="kc">False</span>
+        
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">is_track1_valid</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_validate_track_one</span><span class="p">(</span><span class="n">full_track</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">is_track1_valid</span><span class="p">:</span>
+                <span class="n">track1</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">parse_track_one</span><span class="p">(</span><span class="n">full_track</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">InvalidTrackOneError</span><span class="p">(</span><span class="s2">&quot;Failed to parse Track 1 data&quot;</span><span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">e</span>
+            
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">is_track2_valid</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_validate_track_two</span><span class="p">(</span><span class="n">full_track</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">is_track2_valid</span><span class="p">:</span>
+                <span class="n">track2</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">parse_track_two</span><span class="p">(</span><span class="n">full_track</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">InvalidTrackTwoError</span><span class="p">(</span><span class="s2">&quot;Failed to parse Track 2 data&quot;</span><span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">e</span>
+            
+        <span class="k">return</span> <span class="n">FullTrackDataModel</span><span class="p">(</span>
+            <span class="n">is_track_one_valid</span><span class="o">=</span><span class="n">is_track1_valid</span><span class="p">,</span>
+            <span class="n">track_one</span><span class="o">=</span><span class="n">track1</span><span class="p">,</span>
+            <span class="n">is_track_two_valid</span><span class="o">=</span><span class="n">is_track2_valid</span><span class="p">,</span>
+            <span class="n">track_two</span><span class="o">=</span><span class="n">track2</span>
+        <span class="p">)</span></div>
+
+    
+<div class="viewcode-block" id="FullTrackParser.parse_track1">
+<a class="viewcode-back" href="../../api/full_track_parser.html#credit_card_stripe_parser.full_track_parser.FullTrackParser.parse_track1">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">parse_track1</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">full_track</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">TrackOneModel</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Alias for parse_track_one. Parses Track 1 data from a full track string.</span>
+<span class="sd">        </span>
+<span class="sd">        Args:</span>
+<span class="sd">            full_track: The full track data string to parse.</span>
+<span class="sd">            </span>
+<span class="sd">        Returns:</span>
+<span class="sd">            TrackOneModel: The parsed Track 1 data.</span>
+<span class="sd">            </span>
+<span class="sd">        Raises:</span>
+<span class="sd">            ValueError: If the track data is invalid or malformed.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">parse_track_one</span><span class="p">(</span><span class="n">full_track</span><span class="p">)</span></div>
+
+        
+<div class="viewcode-block" id="FullTrackParser.parse_track_one">
+<a class="viewcode-back" href="../../api/full_track_parser.html#credit_card_stripe_parser.full_track_parser.FullTrackParser.parse_track_one">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">parse_track_one</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">full_track</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">TrackOneModel</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Parse Track 1 data from a full track string.</span>
+<span class="sd">        </span>
+<span class="sd">        Args:</span>
+<span class="sd">            full_track: The full track data string to parse.</span>
+<span class="sd">            </span>
+<span class="sd">        Returns:</span>
+<span class="sd">            TrackOneModel: The parsed Track 1 data.</span>
+<span class="sd">            </span>
+<span class="sd">        Raises:</span>
+<span class="sd">            ValueError: If the track data is invalid or malformed.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_SS1</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">full_track</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ES1</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">full_track</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid Track 1 data: missing start or end sentinel&quot;</span><span class="p">)</span>
+            
+        <span class="c1"># Extract the track string (between SS1 and ES1)</span>
+        <span class="n">start_idx</span> <span class="o">=</span> <span class="n">full_track</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_SS1</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="n">end_idx</span> <span class="o">=</span> <span class="n">full_track</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_ES1</span><span class="p">)</span>
+        <span class="n">track_string</span> <span class="o">=</span> <span class="n">full_track</span><span class="p">[</span><span class="n">start_idx</span><span class="p">:</span><span class="n">end_idx</span><span class="p">]</span>
+        
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">track_string</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">79</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Track 1 data exceeds maximum length of 79 characters&quot;</span><span class="p">)</span>
+            
+        <span class="c1"># Split into segments using the field separator</span>
+        <span class="n">track_segments</span> <span class="o">=</span> <span class="n">track_string</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_FS1</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">track_segments</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid Track 1 data: missing required fields&quot;</span><span class="p">)</span>
+            
+        <span class="c1"># The first character after SS1 is the format code</span>
+        <span class="n">format_code</span> <span class="o">=</span> <span class="n">track_string</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">if</span> <span class="n">track_string</span> <span class="k">else</span> <span class="s1">&#39;&#39;</span>
+        
+        <span class="k">return</span> <span class="n">TrackOneModel</span><span class="p">(</span>
+            <span class="n">format_code</span><span class="o">=</span><span class="n">format_code</span><span class="p">,</span>
+            <span class="n">pan</span><span class="o">=</span><span class="n">track_segments</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">:],</span>  <span class="c1"># Skip the format code</span>
+            <span class="n">card_holder_name</span><span class="o">=</span><span class="n">track_segments</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+            <span class="n">expiration_date</span><span class="o">=</span><span class="n">track_segments</span><span class="p">[</span><span class="mi">2</span><span class="p">][:</span><span class="mi">4</span><span class="p">],</span>
+            <span class="n">service_code</span><span class="o">=</span><span class="n">track_segments</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">4</span><span class="p">:</span><span class="mi">7</span><span class="p">],</span>
+            <span class="n">discretionary_data</span><span class="o">=</span><span class="n">track_segments</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">7</span><span class="p">:],</span>  <span class="c1"># Everything after service code</span>
+            <span class="n">source_string</span><span class="o">=</span><span class="n">full_track</span><span class="p">[:</span><span class="n">end_idx</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span>  <span class="c1"># Include the end sentinel</span>
+        <span class="p">)</span></div>
+
+    
+<div class="viewcode-block" id="FullTrackParser.try_parse_track_one">
+<a class="viewcode-back" href="../../api/full_track_parser.html#credit_card_stripe_parser.full_track_parser.FullTrackParser.try_parse_track_one">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">try_parse_track_one</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">full_track</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">bool</span><span class="p">,</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TrackOneModel</span><span class="p">]]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Try to parse Track 1 data, returning a success flag and the result.</span>
+<span class="sd">        </span>
+<span class="sd">        Args:</span>
+<span class="sd">            full_track: The full track data string to parse.</span>
+<span class="sd">            </span>
+<span class="sd">        Returns:</span>
+<span class="sd">            A tuple of (success, result) where success is a boolean indicating</span>
+<span class="sd">            if parsing was successful, and result is the parsed TrackOneModel or None.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_SS1</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">full_track</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">None</span>
+            <span class="n">track_one</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">parse_track_one</span><span class="p">(</span><span class="n">full_track</span><span class="p">)</span>
+            <span class="k">return</span> <span class="kc">True</span><span class="p">,</span> <span class="n">track_one</span>
+        <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">None</span></div>
+
+    
+<div class="viewcode-block" id="FullTrackParser.parse_track2">
+<a class="viewcode-back" href="../../api/full_track_parser.html#credit_card_stripe_parser.full_track_parser.FullTrackParser.parse_track2">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">parse_track2</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">full_track</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">TrackTwoModel</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Alias for parse_track_two. Parses Track 2 data from a full track string.</span>
+<span class="sd">        </span>
+<span class="sd">        Args:</span>
+<span class="sd">            full_track: The full track data string to parse.</span>
+<span class="sd">            </span>
+<span class="sd">        Returns:</span>
+<span class="sd">            TrackTwoModel: The parsed Track 2 data.</span>
+<span class="sd">            </span>
+<span class="sd">        Raises:</span>
+<span class="sd">            ValueError: If the track data is invalid or malformed.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">parse_track_two</span><span class="p">(</span><span class="n">full_track</span><span class="p">)</span></div>
+
+        
+<div class="viewcode-block" id="FullTrackParser.parse_track_two">
+<a class="viewcode-back" href="../../api/full_track_parser.html#credit_card_stripe_parser.full_track_parser.FullTrackParser.parse_track_two">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">parse_track_two</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">full_track</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">TrackTwoModel</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Parse Track 2 data from a full track string.</span>
+<span class="sd">        </span>
+<span class="sd">        Args:</span>
+<span class="sd">            full_track: The full track data string to parse.</span>
+<span class="sd">            </span>
+<span class="sd">        Returns:</span>
+<span class="sd">            TrackTwoModel: The parsed Track 2 data.</span>
+<span class="sd">            </span>
+<span class="sd">        Raises:</span>
+<span class="sd">            ValueError: If the track data is invalid or malformed.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_SS2</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">full_track</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ES2</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">full_track</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid Track 2 data: missing start or end sentinel&quot;</span><span class="p">)</span>
+            
+        <span class="c1"># Extract the track string (between SS2 and ES2)</span>
+        <span class="n">start_idx</span> <span class="o">=</span> <span class="n">full_track</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_SS2</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="n">end_idx</span> <span class="o">=</span> <span class="n">full_track</span><span class="o">.</span><span class="n">rindex</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_ES2</span><span class="p">)</span>  <span class="c1"># Use rindex in case of multiple &#39;?&#39;</span>
+        <span class="n">track_string</span> <span class="o">=</span> <span class="n">full_track</span><span class="p">[</span><span class="n">start_idx</span><span class="p">:</span><span class="n">end_idx</span><span class="p">]</span>
+        
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">track_string</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">40</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Track 2 data exceeds maximum length of 40 characters&quot;</span><span class="p">)</span>
+            
+        <span class="c1"># Split into segments using the field separator</span>
+        <span class="n">track_segments</span> <span class="o">=</span> <span class="n">track_string</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_FS2</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">track_segments</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid Track 2 data: missing required fields&quot;</span><span class="p">)</span>
+            
+        <span class="c1"># The first segment is PAN, second segment contains expiration date, service code, and discretionary data</span>
+        <span class="n">pan</span> <span class="o">=</span> <span class="n">track_segments</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">data_segment</span> <span class="o">=</span> <span class="n">track_segments</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        
+        <span class="c1"># Ensure data segment is long enough</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">data_segment</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">7</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid Track 2 data: data segment too short&quot;</span><span class="p">)</span>
+            
+        <span class="k">return</span> <span class="n">TrackTwoModel</span><span class="p">(</span>
+            <span class="n">pan</span><span class="o">=</span><span class="n">pan</span><span class="p">,</span>
+            <span class="n">expiration_date</span><span class="o">=</span><span class="n">data_segment</span><span class="p">[:</span><span class="mi">4</span><span class="p">],</span>
+            <span class="n">service_code</span><span class="o">=</span><span class="n">data_segment</span><span class="p">[</span><span class="mi">4</span><span class="p">:</span><span class="mi">7</span><span class="p">],</span>
+            <span class="n">discretionary_data</span><span class="o">=</span><span class="n">data_segment</span><span class="p">[</span><span class="mi">7</span><span class="p">:],</span>
+            <span class="n">source_string</span><span class="o">=</span><span class="n">full_track</span><span class="p">[</span><span class="n">full_track</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_SS2</span><span class="p">):</span><span class="n">end_idx</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span>  <span class="c1"># Include the end sentinel</span>
+        <span class="p">)</span></div>
+
+    
+<div class="viewcode-block" id="FullTrackParser.try_parse_track_two">
+<a class="viewcode-back" href="../../api/full_track_parser.html#credit_card_stripe_parser.full_track_parser.FullTrackParser.try_parse_track_two">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">try_parse_track_two</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">full_track</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">bool</span><span class="p">,</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TrackTwoModel</span><span class="p">]]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Try to parse Track 2 data, returning a success flag and the result.</span>
+<span class="sd">        </span>
+<span class="sd">        Args:</span>
+<span class="sd">            full_track: The full track data string to parse.</span>
+<span class="sd">            </span>
+<span class="sd">        Returns:</span>
+<span class="sd">            A tuple of (success, result) where success is a boolean indicating</span>
+<span class="sd">            if parsing was successful, and result is the parsed TrackTwoModel or None.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_SS2</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">full_track</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">None</span>
+            <span class="n">track_two</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">parse_track_two</span><span class="p">(</span><span class="n">full_track</span><span class="p">)</span>
+            <span class="k">return</span> <span class="kc">True</span><span class="p">,</span> <span class="n">track_two</span>
+        <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">None</span></div>
+
+    
+<div class="viewcode-block" id="FullTrackParser._calculate_lrc">
+<a class="viewcode-back" href="../../api/full_track_parser.html#credit_card_stripe_parser.full_track_parser.FullTrackParser._calculate_lrc">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_calculate_lrc</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="nb">bytes</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Calculate the Longitudinal Redundancy Check (LRC) for the given data.</span>
+<span class="sd">        </span>
+<span class="sd">        Args:</span>
+<span class="sd">            data: The data to calculate the LRC for.</span>
+<span class="sd">            </span>
+<span class="sd">        Returns:</span>
+<span class="sd">            The calculated LRC byte.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">lrc</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">byte</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+            <span class="n">lrc</span> <span class="o">^=</span> <span class="n">byte</span>
+        <span class="k">return</span> <span class="n">lrc</span></div>
+
+    
+<div class="viewcode-block" id="FullTrackParser._has_lrc_code">
+<a class="viewcode-back" href="../../api/full_track_parser.html#credit_card_stripe_parser.full_track_parser.FullTrackParser._has_lrc_code">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_has_lrc_code</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">full_track</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Check if the track data includes an LRC code.</span>
+<span class="sd">        </span>
+<span class="sd">        Args:</span>
+<span class="sd">            full_track: The full track data string to check.</span>
+<span class="sd">            </span>
+<span class="sd">        Returns:</span>
+<span class="sd">            bool: True if an LRC code is present, False otherwise.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_ES1</span><span class="si">}{</span><span class="bp">self</span><span class="o">.</span><span class="n">_SS2</span><span class="si">}</span><span class="s2">&quot;</span> <span class="ow">in</span> <span class="n">full_track</span> <span class="ow">or</span> <span class="n">full_track</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_ES1</span><span class="p">):</span>
+            <span class="k">return</span> <span class="kc">False</span>
+        <span class="k">if</span> <span class="n">full_track</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_ES2</span><span class="p">):</span>
+            <span class="k">return</span> <span class="kc">False</span>
+        <span class="k">return</span> <span class="kc">True</span></div>
+
+    
+<div class="viewcode-block" id="FullTrackParser._validate_track_one">
+<a class="viewcode-back" href="../../api/full_track_parser.html#credit_card_stripe_parser.full_track_parser.FullTrackParser._validate_track_one">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_validate_track_one</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">full_track</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Validate Track 1 data.</span>
+<span class="sd">        </span>
+<span class="sd">        Args:</span>
+<span class="sd">            full_track: The full track data string to validate.</span>
+<span class="sd">            </span>
+<span class="sd">        Returns:</span>
+<span class="sd">            bool: True if the Track 1 data is valid, False otherwise.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_SS1</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">full_track</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+            
+        <span class="n">es1_index</span> <span class="o">=</span> <span class="n">full_track</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_ES1</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">es1_index</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+            
+        <span class="c1"># If there&#39;s no LRC code, we&#39;re done</span>
+        <span class="k">if</span> <span class="n">es1_index</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">full_track</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">True</span>
+            
+        <span class="c1"># Check for LRC</span>
+        <span class="n">potential_lrc</span> <span class="o">=</span> <span class="n">full_track</span><span class="p">[</span><span class="n">es1_index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">potential_lrc</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_SS2</span><span class="p">:</span>  <span class="c1"># If not the start of Track 2</span>
+            <span class="c1"># Calculate expected LRC</span>
+            <span class="n">track_data</span> <span class="o">=</span> <span class="n">full_track</span><span class="p">[</span><span class="n">full_track</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_SS1</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">:</span><span class="n">es1_index</span><span class="p">]</span>
+            <span class="n">calculated_lrc</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_calculate_lrc</span><span class="p">(</span><span class="n">track_data</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;ascii&#39;</span><span class="p">))</span>
+            <span class="k">if</span> <span class="nb">ord</span><span class="p">(</span><span class="n">potential_lrc</span><span class="p">)</span> <span class="o">!=</span> <span class="n">calculated_lrc</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">False</span>
+                
+        <span class="k">return</span> <span class="kc">True</span></div>
+
+    
+<div class="viewcode-block" id="FullTrackParser._validate_track_two">
+<a class="viewcode-back" href="../../api/full_track_parser.html#credit_card_stripe_parser.full_track_parser.FullTrackParser._validate_track_two">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_validate_track_two</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">full_track</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Validate Track 2 data.</span>
+<span class="sd">        </span>
+<span class="sd">        Args:</span>
+<span class="sd">            full_track: The full track data string to validate.</span>
+<span class="sd">            </span>
+<span class="sd">        Returns:</span>
+<span class="sd">            bool: True if the Track 2 data is valid, False otherwise.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_SS2</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">full_track</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+            
+        <span class="n">es2_index</span> <span class="o">=</span> <span class="n">full_track</span><span class="o">.</span><span class="n">rfind</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_ES2</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">es2_index</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+            
+        <span class="c1"># If there&#39;s no LRC code, we&#39;re done</span>
+        <span class="k">if</span> <span class="n">es2_index</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">full_track</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">True</span>
+            
+        <span class="c1"># Check for LRC</span>
+        <span class="n">potential_lrc</span> <span class="o">=</span> <span class="n">full_track</span><span class="p">[</span><span class="n">es2_index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">:</span><span class="n">es2_index</span> <span class="o">+</span> <span class="mi">2</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">potential_lrc</span> <span class="ow">and</span> <span class="n">potential_lrc</span> <span class="o">!=</span> <span class="s1">&#39;</span><span class="se">\0</span><span class="s1">&#39;</span><span class="p">:</span>  <span class="c1"># If not null terminator</span>
+            <span class="c1"># Calculate expected LRC</span>
+            <span class="n">track_data</span> <span class="o">=</span> <span class="n">full_track</span><span class="p">[</span><span class="n">full_track</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_SS2</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">:</span><span class="n">es2_index</span><span class="p">]</span>
+            <span class="n">calculated_lrc</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_calculate_lrc</span><span class="p">(</span><span class="n">track_data</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;ascii&#39;</span><span class="p">))</span>
+            <span class="k">if</span> <span class="nb">ord</span><span class="p">(</span><span class="n">potential_lrc</span><span class="p">)</span> <span class="o">!=</span> <span class="n">calculated_lrc</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">False</span>
+                
+        <span class="k">return</span> <span class="kc">True</span></div>
+</div>
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Nsfr750.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

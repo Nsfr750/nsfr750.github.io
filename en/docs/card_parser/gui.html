@@ -1,0 +1,381 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Graphical User Interface &mdash; Credit Card Stripe Parser 1.2.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=6efca38a"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/custom.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="FullTrackParser" href="api/full_track_parser.html" />
+    <link rel="prev" title="Examples" href="examples.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #2980B9" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Credit Card Stripe Parser
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Graphical User Interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#launching-the-application">Launching the Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#interface-components">Interface Components</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#menu-bar">Menu Bar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#input-section">Input Section</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#output-tabs">Output Tabs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#status-bar">Status Bar</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#basic-usage">Basic Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#keyboard-shortcuts">Keyboard Shortcuts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#advanced-features">Advanced Features</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#drag-and-drop">Drag and Drop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#command-line-arguments">Command Line Arguments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#custom-styling">Custom Styling</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#troubleshooting">Troubleshooting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#gui-not-starting">GUI Not Starting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#font-issues">Font Issues</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#performance-issues">Performance Issues</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#screenshots">Screenshots</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#see-also">See Also</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api/full_track_parser.html">FullTrackParser</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/models.html">Data Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/exceptions.html">Exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/gui.html">GUI Module</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Project Info</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing to Credit Card Stripe Parser</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions (FAQ)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #2980B9" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Credit Card Stripe Parser</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Graphical User Interface</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/gui.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="graphical-user-interface">
+<span id="gui"></span><h1>Graphical User Interface<a class="headerlink" href="#graphical-user-interface" title="Link to this heading"></a></h1>
+<p>The Credit Card Stripe Parser comes with a user-friendly GUI built with Tkinter.</p>
+<nav class="contents local" id="table-of-contents">
+<p class="topic-title">Table of Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#launching-the-application" id="id3">Launching the Application</a></p></li>
+<li><p><a class="reference internal" href="#interface-components" id="id4">Interface Components</a></p>
+<ul>
+<li><p><a class="reference internal" href="#menu-bar" id="id5">Menu Bar</a></p></li>
+<li><p><a class="reference internal" href="#input-section" id="id6">Input Section</a></p></li>
+<li><p><a class="reference internal" href="#output-tabs" id="id7">Output Tabs</a></p></li>
+<li><p><a class="reference internal" href="#status-bar" id="id8">Status Bar</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#basic-usage" id="id9">Basic Usage</a></p></li>
+<li><p><a class="reference internal" href="#keyboard-shortcuts" id="id10">Keyboard Shortcuts</a></p></li>
+<li><p><a class="reference internal" href="#advanced-features" id="id11">Advanced Features</a></p>
+<ul>
+<li><p><a class="reference internal" href="#drag-and-drop" id="id12">Drag and Drop</a></p></li>
+<li><p><a class="reference internal" href="#command-line-arguments" id="id13">Command Line Arguments</a></p></li>
+<li><p><a class="reference internal" href="#custom-styling" id="id14">Custom Styling</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#troubleshooting" id="id15">Troubleshooting</a></p>
+<ul>
+<li><p><a class="reference internal" href="#gui-not-starting" id="id16">GUI Not Starting</a></p></li>
+<li><p><a class="reference internal" href="#font-issues" id="id17">Font Issues</a></p></li>
+<li><p><a class="reference internal" href="#performance-issues" id="id18">Performance Issues</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#screenshots" id="id19">Screenshots</a></p>
+<ul>
+<li><p><a class="reference internal" href="#see-also" id="id20">See Also</a></p></li>
+</ul>
+</li>
+</ul>
+</nav>
+<section id="launching-the-application">
+<h2><a class="toc-backref" href="#table-of-contents" role="doc-backlink">Launching the Application</a><a class="headerlink" href="#launching-the-application" title="Link to this heading"></a></h2>
+<p>You can start the GUI in several ways:</p>
+<ol class="arabic">
+<li><p>From the command line:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>credit_card_stripe_parser<span class="w"> </span>gui
+</pre></div>
+</div>
+</li>
+<li><p>By running the main script:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>main.py
+</pre></div>
+</div>
+</li>
+<li><p>By directly executing the module:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>credit_card_stripe_parser
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="interface-components">
+<h2><a class="toc-backref" href="#table-of-contents" role="doc-backlink">Interface Components</a><a class="headerlink" href="#interface-components" title="Link to this heading"></a></h2>
+<p>The GUI consists of the following main components:</p>
+<section id="menu-bar">
+<h3><a class="toc-backref" href="#table-of-contents" role="doc-backlink">Menu Bar</a><a class="headerlink" href="#menu-bar" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>File</strong>: Open, save, and exit options</p></li>
+<li><p><strong>Edit</strong>: Copy, paste, and clear options</p></li>
+<li><p><strong>View</strong>: Toggle between different views</p></li>
+<li><p><strong>Help</strong>: Documentation and about information</p></li>
+</ul>
+</section>
+<section id="input-section">
+<h3><a class="toc-backref" href="#table-of-contents" role="doc-backlink">Input Section</a><a class="headerlink" href="#input-section" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>Track 1</strong>: Input field for Track 1 data</p></li>
+<li><p><strong>Track 2</strong>: Input field for Track 2 data</p></li>
+<li><p><strong>Parse Button</strong>: Process the input data</p></li>
+<li><p><strong>Clear Button</strong>: Clear all input fields</p></li>
+</ul>
+</section>
+<section id="output-tabs">
+<h3><a class="toc-backref" href="#table-of-contents" role="doc-backlink">Output Tabs</a><a class="headerlink" href="#output-tabs" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>Parsed Data</strong>: Structured view of parsed track data</p></li>
+<li><p><strong>Raw Data</strong>: Raw track data with formatting</p></li>
+<li><p><strong>JSON</strong>: Parsed data in JSON format</p></li>
+<li><p><strong>Debug</strong>: Debug information and logs</p></li>
+</ul>
+</section>
+<section id="status-bar">
+<h3><a class="toc-backref" href="#table-of-contents" role="doc-backlink">Status Bar</a><a class="headerlink" href="#status-bar" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Shows the current status and messages</p></li>
+</ul>
+</section>
+</section>
+<section id="basic-usage">
+<h2><a class="toc-backref" href="#table-of-contents" role="doc-backlink">Basic Usage</a><a class="headerlink" href="#basic-usage" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><strong>Enter Track Data</strong>
+- Paste your track data into the appropriate fields
+- You can enter just Track 1, just Track 2, or both</p></li>
+<li><p><strong>Parse the Data</strong>
+- Click the “Parse” button to process the data
+- The parsed information will be displayed in the output tabs</p></li>
+<li><p><strong>View Results</strong>
+- Switch between tabs to see different representations of the data
+- Use the “Copy” button to copy data to clipboard</p></li>
+<li><p><strong>Save Results</strong>
+- Go to <em>File &gt; Save As…</em> to save the parsed data
+- Choose between JSON, TXT, or CSV format</p></li>
+</ol>
+</section>
+<section id="keyboard-shortcuts">
+<h2><a class="toc-backref" href="#table-of-contents" role="doc-backlink">Keyboard Shortcuts</a><a class="headerlink" href="#keyboard-shortcuts" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 80.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Shortcut</p></th>
+<th class="head"><p>Action</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Ctrl+O</span></code></p></td>
+<td><p>Open file</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Ctrl+S</span></code></p></td>
+<td><p>Save file</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Ctrl+Q</span></code></p></td>
+<td><p>Quit application</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">F1</span></code></p></td>
+<td><p>Show help</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Ctrl+C</span></code></p></td>
+<td><p>Copy selected text</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Ctrl+V</span></code></p></td>
+<td><p>Paste text</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Ctrl+A</span></code></p></td>
+<td><p>Select all text</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">F5</span></code></p></td>
+<td><p>Refresh the view</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="advanced-features">
+<h2><a class="toc-backref" href="#table-of-contents" role="doc-backlink">Advanced Features</a><a class="headerlink" href="#advanced-features" title="Link to this heading"></a></h2>
+<section id="drag-and-drop">
+<h3><a class="toc-backref" href="#table-of-contents" role="doc-backlink">Drag and Drop</a><a class="headerlink" href="#drag-and-drop" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Drag and drop text files containing track data onto the application window</p></li>
+<li><p>The file contents will be automatically loaded and parsed</p></li>
+</ul>
+</section>
+<section id="command-line-arguments">
+<h3><a class="toc-backref" href="#table-of-contents" role="doc-backlink">Command Line Arguments</a><a class="headerlink" href="#command-line-arguments" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">--debug</span></code>: Enable debug mode</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--theme</span> <span class="pre">[light|dark]</span></code>: Set the color theme</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--font-size</span> <span class="pre">N</span></code>: Set the font size (default: 10)</p></li>
+</ul>
+</section>
+<section id="custom-styling">
+<h3><a class="toc-backref" href="#table-of-contents" role="doc-backlink">Custom Styling</a><a class="headerlink" href="#custom-styling" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>The GUI supports custom themes and styling</p></li>
+<li><p>Create a <code class="docutils literal notranslate"><span class="pre">config.ini</span></code> file in the user’s config directory to customize the appearance</p></li>
+</ul>
+</section>
+</section>
+<section id="troubleshooting">
+<h2><a class="toc-backref" href="#table-of-contents" role="doc-backlink">Troubleshooting</a><a class="headerlink" href="#troubleshooting" title="Link to this heading"></a></h2>
+<section id="gui-not-starting">
+<h3><a class="toc-backref" href="#table-of-contents" role="doc-backlink">GUI Not Starting</a><a class="headerlink" href="#gui-not-starting" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Make sure you have Tkinter installed (usually included with Python)</p></li>
+<li><p>On Ubuntu/Debian: <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">python3-tk</span></code></p></li>
+<li><p>On RHEL/CentOS: <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">yum</span> <span class="pre">install</span> <span class="pre">python3-tkinter</span></code></p></li>
+</ul>
+</section>
+<section id="font-issues">
+<h3><a class="toc-backref" href="#table-of-contents" role="doc-backlink">Font Issues</a><a class="headerlink" href="#font-issues" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>If text appears too small or too large, adjust the font size in the settings</p></li>
+<li><p>Go to <em>View &gt; Font Size</em> to change the font size</p></li>
+</ul>
+</section>
+<section id="performance-issues">
+<h3><a class="toc-backref" href="#table-of-contents" role="doc-backlink">Performance Issues</a><a class="headerlink" href="#performance-issues" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>For large files, the GUI might become unresponsive</p></li>
+<li><p>Use the command-line interface for batch processing large numbers of tracks</p></li>
+</ul>
+</section>
+</section>
+<section id="screenshots">
+<h2><a class="toc-backref" href="#table-of-contents" role="doc-backlink">Screenshots</a><a class="headerlink" href="#screenshots" title="Link to this heading"></a></h2>
+<figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="_images/main_window.png"><img alt="Main Window" src="_images/main_window.png" style="width: 80%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Main Application Window</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="_images/parsed_view.png"><img alt="Parsed View" src="_images/parsed_view.png" style="width: 80%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Parsed Data View</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<section id="see-also">
+<h3><a class="toc-backref" href="#table-of-contents" role="doc-backlink">See Also</a><a class="headerlink" href="#see-also" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="quickstart.html#quickstart"><span class="std std-ref">Quickstart Guide</span></a> - Getting started with the Credit Card Stripe Parser</p></li>
+<li><p><a class="reference internal" href="api/modules.html#api-reference"><span class="std std-ref">API Reference</span></a> - Programmatic API documentation</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="examples.html" class="btn btn-neutral float-left" title="Examples" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="api/full_track_parser.html" class="btn btn-neutral float-right" title="FullTrackParser" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Nsfr750.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
