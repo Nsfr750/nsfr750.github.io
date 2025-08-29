@@ -9,18 +9,12 @@ timezone: Europe/Rome
 # Setup
 baseurl: ""
 auxtoro: Nsfr750
-# cambia nella tua lingua
-laborlingvo: en
-# rimuovi il commento dalla seguente per rimuovere il menu "tutti i post"
-ne_afisxoj: "true"
-# rimuovi il commento dalla seguente riga per rimuovere il menu "cerca con google"
-ne_googlesearch: "true"
-# utente github per i commenti
-gh_uzanto: "Nsfr750"
-# Google Analytics tag
-#ga_tag: "G-LWXDPT250W"
-# Google Adsense
-#ga_adsense: "ca-pub-8796238373525171"
+laborlingvo: en # cambia nella tua lingua
+ne_afisxoj: "true" # menu "tutti i post"
+ne_googlesearch: "true" #menu "cerca con google"
+gh_uzanto: "Nsfr750" # utente github per i commenti
+#ga_tag: "G-XXXXXXXXXX" # Google Analytics tag
+#ga_adsense: "ca-pub-XXXXXXXXX" # Google Adsense
 
 # Dependencies
 highlighter:      rouge
