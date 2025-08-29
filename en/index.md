@@ -2,7 +2,7 @@
 lang: en
 lang-niv: fonto
 lang-ref: 001-jbk
-layout: page
+layout: index
 title: 'Home'
 ---
 

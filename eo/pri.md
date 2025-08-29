@@ -7,4 +7,4 @@ lang-niv: fonto
 
 ---
 
-Metu kelkajn vortojn de prezento ĉi tie.
+lorem ipsum sed tenet arepo
