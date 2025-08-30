@@ -21,7 +21,7 @@ Ciao! Sono Nsfr750, uno sviluppatore appassionato e sostenitore dell'open-source
 
 {% endfor %}
 
-[Vedi tutti gli articoli](/blog) | [Esplora per categoria](/categories)
+[Vedi tutti gli articoli](blog) | [Esplora per categoria](categories)
 
 ## Progetti in Evidenza
 
