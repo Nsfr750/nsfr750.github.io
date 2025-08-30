@@ -34,6 +34,12 @@
     <br>
     {% endif %}
 
+    <!-- Documentation Navigation Dropdown -->
+    {% if site.ne_docs != "false" %}
+      {% include docs_nav.html %}
+      <br>
+    {% endif %}
+
     <div class="sidebar-about">
       <h1>
         <a href="{{site.baseurl}}/{{page.lang}}">

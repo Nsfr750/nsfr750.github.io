@@ -1,32 +1,124 @@
-<nav>
-    {% for block in site.data.map %}
-    {% for item in block[page.docs] %}
-    {% if item == page.path %}
-    {% for trans in block %}
-    {% assign trans_path = trans[1] %}
-    {% assign posts = site.posts | where:"path",trans_path %} 
+<div class="docs-nav">
+  <button class="docs-dropbtn">
+    {{ site.data.translations[page.lang]['documentation'] | default: 'Documentation' }} ▼
+  </button>
+  <div class="docs-dropdown-content">
+    {% assign docs = site.pages | where: "lang", page.lang | where: "layout", "doc" | sort: "order" %}
+    {% for doc in docs %}
+      <a href="#" data-doc="{{ site.baseurl }}{{ doc.url }}" class="doc-link">{{ doc.title }}</a>
+    {% endfor %}
+  </div>
+</div>
 
-    {% for item in posts %}
-    {% if item.path == page.path %}
-    <a hrefdocs="{{item.docs}}" class="active">{{site.data.locales[item.docs].title}}</a>
-    {% else %}
-    <a hrefdocs="{{item.docs}}" href="{{item.url|absolute_url}}">{{site.data.locales[item.docs].title}}</a>
-    {% endif %}
-    {% endfor %}
+<style>
+.docs-nav {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  margin: 10px 0;
+}
 
-    {% assign pages = site.pages | where:"path",trans_path %}
+.docs-dropbtn {
+  background-color: #f8f8f8;
+  color: #333;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
 
-    {% for item in pages %}
-    {% if item.path == page.path %}
-    <a hrefdocs="{{item.docs}}" class="active">{{site.data.locales[item.docs].title}}</a>
-    {% else %}
-    <a hrefdocs="{{item.docs}}" href="{{item.url|absolute_url}}">{{site.data.locales[item.docs].title}}</a>
-    {% endif %}
-    {% endfor %}
-    
-    {% endfor %}
-    {% endif %}
-    {% endfor %}
-    {% endfor %}
+.docs-dropbtn:hover {
+  background-color: #e7e7e7;
+}
 
-</nav>
+.docs-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  max-height: 400px;
+  overflow-y: auto;
+  border-radius: 4px;
+}
+
+.docs-dropdown-content a {
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.3s ease;
+}
+
+.docs-dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.show {
+  display: block;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Toggle dropdown
+  const dropBtn = document.querySelector('.docs-dropbtn');
+  if (dropBtn) {
+    dropBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      document.querySelector('.docs-dropdown-content').classList.toggle('show');
+    });
+  }
+
+  // Close dropdown when clicking outside
+  window.addEventListener('click', function() {
+    const dropdowns = document.querySelectorAll('.docs-dropdown-content');
+    dropdowns.forEach(dropdown => {
+      if (dropdown.classList.contains('show')) {
+        dropdown.classList.remove('show');
+      }
+    });
+  });
+
+  // Handle document link clicks
+  const docLinks = document.querySelectorAll('.doc-link');
+  docLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const docUrl = this.getAttribute('data-doc');
+      
+      // Load the document content into the main content area
+      fetch(docUrl)
+        .then(response => response.text())
+        .then(html => {
+          // Create a temporary element to parse the HTML
+          const temp = document.createElement('div');
+          temp.innerHTML = html;
+          
+          // Extract the main content
+          const mainContent = temp.querySelector('main');
+          
+          if (mainContent) {
+            // Update the main content area
+            document.querySelector('main').innerHTML = mainContent.innerHTML;
+            
+            // Update the URL without reloading the page
+            window.history.pushState({}, '', docUrl);
+            
+            // Close the dropdown
+            document.querySelector('.docs-dropdown-content').classList.remove('show');
+          }
+        })
+        .catch(error => {
+          console.error('Error loading document:', error);
+        });
+    });
+  });
+});
+</script>
