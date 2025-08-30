@@ -6,56 +6,65 @@ layout: page
 title: 'Documentazione'
 ---
 
-## Documentazione dei Progetti
+## Documentazione del Progetto
 
-Benvenuto nel centro documentazione dei miei progetti. Qui troverai guide dettagliate, riferimenti alle API e altre risorse utili.
+Benvenuti nel centro documentazione dei miei progetti. Qui troverai guide dettagliate, riferimenti API e altre risorse utili.
+
+Nota: Tutta la documentazione è disponibile SOLO in inglese
 
 ## Documentazione Disponibile
 
 ### Stampa 3D
 
-- [3D Filament Manager](/docs/3D_Filament_Manager/)
+- [Gestore Filamenti 3D](/docs/3D_Filament_Manager)
 
 ### Strumenti Hardware
 
-- [Simulatore CDE550](/docs/CDE550-sim/)
-- [Strumento MSR605](/docs/MSR605/)
-- [Nidec Commander CDE](/docs/Nidec_CommanderCDE/)
-- [Strumenti NFC](/docs/NFC/)
+- [Simulatore CDE550](/docs/CDE550-sim)
+- [Strumento MSR605](/docs/MSR605)
+- [Nidec Commander CDE](/docs/Nidec_CommanderCDE)
+- [Strumenti NFC](/docs/NFC)
 
 ### Gestione File
 
-- [Email Duplicate Cleaner](/docs/EmailDuplicateCleaner/)
-- [Images Deduplicator](/docs/Images-Deduplicator/)
-- [PDF Finder](/docs/PDF_Finder/)
-- [Credit Card Stripe Parser](/docs/card_parser/)
+- [Pulizia Email Duplicate](/docs/EmailDuplicateCleaner)
+- [Rimuovi Immagini Duplicate](/docs/Images-Deduplicator)
+- [Cerca PDF](/docs/PDF_Finder)
+- [Analizzatore di Bande Magnetiche](/docs/card_parser)
 
 ### Sicurezza e Privacy
 
-- [Strumenti OpenPGP](/docs/OpenPGP/)
+- [Strumenti OpenPGP](/docs/OpenPGP)
 
 ### Strumenti di Sviluppo
 
-- [PySnoop](/docs/PySnoop/) - Strumento di debug per Python
-- [Raspberry Pi Utilities](/docs/raspy_utility/) - Raccolta di strumenti per Raspberry Pi
-- [App Meteo](/docs/weather/) - Applicazione meteo con varie funzionalità
+- [PySnoop](/docs/PySnoop) - Strumento di debug per Python
+- [Utilità Raspberry Pi](/docs/raspy_utility) - Raccolta di strumenti per Raspberry Pi
+- [App Meteo](/docs/weather) - Applicazione meteo con varie funzionalità
 
-## Supporto
+## Guida e Supporto
 
 Se non trovi quello che stai cercando o hai bisogno di assistenza:
 
-1. Controlla la repository GitHub del progetto per la documentazione più aggiornata
-2. Apri una segnalazione (issue) nel sistema di tracciamento del progetto
+1. Controlla il repository GitHub del progetto per la documentazione più recente
+2. Apri una segnalazione sul sistema di tracciamento dei problemi del progetto
 3. [Contattami](/contact/) per supporto diretto
 4. Unisciti al [mio server Discord](/https://discord.gg/ryqNeuRYjD) per chiedere aiuto alla comunità
 
 ## Contribuire alla Documentazione
 
-Se vuoi contribuire al miglioramento della documentazione:
+I miglioramenti alla documentazione sono sempre ben accetti! Se trovi problemi o vuoi contribuire:
 
-1. Fai un fork della repository del progetto
-2. Apporta le tue modifiche alla documentazione
-3. Invia una richiesta di pull con le tue modifiche
+1. Fai un fork del repository
+2. Apporta le tue modifiche
+3. Invia una pull request
+4. [Contattami](/contact/) se hai bisogno di aiuto per iniziare
+
+## Stato della Documentazione
+
+Questa documentazione è un lavoro in corso.
+Alcuni progetti potrebbero avere una documentazione più completa di altri.
+Se desideri contribuire a migliorare la documentazione per un progetto specifico, fammi sapere!
 
 ## Licenza
 
