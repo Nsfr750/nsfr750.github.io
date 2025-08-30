@@ -2,7 +2,8 @@
 lang: de
 lang-niv: fonto
 lang-ref: 014-jbk
-layout: page
+layout: doc
+order: 4
 title: 'Bild-Duplikaterkennung'
 ---
 

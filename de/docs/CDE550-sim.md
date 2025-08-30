@@ -2,7 +2,8 @@
 lang: de
 lang-niv: font
 lang-ref: 012-jbk
-layout: page
+layout: doc
+order: 2
 title: 'CDE550-Sim'
 ---
 

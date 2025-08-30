@@ -2,7 +2,8 @@
 lang: ar
 lang-niv: font
 lang-ref: 021-jbk
-layout: page
+layout: doc
+order: 12
 title: 'أداة RasPY'
 ---
 

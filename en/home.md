@@ -36,7 +36,6 @@ Here are some of my most popular open-source projects:
 ## Get in Touch
 
 - [About Me](about) - Learn more about my work and interests
-- [Documentation](docs) - Detailed guides for my projects
 - [Support](support) - Like my work? Consider supporting me
 - [Contact](contact) - Reach out for collaborations or questions
 

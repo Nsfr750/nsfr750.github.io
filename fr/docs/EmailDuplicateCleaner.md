@@ -2,7 +2,8 @@
 lang: fr
 lang-niv: fonto
 lang-ref: 013-jbk
-layout: page
+layout: doc
+order: 3
 title: 'Nettoyeur de Doublons d\'Emails'
 ---
 

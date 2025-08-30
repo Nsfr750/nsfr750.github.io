@@ -2,7 +2,8 @@
 lang: de
 lang-niv: fonto
 lang-ref: 018-jbk
-layout: page
+layout: doc
+order: 8
 title: 'OpenPGP'
 ---
 

@@ -2,7 +2,8 @@
 lang: de
 lang-niv: fonto
 lang-ref: 013-jbk
-layout: page
+layout: doc
+order: 3
 title: 'E-Mail-Duplikatbereiniger'
 ---
 

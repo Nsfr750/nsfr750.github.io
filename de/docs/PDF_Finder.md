@@ -2,7 +2,8 @@
 lang: de
 lang-niv: fonto
 lang-ref: 019-jbk
-layout: page
+layout: doc
+order: 9
 title: 'PDF Finder'
 ---
 

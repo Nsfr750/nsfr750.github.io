@@ -2,7 +2,8 @@
 lang: fr
 lang-niv: fonto
 lang-ref: 016-jbk
-layout: page
+layout: doc
+order: 6
 title: 'NFC'
 ---
 

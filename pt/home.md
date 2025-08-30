@@ -36,7 +36,6 @@ Aqui estão alguns dos meus projetos de código aberto mais populares:
 ## Entre em Contato
 
 - [Sobre Mim](about) - Saiba mais sobre meu trabalho e interesses
-- [Documentação](docs) - Guias detalhados para meus projetos
 - [Apoio](support) - Gostou do meu trabalho? Considere me apoiar
 - [Contato](contact) - Entre em contato para colaborações ou perguntas
 

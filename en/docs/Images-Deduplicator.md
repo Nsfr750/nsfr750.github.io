@@ -2,7 +2,8 @@
 lang: en
 lang-niv: fonto
 lang-ref: 014-jbk
-layout: page
+layout: doc
+order: 5
 title: 'Images Deduplicator'
 ---
 

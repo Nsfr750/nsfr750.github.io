@@ -36,7 +36,6 @@ Hier sind einige meiner beliebtesten Open-Source-Projekte:
 ## Kontakt
 
 - [Über mich](about) - Erfahren Sie mehr über meine Arbeit und Interessen
-- [Dokumentation](docs) - Detaillierte Anleitungen für meine Projekte
 - [Unterstützung](support) - Gefällt Ihnen meine Arbeit? Unterstützen Sie mich
 - [Kontakt](contact) - Nehmen Sie für Zusammenarbeit oder Fragen Kontakt auf
 

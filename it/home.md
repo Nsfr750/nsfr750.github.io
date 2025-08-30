@@ -36,7 +36,6 @@ Ecco alcuni dei miei progetti open-source più popolari:
 ## Contatti
 
 - [Chi Sono](about) - Scopri di più sul mio lavoro e i miei interessi
-- [Documentazione](docs) - Guide dettagliate per i miei progetti
 - [Supporto](support) - Ti piace il mio lavoro? Considera di supportarmi
 - [Contatti](contact) - Contattami per collaborazioni o domande
 

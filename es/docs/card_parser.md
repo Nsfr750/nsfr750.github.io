@@ -2,7 +2,8 @@
 lang: es
 lang-niv: fonto
 lang-ref: 011-jbk
-layout: page
+layout: doc
+order: 2
 title: 'Analizador de Banda Magnética de Tarjetas de Crédito'
 ---
 

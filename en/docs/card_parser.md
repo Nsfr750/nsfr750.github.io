@@ -2,7 +2,8 @@
 lang: en
 lang-niv: fonto
 lang-ref: 011-jbk
-layout: page
+layout: doc
+order: 2
 title: 'Credit Card Stripe Parser'
 ---
 

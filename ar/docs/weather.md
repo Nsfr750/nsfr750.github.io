@@ -2,7 +2,8 @@
 lang: ar
 lang-niv: fonto
 lang-ref: 022-jbk
-layout: page
+layout: doc
+order: 13
 title: 'الطقس'
 ---
 
