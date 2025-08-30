@@ -10,8 +10,8 @@ timezone: Europe/Rome
 baseurl: ""
 auxtoro: Nsfr750
 laborlingvo: en # cambia nella tua lingua
-ne_afisxoj: "true" # menu "tutti i post"
-ne_googlesearch: "true" #menu "cerca con google"
+ne_afisxoj: "false" # nasconde menu "tutti i post"
+ne_googlesearch: "true" # nasconde menu "cerca con google"
 gh_uzanto: "Nsfr750" # utente github per i commenti
 #ga_tag: "G-XXXXXXXXXX" # Google Analytics tag
 #ga_adsense: "ca-pub-XXXXXXXXX" # Google Adsense
