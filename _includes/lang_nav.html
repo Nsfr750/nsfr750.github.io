@@ -22,7 +22,7 @@
       <a hreflang="{{item.lang}}" class="active">{{site.data.locales[item.lang].title}}</a>
       {% else %}
         {% comment %} Check if this is a docs page and construct the URL accordingly {% endcomment %}
-        {% if item.path contains '/docs/' %}
+        {% if item.path contains 'docs/' %}
           <a hreflang="{{item.lang}}" href="/{{ item.lang }}/{{ item.path | split: '/' | last | replace: '.md', '.html' }}">
             {{site.data.locales[item.lang].title}}
           </a>

@@ -1,11 +1,16 @@
 <div class="docs-nav">
   <button class="docs-dropbtn">
-    {{ site.data.translations[page.lang]['documentation'] | default: 'Documentation' }} ▼
+    {{ site.data.translations[page.lang].documentation | default: 'Documentation' }} ▼
   </button>
   <div class="docs-dropdown-content">
-    {% assign docs = site.pages | where: "lang", page.lang | where: "layout", "doc" | sort: "order" %}
-    {% for doc in docs %}
-      <a href="#" data-doc="{{ site.baseurl }}{{ doc.url }}" class="doc-link">{{ doc.title }}</a>
+    {% assign docs_dir = page.lang | append: '/docs/' %}
+    {% assign all_docs = site.pages | where_exp: "item", "item.path contains docs_dir" | sort: 'title' %}
+    
+    {% for doc in all_docs %}
+      {% assign doc_name = doc.path | split: '/' | last | replace: '.md', '' %}
+      <a href="/{{ page.lang }}/docs/{{ doc_name }}.html" class="doc-link">
+        {{ doc_name | replace: '_', ' ' | capitalize }}
+      </a>
     {% endfor %}
   </div>
 </div>
@@ -29,6 +34,7 @@
   text-align: left;
   font-size: 16px;
   transition: all 0.3s ease;
+  margin-bottom: 5px;
 }
 
 .docs-dropbtn:hover {
@@ -41,27 +47,42 @@
   background-color: #f9f9f9;
   min-width: 100%;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-  max-height: 400px;
+  z-index: 1000;
+  max-height: 70vh;
   overflow-y: auto;
   border-radius: 4px;
+  border: 1px solid #ddd;
 }
 
 .docs-dropdown-content a {
   color: #333;
-  padding: 12px 16px;
+  padding: 10px 15px;
   text-decoration: none;
   display: block;
   border-bottom: 1px solid #eee;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.2s ease;
+  font-size: 14px;
 }
 
 .docs-dropdown-content a:hover {
   background-color: #f1f1f1;
+  color: #000;
 }
 
 .show {
   display: block;
+  animation: fadeIn 0.2s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Active state for current page */
+.docs-dropdown-content a.active {
+  background-color: #e0e0e0;
+  font-weight: bold;
 }
 </style>
 
@@ -77,27 +98,28 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // Close dropdown when clicking outside
-  window.addEventListener('click', function() {
-    const dropdowns = document.querySelectorAll('.docs-dropdown-content');
-    dropdowns.forEach(dropdown => {
-      if (dropdown.classList.contains('show')) {
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.docs-nav')) {
+      const dropdowns = document.querySelectorAll('.docs-dropdown-content');
+      dropdowns.forEach(dropdown => {
         dropdown.classList.remove('show');
-      }
-    });
+      });
+    }
   });
 
-  // Handle document link clicks
-  const docLinks = document.querySelectorAll('.doc-link');
+  // Highlight current page in the menu
+  const currentPath = window.location.pathname;
+  const docLinks = document.querySelectorAll('.docs-dropdown-content a');
   docLinks.forEach(link => {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      const docUrl = this.getAttribute('data-doc');
-      
-      // Load the document content into the main content area
-      fetch(docUrl)
-        .then(response => response.text())
-        .then(html => {
-          // Create a temporary element to parse the HTML
+    if (link.getAttribute('href') === currentPath) {
+      link.classList.add('active');
+      // Update button text to show current document
+      const docTitle = link.textContent.trim();
+      dropBtn.textContent = docTitle + ' ▼';
+    }
+  });
+});
+</script>
           const temp = document.createElement('div');
           temp.innerHTML = html;
           
