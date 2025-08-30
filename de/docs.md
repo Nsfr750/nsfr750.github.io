@@ -14,31 +14,31 @@ Willkommen im Dokumentationszentrum meiner Projekte. Hier finden Sie detailliert
 
 ### 3D-Druck
 
-- [3D Filament Manager](docs/3D_Filament_Manager/)
+- [3D Filament Manager](/docs/3D_Filament_Manager/)
 
 ### Hardware-Tools
 
-- [CDE550 Simulator](docs/CDE550-sim/)
-- [MSR605 Tool](docs/MSR605/)
-- [Nidec Commander CDE](docs/Nidec_CommanderCDE/)
-- [NFC Tools](docs/NFC/)
+- [CDE550 Simulator](/docs/CDE550-sim/)
+- [MSR605 Tool](/docs/MSR605/)
+- [Nidec Commander CDE](/docs/Nidec_CommanderCDE/)
+- [NFC Tools](/docs/NFC/)
 
 ### Dateiverwaltung
 
-- [Email Duplicate Cleaner](docs/EmailDuplicateCleaner/)
-- [Images Deduplicator](docs/Images-Deduplicator/)
-- [PDF Finder](docs/PDF_Finder/)
-- [Kreditkartenstreifen-Parser](docs/card_parser/)
+- [Email Duplicate Cleaner](/docs/EmailDuplicateCleaner/)
+- [Images Deduplicator](/docs/Images-Deduplicator/)
+- [PDF Finder](/docs/PDF_Finder/)
+- [Kreditkartenstreifen-Parser](/docs/card_parser/)
 
 ### Sicherheit & Datenschutz
 
-- [OpenPGP Tools](docs/OpenPGP/)
+- [OpenPGP Tools](/docs/OpenPGP/)
 
 ### Entwicklungstools
 
-- [PySnoop](docs/PySnoop/) - Python-Debugging-Tool
-- [Raspberry Pi Utilities](docs/raspy_utility/) - Sammlung von Raspberry Pi-Tools
-- [Wetter-App](docs/weather/) - Wetteranwendung mit verschiedenen Funktionen
+- [PySnoop](/docs/PySnoop/) - Python-Debugging-Tool
+- [Raspberry Pi Utilities](/docs/raspy_utility/) - Sammlung von Raspberry Pi-Tools
+- [Wetter-App](/docs/weather/) - Wetteranwendung mit verschiedenen Funktionen
 
 ## Hilfe erhalten
 
@@ -46,7 +46,7 @@ Wenn Sie nicht finden, wonach Sie suchen, oder Unterstützung benötigen:
 
 1. Überprüfen Sie das GitHub-Repository des Projekts auf die neueste Dokumentation
 2. Eröffnen Sie ein Issue im Issue-Tracker des Projekts
-3. [Kontaktieren Sie mich](contact/) für direkte Unterstützung
+3. [Kontaktieren Sie mich](/contact/) für direkte Unterstützung
 
 ## Zur Dokumentation beitragen
 

@@ -14,31 +14,31 @@ Bienvenue sur le centre de documentation de mes projets. Vous trouverez ici des 
 
 ### Impression 3D
 
-- [3D Filament Manager](docs/3D_Filament_Manager/)
+- [3D Filament Manager](/docs/3D_Filament_Manager/)
 
 ### Outils Matériels
 
-- [Simulateur CDE550](docs/CDE550-sim/)
-- [Outil MSR605](docs/MSR605/)
-- [Nidec Commander CDE](docs/Nidec_CommanderCDE/)
-- [Outils NFC](docs/NFC/)
+- [Simulateur CDE550](/docs/CDE550-sim/)
+- [Outil MSR605](/docs/MSR605/)
+- [Nidec Commander CDE](/docs/Nidec_CommanderCDE/)
+- [Outils NFC](/docs/NFC/)
 
 ### Gestion de Fichiers
 
-- [Email Duplicate Cleaner](docs/EmailDuplicateCleaner/)
-- [Images Deduplicator](docs/Images-Deduplicator/)
-- [PDF Finder](docs/PDF_Finder/)
-- [Analyseur de Piste de Carte Bancaire](docs/card_parser/)
+- [Email Duplicate Cleaner](/docs/EmailDuplicateCleaner/)
+- [Images Deduplicator](/docs/Images-Deduplicator/)
+- [PDF Finder](/docs/PDF_Finder/)
+- [Analyseur de Piste de Carte Bancaire](/docs/card_parser/)
 
 ### Sécurité et Confidentialité
 
-- [Outils OpenPGP](docs/OpenPGP/)
+- [Outils OpenPGP](/docs/OpenPGP/)
 
 ### Outils de Développement
 
-- [PySnoop](docs/PySnoop/) - Outil de débogage Python
-- [Utilitaires Raspberry Pi](docs/raspy_utility/) - Collection d'outils pour Raspberry Pi
-- [Application Météo](docs/weather/) - Application météo avec diverses fonctionnalités
+- [PySnoop](/docs/PySnoop/) - Outil de débogage Python
+- [Utilitaires Raspberry Pi](/docs/raspy_utility/) - Collection d'outils pour Raspberry Pi
+- [Application Météo](/docs/weather/) - Application météo avec diverses fonctionnalités
 
 ## Obtenir de l'Aide
 
@@ -46,7 +46,7 @@ Si vous ne trouvez pas ce que vous cherchez ou si vous avez besoin d'aide :
 
 1. Consultez le dépôt GitHub du projet pour la documentation la plus récente
 2. Ouvrez un ticket sur le suivi des problèmes du projet
-3. [Contactez-moi](contact/) pour un support direct
+3. [Contactez-moi](/contact/) pour un support direct
 
 ## Contribuer à la Documentation
 

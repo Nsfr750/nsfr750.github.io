@@ -14,31 +14,31 @@ Bienvenido al centro de documentación de mis proyectos. Aquí encontrarás guí
 
 ### Impresión 3D
 
-- [3D Filament Manager](docs/3D_Filament_Manager/)
+- [3D Filament Manager](/docs/3D_Filament_Manager/)
 
 ### Herramientas de Hardware
 
-- [Simulador CDE550](docs/CDE550-sim/)
-- [Herramienta MSR605](docs/MSR605/)
-- [Nidec Commander CDE](docs/Nidec_CommanderCDE/)
-- [Herramientas NFC](docs/NFC/)
+- [Simulador CDE550](/docs/CDE550-sim/)
+- [Herramienta MSR605](/docs/MSR605/)
+- [Nidec Commander CDE](/docs/Nidec_CommanderCDE/)
+- [Herramientas NFC](/docs/NFC/)
 
 ### Gestión de Archivos
 
-- [Email Duplicate Cleaner](docs/EmailDuplicateCleaner/)
-- [Images Deduplicator](docs/Images-Deduplicator/)
-- [PDF Finder](docs/PDF_Finder/)
-- [Credit Card Stripe Parser](docs/card_parser/)
+- [Email Duplicate Cleaner](/docs/EmailDuplicateCleaner/)
+- [Images Deduplicator](/docs/Images-Deduplicator/)
+- [PDF Finder](/docs/PDF_Finder/)
+- [Credit Card Stripe Parser](/docs/card_parser/)
 
 ### Seguridad y Privacidad
 
-- [Herramientas OpenPGP](docs/OpenPGP/)
+- [Herramientas OpenPGP](/docs/OpenPGP/)
 
 ### Herramientas de Desarrollo
 
-- [PySnoop](docs/PySnoop/) - Herramienta de depuración para Python
-- [Utilidades para Raspberry Pi](docs/raspy_utility/) - Colección de herramientas para Raspberry Pi
-- [Aplicación del Tiempo](docs/weather/) - Aplicación meteorológica con varias funciones
+- [PySnoop](/docs/PySnoop/) - Herramienta de depuración para Python
+- [Utilidades para Raspberry Pi](/docs/raspy_utility/) - Colección de herramientas para Raspberry Pi
+- [Aplicación del Tiempo](/docs/weather/) - Aplicación meteorológica con varias funciones
 
 ## Obtener Ayuda
 
@@ -46,8 +46,8 @@ Si no encuentras lo que buscas o necesitas asistencia:
 
 1. Revisa el repositorio de GitHub del proyecto para ver la documentación más reciente
 2. Abre un issue en el sistema de seguimiento del proyecto
-3. [Contáctame](contact/) para soporte directo
-4. Únete a [mi servidor de Discord](https://discord.gg/ryqNeuRYjD) para obtener ayuda de la comunidad
+3. [Contáctame](/contact/) para soporte directo
+4. Únete a [mi servidor de Discord](/https://discord.gg/ryqNeuRYjD) para obtener ayuda de la comunidad
 
 ## Contribuir a la Documentación
 
