@@ -17,31 +17,31 @@ Note: All documentation are ONLY on english
 
 ### 3D Printing
 
-- [3D Filament Manager](/docs/3D_Filament_Manager)
+- [3D Filament Manager](docs/3D_Filament_Manager)
 
 ### Hardware Tools
 
-- [CDE550 Simulator](/docs/CDE550-sim)
-- [MSR605 Tool](/docs/MSR605)
-- [Nidec Commander CDE](/docs/Nidec_CommanderCDE)
-- [NFC Tools](/docs/NFC)
+- [CDE550 Simulator](docs/CDE550-sim)
+- [MSR605 Tool](docs/MSR605)
+- [Nidec Commander CDE](docs/Nidec_CommanderCDE)
+- [NFC Tools](docs/NFC)
 
 ### File Management
 
-- [Email Duplicate Cleaner](/docs/EmailDuplicateCleaner)
-- [Images Deduplicator](/docs/Images-Deduplicator)
-- [PDF Finder](/docs/PDF_Finder)
-- [Credit Card Stripe Parser](/docs/card_parser)
+- [Email Duplicate Cleaner](docs/EmailDuplicateCleaner)
+- [Images Deduplicator](docs/Images-Deduplicator)
+- [PDF Finder](docs/PDF_Finder)
+- [Credit Card Stripe Parser](docs/card_parser)
 
 ### Security & Privacy
 
-- [OpenPGP Tools](/docs/OpenPGP)
+- [OpenPGP Tools](docs/OpenPGP)
 
 ### Development Tools
 
-- [PySnoop](/docs/PySnoop) - Python debugging tool
-- [Raspberry Pi Utilities](/docs/raspy_utility) - Collection of Raspberry Pi tools
-- [Weather App](/docs/weather) - Weather application with various features
+- [PySnoop](docs/PySnoop) - Python cardsnoop tool
+- [Raspberry Pi Utilities](docs/raspy_utility) - Collection of Raspberry Pi tools
+- [Weather App](docs/weather) - Weather application with various features
 
 ## Getting Help
 
