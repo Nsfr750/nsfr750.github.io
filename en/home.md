@@ -31,14 +31,3 @@ Here are some of my most popular open-source projects:
 - [CDE550 Simulator](https://github.com/Nsfr750/CDE550-sim) - Simulator for Nidec CDE550 motor controller
 - [Email Duplicate Cleaner](https://github.com/Nsfr750/EmailDuplicateCleaner) - Clean up duplicate emails efficiently
 
-[View all projects](projects)
-
-## Get in Touch
-
-- [About Me](about) - Learn more about my work and interests
-- [Support](support) - Like my work? Consider supporting me
-- [Contact](contact) - Reach out for collaborations or questions
-
----
-
-Last updated: {{ site.time | date: "%B %-d, %Y" }}
