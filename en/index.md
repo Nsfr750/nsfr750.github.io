@@ -30,3 +30,10 @@ Here are some of my most popular open-source projects:
 - [3D Filament Manager](https://github.com/Nsfr750/3D_Filament_Manager) - Manage your 3D printing filaments with ease
 - [CDE550 Simulator](https://github.com/Nsfr750/CDE550-sim) - Simulator for Nidec CDE550 motor controller
 - [Email Duplicate Cleaner](https://github.com/Nsfr750/EmailDuplicateCleaner) - Clean up duplicate emails efficiently
+
+
+    <!-- Documentation Navigation Dropdown -->
+    {% if site.ne_docs != "false" %}
+      {% include docs_nav.html %}
+      <br>
+    {% endif %}
