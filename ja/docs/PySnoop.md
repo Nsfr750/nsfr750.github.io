@@ -2,7 +2,8 @@
 lang: ja
 lang-niv: fonto
 lang-ref: 020-jbk
-layout: page
+layout: doc
+order: 11
 title: 'PySnoop'
 ---
 

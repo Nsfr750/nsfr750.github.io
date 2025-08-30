@@ -2,7 +2,8 @@
 lang: zh
 lang-niv: fonto
 lang-ref: 013-jbk
-layout: page
+layout: doc
+order: 4
 title: '邮件重复清理工具'
 ---
 

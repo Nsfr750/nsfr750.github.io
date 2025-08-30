@@ -2,7 +2,8 @@
 lang: it
 lang-niv: fonto
 lang-ref: 013-jbk
-layout: page
+layout: doc
+order: 4
 title: 'Email Duplicate Cleaner'
 ---
 

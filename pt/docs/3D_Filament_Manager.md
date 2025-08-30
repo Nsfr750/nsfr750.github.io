@@ -2,7 +2,8 @@
 lang: pt
 lang-niv: fonto
 lang-ref: 010-jbk
-layout: page
+layout: doc
+order: 1
 title: 'Gerenciador de Filamento 3D'
 ---
 

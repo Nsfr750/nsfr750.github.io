@@ -2,7 +2,8 @@
 lang: ja
 lang-niv: fonto
 lang-ref: 013-jbk
-layout: page
+layout: doc
+order: 4
 title: 'メール重複クリーナー'
 ---
 

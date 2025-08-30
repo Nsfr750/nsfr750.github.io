@@ -2,7 +2,8 @@
 lang: ja
 lang-niv: fonto
 lang-ref: 014-jbk
-layout: page
+layout: doc
+order: 5
 title: '画像重複検出ツール'
 ---
 

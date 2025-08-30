@@ -2,7 +2,8 @@
 lang: zh
 lang-niv: fonto
 lang-ref: 018-jbk
-layout: page
+layout: doc
+order: 9
 title: 'OpenPGP 图形界面应用'
 ---
 

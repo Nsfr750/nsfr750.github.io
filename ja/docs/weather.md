@@ -2,7 +2,8 @@
 lang: ja
 lang-niv: font
 lang-ref: 022-jbk
-layout: page
+layout: doc
+order: 13
 title: '天気アプリ'
 ---
 

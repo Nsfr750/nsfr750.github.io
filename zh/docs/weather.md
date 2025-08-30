@@ -2,11 +2,10 @@
 lang: zh
 lang-niv: fonto
 lang-ref: 022-jbk
-layout: page
+layout: doc
+order: 13
 title: 'Weather'
 ---
-
--
 
 # 天气应用文档 (v1.6.0)
 

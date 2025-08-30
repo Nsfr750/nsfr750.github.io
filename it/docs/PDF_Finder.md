@@ -2,7 +2,8 @@
 lang: it
 lang-niv: fonto
 lang-ref: 019-jbk
-layout: page
+layout: doc
+order: 10
 title: 'Cerca PDF'
 ---
 

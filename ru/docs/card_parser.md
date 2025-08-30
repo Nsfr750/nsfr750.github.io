@@ -2,7 +2,8 @@
 lang: ru
 lang-niv: fonto
 lang-ref: 011-jbk
-layout: page
+layout: doc
+order: 2
 title: 'Парсер магнитных полос банковских карт'
 ---
 

@@ -2,7 +2,9 @@
 lang: it
 lang-niv: fonto
 lang-ref: 011-jbk
-layout: page
+layout: pagelayout: doc
+layout: doc
+order: 2
 title: 'Analizzatore di Bande Magnetiche Carte di Credito'
 ---
 

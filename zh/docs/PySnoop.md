@@ -2,7 +2,8 @@
 lang: zh
 lang-niv: fonto
 lang-ref: 020-jbk
-layout: page
+layout: doc
+order: 11
 title: 'PySnoop 磁卡读写工具'
 ---
 

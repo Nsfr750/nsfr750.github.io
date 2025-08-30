@@ -2,7 +2,8 @@
 lang: it
 lang-niv: fonto
 lang-ref: 012-jbk
-layout: page
+layout: doc
+order: 3
 title: 'CDE550-Sim'
 ---
 

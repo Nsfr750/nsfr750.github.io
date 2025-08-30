@@ -2,7 +2,9 @@
 lang: zh
 lang-niv: font
 lang-ref: 021-jbk
-layout: page
+layout: pagelayout: doc
+layout: doc
+order: 12
 title: 'RasPY 实用工具'
 ---
 

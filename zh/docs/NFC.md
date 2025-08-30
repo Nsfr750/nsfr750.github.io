@@ -2,7 +2,8 @@
 lang: zh
 lang-niv: fonto
 lang-ref: 016-jbk
-layout: page
+layout: doc
+order: 7
 title: 'NFC读写工具'
 ---
 

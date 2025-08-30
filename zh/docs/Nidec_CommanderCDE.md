@@ -2,7 +2,8 @@
 lang: zh
 lang-niv: fonto
 lang-ref: 017-jbk
-layout: page
+layout: doc
+order: 8
 title: 'Nidec CommanderCDE 驱动器控制工具'
 ---
 
