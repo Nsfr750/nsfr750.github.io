@@ -21,15 +21,15 @@ title: '博客'
 
 {% endfor %}
 
-[查看所有文章](/archive) | [按分类浏览](/categories) | [通过RSS订阅](/feed.xml)
+[查看所有文章](archive) | [按分类浏览](categories) | [通过RSS订阅](feed.xml)
 
 ## 分类
 
-- [3D打印](/category/3d-printing/)
-- [电子技术](/category/electronics/)
-- [Python](/category/python/)
-- [教程](/category/tutorials/)
-- [项目更新](/category/updates/)
+- [3D打印](category/3d-printing/)
+- [电子技术](category/electronics/)
+- [Python](category/python/)
+- [教程](category/tutorials/)
+- [项目更新](category/updates/)
 
 ---
 

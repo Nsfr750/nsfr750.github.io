@@ -80,7 +80,7 @@ También soy un colaborador activo en varios otros proyectos de código abierto.
 
 ## Colaboraciones
 
-Si estás interesado en colaborar en alguno de estos proyectos o tienes ideas para nuevos proyectos, no dudes en [contactarme](/contact).
+Si estás interesado en colaborar en alguno de estos proyectos o tienes ideas para nuevos proyectos, no dudes en [contactarme](contact).
 
 ---
 

@@ -12,11 +12,11 @@ Sfoglia gli articoli per categoria per trovare i contenuti che ti interessano di
 
 ## Categorie Principali
 
-- [Blog](/category/blog/) - Aggiornamenti e pensieri generali
-- [Progetti](/category/projects) - Vetrina dei miei lavori
-- [Tutorial](/category/tutorials) - Guide passo dopo passo
-- [Tecnologia](/category/technology) - Approfondimenti e recensioni tecnologiche
-- [Sviluppo](/category/development) - Programmazione e argomenti di codifica
+- [Blog](category/blog/) - Aggiornamenti e pensieri generali
+- [Progetti](category/projects) - Vetrina dei miei lavori
+- [Tutorial](category/tutorials) - Guide passo dopo passo
+- [Tecnologia](category/technology) - Approfondimenti e recensioni tecnologiche
+- [Sviluppo](category/development) - Programmazione e argomenti di codifica
 
 ## Ultimi Post
 
@@ -32,7 +32,7 @@ Sfoglia gli articoli per categoria per trovare i contenuti che ti interessano di
 
 {% endfor %}
 
-[Vedi tutti i post](/archive) | [Iscriviti via RSS](/feed.xml)
+[Vedi tutti i post](archive) | [Iscriviti via RSS](feed.xml)
 
 ---
 

@@ -80,7 +80,7 @@ Sono anche un collaboratore attivo in diversi altri progetti open-source. Puoi t
 
 ## Collaborazioni
 
-Se sei interessato a collaborare su uno di questi progetti o hai idee per nuovi progetti, non esitare a [contattarmi](/contact).
+Se sei interessato a collaborare su uno di questi progetti o hai idee per nuovi progetti, non esitare a [contattarmi](contact).
 
 ---
 

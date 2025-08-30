@@ -12,11 +12,11 @@ Durchsuchen Sie Artikel nach Kategorien, um Inhalte zu finden, die Sie am meiste
 
 ## Hauptkategorien
 
-- [Blog](/category/blog/) - Allgemeine Updates und Gedanken
-- [Projekte](/category/projects) - Vorstellung meiner Arbeiten
-- [Anleitungen](/category/tutorials) - Schritt-für-Schritt-Anleitungen
-- [Technologie](/category/technology) - Technische Einblicke und Bewertungen
-- [Entwicklung](/category/development) - Programmierung und Codierungsthemen
+- [Blog](category/blog/) - Allgemeine Updates und Gedanken
+- [Projekte](category/projects) - Vorstellung meiner Arbeiten
+- [Anleitungen](category/tutorials) - Schritt-für-Schritt-Anleitungen
+- [Technologie](category/technology) - Technische Einblicke und Bewertungen
+- [Entwicklung](category/development) - Programmierung und Codierungsthemen
 
 ## Neueste Beiträge
 
@@ -32,7 +32,7 @@ Durchsuchen Sie Artikel nach Kategorien, um Inhalte zu finden, die Sie am meiste
 
 {% endfor %}
 
-[Alle Beiträge anzeigen](/archive) | [Über RSS abonnieren](/feed.xml)
+[Alle Beiträge anzeigen](archive) | [Über RSS abonnieren](feed.xml)
 
 ---
 

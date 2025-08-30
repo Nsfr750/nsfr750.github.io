@@ -21,15 +21,15 @@ title: 'Блог'
 
 {% endfor %}
 
-[Все записи](/archive) | [Поиск по категориям](/categories) | [Подписаться через RSS](/feed.xml)
+[Все записи](archive) | [Поиск по категориям](categories) | [Подписаться через RSS](feed.xml)
 
 ## Категории
 
-- [3D-печать](/category/3d-printing/)
-- [Электроника](/category/electronics/)
-- [Python](/category/python/)
-- [Руководства](/category/tutorials/)
-- [Обновления проектов](/category/updates/)
+- [3D-печать](category/3d-printing/)
+- [Электроника](category/electronics/)
+- [Python](category/python/)
+- [Руководства](category/tutorials/)
+- [Обновления проектов](category/updates/)
 
 ---
 

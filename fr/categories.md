@@ -12,11 +12,11 @@ Parcourez les articles par catégorie pour trouver le contenu qui vous intéress
 
 ## Catégories Principales
 
-- [Blog](/category/blog/) - Mises à jour et réflexions générales
-- [Projets](/category/projects) - Vitrine de mon travail
-- [Tutoriels](/category/tutorials) - Guides étape par étape
-- [Technologie](/category/technology) - Aperçus et critiques technologiques
-- [Développement](/category/development) - Programmation et sujets de codage
+- [Blog](category/blog/) - Mises à jour et réflexions générales
+- [Projets](category/projects) - Vitrine de mon travail
+- [Tutoriels](category/tutorials) - Guides étape par étape
+- [Technologie](category/technology) - Aperçus et critiques technologiques
+- [Développement](category/development) - Programmation et sujets de codage
 
 ## Dernières Publications
 
@@ -32,7 +32,7 @@ Parcourez les articles par catégorie pour trouver le contenu qui vous intéress
 
 {% endfor %}
 
-[Voir tous les articles](/archive) | [S'abonner via RSS](/feed.xml)
+[Voir tous les articles](archive) | [S'abonner via RSS](feed.xml)
 
 ---
 

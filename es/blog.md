@@ -21,15 +21,15 @@ title: 'Blog'
 
 {% endfor %}
 
-[Ver todas las publicaciones](/archive) | [Explorar por categoría](/categories) | [Suscríbete vía RSS](/feed.xml)
+[Ver todas las publicaciones](archive) | [Explorar por categoría](categories) | [Suscríbete vía RSS](feed.xml)
 
 ## Categorías
 
-- [Impresión 3D](/category/3d-printing/)
-- [Electrónica](/category/electronics/)
-- [Python](/category/python/)
-- [Tutoriales](/category/tutorials/)
-- [Actualizaciones de Proyectos](/category/updates/)
+- [Impresión 3D](category/3d-printing/)
+- [Electrónica](category/electronics/)
+- [Python](category/python/)
+- [Tutoriales](category/tutorials/)
+- [Actualizaciones de Proyectos](category/updates/)
 
 ---
 

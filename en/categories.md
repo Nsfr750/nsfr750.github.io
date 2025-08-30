@@ -12,11 +12,11 @@ Browse articles by category to find content that interests you most.
 
 ## Main Categories
 
-- [Blog](/category/blog/) - General updates and thoughts
-- [Projects](/category/projects) - Showcase of my work
-- [Tutorials](/category/tutorials) - Step-by-step guides
-- [Technology](/category/technology) - Tech insights and reviews
-- [Development](/category/development) - Programming and coding topics
+- [Blog](category/blog/) - General updates and thoughts
+- [Projects](category/projects) - Showcase of my work
+- [Tutorials](category/tutorials) - Step-by-step guides
+- [Technology](category/technology) - Tech insights and reviews
+- [Development](category/development) - Programming and coding topics
 
 ## Latest Posts
 
@@ -32,7 +32,7 @@ Browse articles by category to find content that interests you most.
 
 {% endfor %}
 
-[View all posts](/archive) | [Subscribe via RSS](/feed.xml)
+[View all posts](archive) | [Subscribe via RSS](feed.xml)
 
 ---
 

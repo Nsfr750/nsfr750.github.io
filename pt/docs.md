@@ -14,31 +14,31 @@ Bem-vindo ao centro de documentação dos meus projetos. Aqui você encontrará 
 
 ### Impressão 3D
 
-- [3D Filament Manager](/docs/3D_Filament_Manager/)
+- [3D Filament Manager](docs/3D_Filament_Manager/)
 
 ### Ferramentas de Hardware
 
-- [Simulador CDE550](/docs/CDE550-sim/)
-- [Ferramenta MSR605](/docs/MSR605/)
-- [Nidec Commander CDE](/docs/Nidec_CommanderCDE/)
-- [Ferramentas NFC](/docs/NFC/)
+- [Simulador CDE550](docs/CDE550-sim/)
+- [Ferramenta MSR605](docs/MSR605/)
+- [Nidec Commander CDE](docs/Nidec_CommanderCDE/)
+- [Ferramentas NFC](docs/NFC/)
 
 ### Gerenciamento de Arquivos
 
-- [Email Duplicate Cleaner](/docs/EmailDuplicateCleaner/)
-- [Images Deduplicator](/docs/Images-Deduplicator/)
-- [PDF Finder](/docs/PDF_Finder/)
-- [Analisador de Tarja de Cartão de Crédito](/docs/card_parser/)
+- [Email Duplicate Cleaner](docs/EmailDuplicateCleaner/)
+- [Images Deduplicator](docs/Images-Deduplicator/)
+- [PDF Finder](docs/PDF_Finder/)
+- [Analisador de Tarja de Cartão de Crédito](docs/card_parser/)
 
 ### Segurança e Privacidade
 
-- [Ferramentas OpenPGP](/docs/OpenPGP/)
+- [Ferramentas OpenPGP](docs/OpenPGP/)
 
 ### Ferramentas de Desenvolvimento
 
-- [PySnoop](/docs/PySnoop/) - Ferramenta de depuração para Python
-- [Utilitários para Raspberry Pi](/docs/raspy_utility/) - Coleção de ferramentas para Raspberry Pi
-- [Aplicativo Meteorológico](/docs/weather/) - Aplicação meteorológica com vários recursos
+- [PySnoop](docs/PySnoop/) - Ferramenta de depuração para Python
+- [Utilitários para Raspberry Pi](docs/raspy_utility/) - Coleção de ferramentas para Raspberry Pi
+- [Aplicativo Meteorológico](docs/weather/) - Aplicação meteorológica com vários recursos
 
 ## Obtendo Ajuda
 
@@ -46,7 +46,7 @@ Se você não encontrar o que procura ou precisar de assistência:
 
 1. Verifique o repositório do projeto no GitHub para obter a documentação mais recente
 2. Abra uma issue no rastreador de problemas do projeto
-3. [Entre em contato comigo](/contact/) para suporte direto
+3. [Entre em contato comigo](contact/) para suporte direto
 
 ## Contribuindo para a Documentação
 

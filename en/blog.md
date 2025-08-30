@@ -22,15 +22,15 @@ Welcome to my blog! Here I share tutorials, project updates, and thoughts on tec
 
 {% endfor %}
 
-[View all posts](/archive) | [Browse by category](/categories) | [Subscribe via RSS](/feed.xml)
+[View all posts](archive) | [Browse by category](categories) | [Subscribe via RSS](feed.xml)
 
 ## Categories
 
-- [3D Printing](/category/3d-printing/)
-- [Electronics](/category/electronics/)
-- [Python](/category/python/)
-- [Tutorials](/category/tutorials/)
-- [Project Updates](/category/updates/)
+- [3D Printing](category/3d-printing/)
+- [Electronics](category/electronics/)
+- [Python](category/python/)
+- [Tutorials](category/tutorials/)
+- [Project Updates](category/updates/)
 
 ---
 

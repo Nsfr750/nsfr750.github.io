@@ -21,15 +21,15 @@ title: 'ブログ'
 
 {% endfor %}
 
-[すべての投稿を見る](/archive) | [カテゴリで探す](/categories) | [RSSで購読する](/feed.xml)
+[すべての投稿を見る](archive) | [カテゴリで探す](categories) | [RSSで購読する](feed.xml)
 
 ## カテゴリ
 
-- [3Dプリント](/category/3d-printing/)
-- [電子工作](/category/electronics/)
-- [Python](/category/python/)
-- [チュートリアル](/category/tutorials/)
-- [プロジェクト更新情報](/category/updates/)
+- [3Dプリント](category/3d-printing/)
+- [電子工作](category/electronics/)
+- [Python](category/python/)
+- [チュートリアル](category/tutorials/)
+- [プロジェクト更新情報](category/updates/)
 
 ---
 

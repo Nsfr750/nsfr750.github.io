@@ -43,6 +43,6 @@ J'ai créé plusieurs projets open source dont je suis fier :
 Je crois au pouvoir des logiciels libres pour rendre la technologie accessible à tous. Je m'efforce de créer des outils bien documentés et faciles à utiliser qui résolvent de vrais problèmes.
 - Réception des commentaires et suggestions
 
-N'hésitez pas à [me contacter](/contact) si vous souhaitez échanger !
+N'hésitez pas à [me contacter](contact) si vous souhaitez échanger !
 
 Dernière mise à jour : {{ site.time | date: "%d/%m/%Y" }}

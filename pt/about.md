@@ -43,6 +43,6 @@ Criei vários projetos de código aberto dos quais me orgulho:
 Acredito no poder do software de código aberto para tornar a tecnologia acessível a todos. Me esforço para criar ferramentas bem documentadas e fáceis de usar que resolvam problemas reais.
 - Recebendo feedback e sugestões
 
-Sinta-se à vontade para [entrar em contato](/contact) se quiser conversar!
+Sinta-se à vontade para [entrar em contato](contact) se quiser conversar!
 
 Última atualização: {{ site.time | date: "%d/%m/%Y" }}

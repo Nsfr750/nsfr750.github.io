@@ -80,7 +80,7 @@ Ich bin auch ein aktiver Mitwirkender an mehreren anderen Open-Source-Projekten.
 
 ## Zusammenarbeit
 
-Wenn Sie an einer Zusammenarbeit an einem dieser Projekte interessiert sind oder Ideen für neue Projekte haben, können Sie mich gerne [kontaktieren](/contact).
+Wenn Sie an einer Zusammenarbeit an einem dieser Projekte interessiert sind oder Ideen für neue Projekte haben, können Sie mich gerne [kontaktieren](contact).
 
 ---
 

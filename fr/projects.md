@@ -80,7 +80,7 @@ Je suis également un contributeur actif à plusieurs autres projets open-source
 
 ## Collaborations
 
-Si vous êtes intéressé par une collaboration sur l'un de ces projets ou si vous avez des idées pour de nouveaux projets, n'hésitez pas à [me contacter](/contact).
+Si vous êtes intéressé par une collaboration sur l'un de ces projets ou si vous avez des idées pour de nouveaux projets, n'hésitez pas à [me contacter](contact).
 
 ---
 

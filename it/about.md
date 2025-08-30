@@ -43,6 +43,6 @@ Ho creato diversi progetti open-source di cui vado orgoglioso:
 Credo nel potere del software open-source per rendere la tecnologia accessibile a tutti. Mi impegno a creare strumenti ben documentati e facili da usare che risolvano problemi reali.
 - Ricevere feedback e suggerimenti
 
-Non esitare a [contattarmi](/contact) se vuoi metterti in contatto!
+Non esitare a [contattarmi](contact) se vuoi metterti in contatto!
 
 Ultimo aggiornamento: {{ site.time | date: "%d/%m/%Y" }}

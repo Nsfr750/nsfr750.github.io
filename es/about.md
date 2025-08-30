@@ -43,6 +43,6 @@ He creado varios proyectos de código abierto de los que me enorgullezco:
 Creo en el poder del software de código abierto para hacer que la tecnología sea accesible para todos. Me esfuerzo por crear herramientas bien documentadas y fáciles de usar que resuelvan problemas reales.
 - Recibir comentarios y sugerencias
 
-¡No dudes en [contactarme](/contact) si deseas ponerte en contacto!
+¡No dudes en [contactarme](contact) si deseas ponerte en contacto!
 
 Última actualización: {{ site.time | date: "%d/%m/%Y" }}

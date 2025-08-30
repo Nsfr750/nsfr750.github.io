@@ -23,4 +23,4 @@ permalink: /category/%CATEGORY_NAME%/
 
 {% endfor %}
 
-[Back to Categories](/categories/)
+[Back to Categories](categories/)

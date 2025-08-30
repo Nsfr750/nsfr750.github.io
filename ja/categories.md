@@ -12,11 +12,11 @@ title: 'カテゴリ'
 
 ## メインカテゴリ
 
-- [ブログ](/category/blog/) - 一般的な更新情報や考え
-- [プロジェクト](/category/projects) - 私の作品集
-- [チュートリアル](/category/tutorials) - ステップバイステップガイド
-- [テクノロジー](/category/technology) - 技術的な洞察とレビュー
-- [開発](/category/development) - プログラミングとコーディングのトピック
+- [ブログ](category/blog/) - 一般的な更新情報や考え
+- [プロジェクト](category/projects) - 私の作品集
+- [チュートリアル](category/tutorials) - ステップバイステップガイド
+- [テクノロジー](category/technology) - 技術的な洞察とレビュー
+- [開発](category/development) - プログラミングとコーディングのトピック
 
 ## 最新の投稿
 
@@ -32,7 +32,7 @@ title: 'カテゴリ'
 
 {% endfor %}
 
-[すべての投稿を見る](/archive) | [RSSで購読する](/feed.xml)
+[すべての投稿を見る](archive) | [RSSで購読する](feed.xml)
 
 ---
 

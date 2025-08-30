@@ -22,19 +22,19 @@ title: 'المدونة'
 
 {% endfor %}
 
-[عرض جميع المقالات](/archive) | [تصفح حسب التصنيف](/categories) | [الاشتراك عبر RSS](/feed.xml)
+[عرض جميع المقالات](archive) | [تصفح حسب التصنيف](categories) | [الاشتراك عبر RSS](feed.xml)
 
 ## التصنيفات
 
-- [الطباعة ثلاثية الأبعاد](/category/3d-printing/)
-- [الإلكترونيات](/category/electronics/)
-- [تطوير البرمجيات](/category/software-development/)
-- [أدوات المطورين](/category/developer-tools/)
-- [مشاريع مفتوحة المصدر](/category/open-source/)
+- [الطباعة ثلاثية الأبعاد](category/3d-printing/)
+- [الإلكترونيات](category/electronics/)
+- [تطوير البرمجيات](category/software-development/)
+- [أدوات المطورين](category/developer-tools/)
+- [مشاريع مفتوحة المصدر](category/open-source/)
 
 ## الأرشيف
 
-تصفح المقالات القديمة في [صفحة الأرشيف](/archive).
+تصفح المقالات القديمة في [صفحة الأرشيف](archive).
 
 ---
 

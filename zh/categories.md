@@ -12,11 +12,11 @@ title: '分类'
 
 ## 主要分类
 
-- [博客](/category/blog/) - 一般更新和思考
-- [项目](/category/projects) - 展示我的作品
-- [教程](/category/tutorials) - 分步指南
-- [技术](/category/technology) - 技术洞察和评测
-- [开发](/category/development) - 编程和编码主题
+- [博客](category/blog/) - 一般更新和思考
+- [项目](category/projects) - 展示我的作品
+- [教程](category/tutorials) - 分步指南
+- [技术](category/technology) - 技术洞察和评测
+- [开发](category/development) - 编程和编码主题
 
 ## 最新文章
 
@@ -32,7 +32,7 @@ title: '分类'
 
 {% endfor %}
 
-[查看所有文章](/archive) | [通过RSS订阅](/feed.xml)
+[查看所有文章](archive) | [通过RSS订阅](feed.xml)
 
 ---
 

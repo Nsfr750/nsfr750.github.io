@@ -43,6 +43,6 @@ Ich habe mehrere Open-Source-Projekte erstellt, auf die ich stolz bin:
 Ich glaube an die Kraft von Open-Source-Software, Technologie für jeden zugänglich zu machen. Ich bemühe mich, gut dokumentierte, einfach zu bedienende Tools zu erstellen, die echte Probleme lösen.
 - Feedback und Vorschläge entgegennehmen
 
-Zögern Sie nicht, [mich zu kontaktieren](/contact), wenn Sie sich austauschen möchten!
+Zögern Sie nicht, [mich zu kontaktieren](contact), wenn Sie sich austauschen möchten!
 
 Letzte Aktualisierung: {{ site.time | date: "%d.%m.%Y" }}

@@ -44,6 +44,6 @@ I've created several open-source projects that I'm proud of:
 I believe in the power of open-source software to make technology accessible to everyone. I strive to create well-documented, easy-to-use tools that solve real problems.
 - Receiving feedback and suggestions
 
-Feel free to [contact me](/contact) if you'd like to get in touch!
+Feel free to [contact me](contact) if you'd like to get in touch!
 
 Last updated: {{ site.time | date: "%B %-d, %Y" }}

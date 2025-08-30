@@ -21,15 +21,15 @@ Bienvenue sur mon blog ! Ici, je partage des tutoriels, des mises à jour de pro
 
 {% endfor %}
 
-[Voir tous les articles](/archive) | [Parcourir par catégorie](/categories) | [S'abonner via RSS](/feed.xml)
+[Voir tous les articles](archive) | [Parcourir par catégorie](categories) | [S'abonner via RSS](feed.xml)
 
 ## Catégories
 
-- [Impression 3D](/category/3d-printing/)
-- [Électronique](/category/electronics/)
-- [Python](/category/python/)
-- [Tutoriels](/category/tutorials/)
-- [Mises à jour de Projets](/category/updates/)
+- [Impression 3D](category/3d-printing/)
+- [Électronique](category/electronics/)
+- [Python](category/python/)
+- [Tutoriels](category/tutorials/)
+- [Mises à jour de Projets](category/updates/)
 
 ---
 

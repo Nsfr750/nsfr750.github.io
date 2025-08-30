@@ -25,4 +25,4 @@ dir: rtl
 
 {% endfor %}
 
-[العودة إلى التصنيفات](/ar/categories/)
+[العودة إلى التصنيفات](ar/categories/)
