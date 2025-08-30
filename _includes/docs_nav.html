@@ -90,57 +90,42 @@
 document.addEventListener('DOMContentLoaded', function() {
   // Toggle dropdown
   const dropBtn = document.querySelector('.docs-dropbtn');
-  if (dropBtn) {
+  const dropdownContent = document.querySelector('.docs-dropdown-content');
+  
+  if (dropBtn && dropdownContent) {
+    // Toggle dropdown on button click
     dropBtn.addEventListener('click', function(e) {
       e.stopPropagation();
-      document.querySelector('.docs-dropdown-content').classList.toggle('show');
+      dropdownContent.classList.toggle('show');
+    });
+
+    // Handle document link clicks
+    const docLinks = dropdownContent.querySelectorAll('a');
+    docLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        // Let the default navigation happen
+        dropdownContent.classList.remove('show');
+        
+        // Update button text to show current document
+        const docTitle = this.textContent.trim();
+        dropBtn.textContent = docTitle + ' ▼';
+      });
+      
+      // Highlight current page in the menu
+      if (link.getAttribute('href') === window.location.pathname) {
+        link.classList.add('active');
+        // Update button text to show current document
+        const docTitle = link.textContent.trim();
+        dropBtn.textContent = docTitle + ' ▼';
+      }
     });
   }
 
   // Close dropdown when clicking outside
   document.addEventListener('click', function(e) {
-    if (!e.target.closest('.docs-nav')) {
-      const dropdowns = document.querySelectorAll('.docs-dropdown-content');
-      dropdowns.forEach(dropdown => {
-        dropdown.classList.remove('show');
-      });
+    if (!e.target.closest('.docs-nav') && dropdownContent) {
+      dropdownContent.classList.remove('show');
     }
-  });
-
-  // Highlight current page in the menu
-  const currentPath = window.location.pathname;
-  const docLinks = document.querySelectorAll('.docs-dropdown-content a');
-  docLinks.forEach(link => {
-    if (link.getAttribute('href') === currentPath) {
-      link.classList.add('active');
-      // Update button text to show current document
-      const docTitle = link.textContent.trim();
-      dropBtn.textContent = docTitle + ' ▼';
-    }
-  });
-});
-</script>
-          const temp = document.createElement('div');
-          temp.innerHTML = html;
-          
-          // Extract the main content
-          const mainContent = temp.querySelector('main');
-          
-          if (mainContent) {
-            // Update the main content area
-            document.querySelector('main').innerHTML = mainContent.innerHTML;
-            
-            // Update the URL without reloading the page
-            window.history.pushState({}, '', docUrl);
-            
-            // Close the dropdown
-            document.querySelector('.docs-dropdown-content').classList.remove('show');
-          }
-        })
-        .catch(error => {
-          console.error('Error loading document:', error);
-        });
-    });
   });
 });
 </script>
