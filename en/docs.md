@@ -11,7 +11,6 @@ title: 'Docs'
 
 Welcome to the documentation hub for my projects. Here you'll find detailed guides, API references, and other helpful resources.
 
-Note: All documentation are ONLY on english
 
 ## Available Documentation
 

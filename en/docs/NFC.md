@@ -1,3 +1,11 @@
+---
+lang: en
+lang-niv: fonto
+lang-ref: 016-jbk
+layout: page
+title: 'NFC'
+---
+
 # 🚀 NFC Reader/Writer Application
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)

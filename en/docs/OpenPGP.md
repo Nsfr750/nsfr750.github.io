@@ -1,3 +1,12 @@
+---
+lang: en
+lang-niv: fonto
+lang-ref: 018-jbk
+layout: page
+title: 'OpenPGP'
+---
+
+
 # OpenPGP GUI App Documentation
 
 Welcome to the official documentation for the **OpenPGP GUI App**.

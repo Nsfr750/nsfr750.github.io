@@ -1,3 +1,11 @@
+---
+lang: en
+lang-niv: fonto
+lang-ref: 022-jbk
+layout: page
+title: 'Weather'
+---
+
 # Weather App Documentation (v1.6.0)
 
 Welcome to the Weather App documentation! This application provides real-time weather information and forecasts from multiple weather data providers.

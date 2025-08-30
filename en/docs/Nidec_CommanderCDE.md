@@ -1,3 +1,11 @@
+---
+lang: en
+lang-niv: fonto
+lang-ref: 017-jbk
+layout: page
+title: 'Nidec CommanderCDE'
+---
+
 # Nidec CommanderCDE 
 
 A comprehensive Python GUI application for controlling and monitoring Nidec Commander CDE drives via Modbus RTU.

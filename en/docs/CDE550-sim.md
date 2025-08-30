@@ -1,127 +1,135 @@
-# Simulatore Nidec Commander CDE 550
+---
+lang: en
+lang-niv: font
+lang-ref: 012-jbk
+layout: page
+title: 'CDE550-Sim'
+---
+
+# Nidec Commander CDE 550 Simulator
 
 [![Python Version](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![Version](https://img.shields.io/badge/version-0.0.2-green.svg)](CHANGELOG.md)
 
-Simulatore software dell'inverter Nidec Commander CDE 550 con interfaccia grafica, sviluppato in Python con PyQt6.
+Software simulator for the Nidec Commander CDE 550 inverter with a graphical interface, developed in Python with PyQt6.
 
-## Novità nella versione 0.0.2
+## What's New in Version 0.0.2
 
-- **Localizzazione completa** in italiano dell'interfaccia utente
-- **Migliorata la gestione degli allarmi** con riduzione dei falsi positivi
-- **Ottimizzazioni delle prestazioni** durante l'avvio e la variazione di carico
-- **Documentazione aggiornata** con CHANGELOG dettagliato
+- **Complete localization** of the user interface in Italian
+- **Improved alarm handling** with reduced false positives
+- **Performance optimizations** during startup and load variations
+- **Updated documentation** with detailed CHANGELOG
 
-## Funzionalità
+## Features
 
-- Simulazione realistica del comportamento di un inverter Nidec Commander CDE 550
-- Interfaccia grafica intuitiva con PyQt6 completamente localizzata in italiano
-- Comunicazione seriale tramite pyserial
-- Supporto per i principali comandi di controllo
-- Simulazione di guasti e allarmi con gestione avanzata
-- Monitoraggio in tempo reale dei parametri
-- Log degli eventi e degli errori
+- Realistic simulation of Nidec Commander CDE 550 inverter behavior
+- Intuitive graphical interface with PyQt6 fully localized in Italian
+- Serial communication via pyserial
+- Support for main control commands
+- Fault and alarm simulation with advanced management
+- Real-time parameter monitoring
+- Event and error logging
 
-## Prerequisiti
+## Prerequisites
 
-- Python 3.8 o superiore
-- Pip (gestore pacchetti Python)
-- Ambiente virtuale Python (consigliato)
+- Python 3.8 or higher
+- Pip (Python package manager)
+- Python virtual environment (recommended)
 
-## Installazione
+## Installation
 
-1. Clona il repository:
+1. Clone the repository:
    ```bash
    git clone https://github.com/Nsfr750/CDE550-sim.git
    cd CDE550-sim
    ```
 
-2. Crea e attiva un ambiente virtuale (opzionale ma consigliato):
+2. Create and activate a virtual environment (optional but recommended):
    ```bash
-   # Su Windows
+   # On Windows
    python -m venv venv
    .\venv\Scripts\activate
    
-   # Su macOS/Linux
+   # On macOS/Linux
    python3 -m venv venv
    source venv/bin/activate
    ```
 
-3. Installa le dipendenze:
+3. Install dependencies:
    ```bash
    pip install -r requirements.txt
    ```
 
-## Utilizzo
+## Usage
 
-1. Avvia il simulatore:
+1. Start the simulator:
    ```bash
    python main.py
    ```
 
-2. L'interfaccia grafica mostrerà:
-   - Stato dell'inverter
-   - Parametri operativi
-   - Log degli eventi
-   - Controlli di simulazione
+2. The graphical interface will show:
+   - Inverter status
+   - Operating parameters
+   - Event log
+   - Simulation controls
 
-3. Per la connessione seriale:
-   - Menù Connessione -> Connetti
-   - Seleziona la porta COM desiderata
-   - Imposta la velocità di comunicazione (baud rate)
-   - Clicca su "Connetti"
+3. For serial connection:
+   - Go to Connection -> Connect
+   - Select the desired COM port
+   - Set the communication speed (baud rate)
+   - Click "Connect"
 
-## Comandi seriali supportati
+## Supported Serial Commands
 
-| Comando | Descrizione | Esempio |
+| Command | Description | Example |
 |---------|-------------|---------|
-| `RUN` | Avvia l'inverter | `RUN` |
-| `STOP` | Ferma l'inverter | `STOP` |
-| `RST` | Resetta gli allarmi | `RST` |
-| `FREQ <valore>` | Imposta la frequenza (Hz) | `FREQ 50.0` |
-| `DIR <1\|-1>` | Imposta la direzione | `DIR 1` (avanti) |
-| `STATUS` | Mostra lo stato completo | `STATUS` |
-| `HELP` | Mostra l'elenco comandi | `HELP` |
+| `RUN` | Start the inverter | `RUN` |
+| `STOP` | Stop the inverter | `STOP` |
+| `RST` | Reset alarms | `RST` |
+| `FREQ <value>` | Set frequency (Hz) | `FREQ 50.0` |
+| `DIR <1\|-1>` | Set direction | `DIR 1` (forward) |
+| `STATUS` | Show complete status | `STATUS` |
+| `HELP` | Show command list | `HELP` |
 
-## Struttura del progetto
+## Project Structure
 
 ```
 CDE550-sim/
-├── main.py              # Punto di ingresso dell'applicazione
-├── inverter_sim.py      # Logica di simulazione dell'inverter
-├── serial_handler.py    # Gestione comunicazione seriale
-├── script/              # File dell'interfaccia utente e aiuto
-│   ├── help.py          # Finestra di aiuto
-│   ├── serial_dialog.py # Finestra di connessione seriale
-│   └── version.py       # Gestione versione
-├── requirements.txt     # Dipendenze del progetto
-├── README.md            # Documentazione principale
-└── CHANGELOG.md         # Registro delle modifiche
+├── main.py              # Application entry point
+├── inverter_sim.py      # Inverter simulation logic
+├── serial_handler.py    # Serial communication handling
+├── script/              # User interface and help files
+│   ├── help.py          # Help window
+│   ├── serial_dialog.py # Serial connection window
+│   └── version.py       # Version management
+├── requirements.txt     # Project dependencies
+├── README.md            # Main documentation
+└── CHANGELOG.md         # Change log
 ```
 
-## Contributi
+## Contributing
 
-I contributi sono ben accetti! Per proporre miglioramenti:
+Contributions are welcome! To propose improvements:
 
-1. Crea un fork del progetto
-2. Crea un branch per la tua feature (`git checkout -b feature/AmazingFeature`)
-3. Fai commit delle tue modifiche (`git commit -m 'Aggiungi una nuova funzionalità'`)
-4. Pusha il branch (`git push origin feature/AmazingFeature`)
-5. Apri una Pull Request
+1. Fork the project
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-## Licenza
+## License
 
-Distribuito sotto licenza GPL-3.0. Vedi `LICENSE` per maggiori informazioni.
+Distributed under the GPL-3.0 License. See `LICENSE` for more information.
 
-## Contatti
+## Contact
 
-- Autore: Nsfr750
+- Author: Nsfr750
 - Email: [nsfr750@yandex.com]
 - Repository: https://github.com/Nsfr750/CDE550-sim
 
 ---
 
 <div align="center">
-  <sub>Sviluppato con ❤️ da Nsfr750</sub>
+  <sub>Developed with ❤️ by Nsfr750</sub>
 </div>

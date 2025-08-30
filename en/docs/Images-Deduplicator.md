@@ -1,3 +1,11 @@
+---
+lang: en
+lang-niv: fonto
+lang-ref: 014-jbk
+layout: page
+title: 'Images Deduplicator'
+---
+
 # Images Deduplicator
 
 Images Deduplicator is a powerful Python application designed for efficient management and removal of duplicate images. Leveraging the Wand library (ImageMagick) for image processing, this tool provides advanced visual comparison techniques to identify and manage duplicate images with high accuracy.

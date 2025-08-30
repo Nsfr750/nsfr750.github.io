@@ -1,3 +1,11 @@
+---
+lang: en
+lang-niv: fonto
+lang-ref: 011-jbk
+layout: page
+title: 'Credit Card Stripe Parser'
+---
+
 # Credit Card Stripe Parser
 
 **Credit Card Stripe Parser** is a Python library and command-line tool for parsing and analyzing magnetic stripe data from credit cards. It supports both Track 1 and Track 2 formats as specified in ISO/IEC 7811-2 and ISO/IEC 7813 standards.

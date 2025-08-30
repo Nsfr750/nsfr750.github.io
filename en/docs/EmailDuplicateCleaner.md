@@ -1,3 +1,12 @@
+---
+lang: en
+lang-niv: fonto
+lang-ref: 013-jbk
+layout: page
+title: 'Email Duplicate Cleaner'
+---
+
+
 # 📧 Email Duplicate Cleaner
 
 A comprehensive Python tool designed to scan, identify, and remove duplicate emails across multiple email clients. Featuring web, desktop, and command-line interfaces.

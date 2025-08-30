@@ -1,187 +1,193 @@
+---
+lang: en
+lang-niv: font
+lang-ref: 021-jbk
+layout: page
+title: 'RasPY Utility'
+---
+
 # RasPY Utility
 
 <div align="center">
   <img src="../images/logo.png" alt="RasPY Utility Logo" width="50%">
 </div>
 
-## Benvenuti nella documentazione di RasPY Utility
+## Welcome to RasPY Utility Documentation
 
-RasPY Utility è un'applicazione completa per il controllo e il monitoraggio dei pin GPIO del Raspberry Pi attraverso un'interfaccia grafica intuitiva o un'API REST.
+RasPY Utility is a comprehensive application for controlling and monitoring Raspberry Pi GPIO pins through an intuitive graphical interface or REST API.
 
-## Indice
+## Table of Contents
 
-### Introduzione
-- [Installazione](installazione.md)
-- [Guida](guida.md)
+### Introduction
+- [Installation](installazione.md)
+- [Guide](guida.md)
 
-### Sviluppo
-- [Sviluppo](sviluppo.md)
+### Development
+- [Development](sviluppo.md)
 - [API](api.md)
 - [GUI](gui.md)
-- [Esempi](esempi.md)
+- [Examples](esempi.md)
 
-### Altre risorse
+### Additional Resources
 - [Changelog](changelog.md)
 - [FAQ](faq.md)
 
 ### Community
-- [Contribuire](contribuire.md)
-- [Ringraziamenti](ringraziamenti.md)
+- [Contribute](contribuire.md)
+- [Acknowledgments](ringraziamenti.md)
 
-## Caratteristiche principali
+## Key Features
 
-### ✅ **Interfaccia Grafica Moderna**
-- Tema scuro/chiaro
-- Supporto multi-lingua
-- Visualizzazione in tempo reale dello stato dei pin
-- Integrazione con la system tray
+### ✅ **Modern Graphical Interface**
+- Dark/light theme
+- Multi-language support
+- Real-time pin status visualization
+- System tray integration
 
-### 🔌 **Supporto GPIO Completo**
-- Controllo pin digitali I/O
-- Simulatore integrato per sviluppo
-- Rilevamento automatico hardware
-- Supporto GPIO remoto
+### 🔌 **Complete GPIO Support**
+- Digital I/O pin control
+- Built-in simulator for development
+- Automatic hardware detection
+- Remote GPIO support
 
-### 🌐 **Interfaccia Web**
-- Server web integrato
-- Design responsive per mobile/desktop
-- Aggiornamenti in tempo reale
-- Documentazione API integrata
+### 🌐 **Web Interface**
+- Built-in web server
+- Responsive design for mobile/desktop
+- Real-time updates
+- Integrated API documentation
 
-## Guida rapida
+## Quick Start
 
-1. [Installazione](installazione.md) - Come installare e configurare RasPY Utility
-2. [Guida](guida.md) - Guida all'utilizzo dell'applicazione
-3. [API](api.md) - Documentazione dell'API per sviluppatori
-4. [Sviluppo](sviluppo.md) - Guida allo sviluppo e contributi
+1. [Installation](installazione.md) - How to install and configure RasPY Utility
+2. [Guide](guida.md) - Application usage guide
+3. [API](api.md) - API documentation for developers
+4. [Development](sviluppo.md) - Development and contribution guide
 
-## Guida all'utilizzo
+## User Guide
 
-### Interfaccia Grafica
+### Graphical Interface
 
-L'interfaccia grafica di RasPY 4 Utility è progettata per essere intuitiva e facile da usare.
+The RasPY 4 Utility graphical interface is designed to be intuitive and easy to use.
 
-#### Menu Principale
+#### Main Menu
 
-- **File**: Controlli generali dell'applicazione
-- **GPIO**: Gestione dei pin GPIO e del simulatore
-- **Visualizza**: Personalizzazione dell'interfaccia
-- **Aiuto**: Documentazione e informazioni
+- **File**: Application general controls
+- **GPIO**: GPIO pin and simulator management
+- **View**: Interface customization
+- **Help**: Documentation and information
 
-#### Controllo GPIO
+#### GPIO Control
 
-1. Apri la finestra di controllo GPIO dal menu
-2. Seleziona il pin da controllare
-3. Usa i pulsanti per attivare/disattivare i pin
-4. Monitora lo stato in tempo reale
+1. Open the GPIO control window from the menu
+2. Select the pin to control
+3. Use the buttons to toggle pins
+4. Monitor status in real-time
 
-#### Simulatore GPIO
+#### GPIO Simulator
+The simulator allows you to test code without physical hardware:
 
-Il simulatore ti permette di testare il codice senza un dispositivo fisico:
+1. Start the simulator from the GPIO menu
+2. Use the interface to simulate input/output
+3. Changes are reflected in real-time
 
-1. Avvia il simulatore dal menu GPIO
-2. Usa l'interfaccia per simulare l'input/output
-3. I cambiamenti si riflettono in tempo reale
+### Logging and Debugging
+The application logs important events in the `logs/app.log` file. Use the built-in Log Viewer to:
 
-### Log e Debug
+- Filter messages by level (INFO, WARNING, ERROR)
+- Search for specific messages
+- Export logs for analysis
 
-L'applicazione registra eventi importanti nel file `logs/app.log`. Usa il Visualizzatore Log integrato per:
+### Keyboard Shortcuts
 
-- Filtrare i messaggi per livello (INFO, WARNING, ERROR)
-- Cercare messaggi specifici
-- Esportare i log per l'analisi
-
-### Tasti rapidi
-
-- **Ctrl+Q**: Esci dall'applicazione
-- **F1**: Mostra la guida
-- **Ctrl+L**: Apri il visualizzatore log
-- **F5**: Aggiorna l'interfaccia
+- **Ctrl+Q**: Quit the application
+- **F1**: Show help
+- **Ctrl+L**: Open log viewer
+- **F5**: Refresh interface
 
 ## API Reference
 
-### Panoramica
+### Overview
 
-L'API REST di RasPY 4 Utility permette di controllare i pin GPIO tramite richieste HTTP. 
-Tutte le risposte sono in formato JSON.
+The RasPY 4 Utility REST API allows controlling GPIO pins via HTTP requests.
+All responses are in JSON format.
 
-### Endpoint disponibili
+### Available Endpoints
 
 #### `GET /api/gpio`
 
-Restituisce lo stato di tutti i pin GPIO configurati.
+Returns the status of all configured GPIO pins.
 
-**Esempio di risposta:**
+**Example response:**
 
 ```json
 {
-  "17": {"state": 0, "mode": "out", "description": "LED Rosso"},
-  "18": {"state": 1, "mode": "in", "description": "Pulsante"}
+  "17": {"state": 0, "mode": "out", "description": "Red LED"},
+  "18": {"state": 1, "mode": "in", "description": "Button"}
 }
 ```
 
 #### `GET /api/gpio/<int:pin>`
 
-Restituisce lo stato di un pin specifico.
+Returns the status of a specific pin.
 
-**Parametri:**
-- `pin`: Numero del pin GPIO
+**Parameters:**
+- `pin`: GPIO pin number
 
-**Codici di stato:**
-- 200: Operazione riuscita
-- 404: Pin non trovato
+**Status codes:**
+- 200: Operation successful
+- 404: Pin not found
 
-**Esempio di risposta:**
+**Example response:**
 
 ```json
 {
   "state": 0,
   "mode": "out",
-  "description": "LED Rosso"
+  "description": "Red LED"
 }
 ```
 
 #### `POST /api/gpio/<int:pin>/on`
 
-Accende il pin specificato.
+Turns the specified pin on.
 
-**Parametri:**
-- `pin`: Numero del pin GPIO
+**Parameters:**
+- `pin`: GPIO pin number
 
-**Codici di stato:**
-- 200: Operazione riuscita
-- 400: Pin non valido o non scrivibile
+**Status codes:**
+- 200: Operation successful
+- 400: Invalid or non-writable pin
 
 #### `POST /api/gpio/<int:pin>/off`
 
-Spegne il pin specificato.
+Turns the specified pin off.
 
-**Parametri:**
-- `pin`: Numero del pin GPIO
+**Parameters:**
+- `pin`: GPIO pin number
 
-**Codici di stato:**
-- 200: Operazione riuscita
-- 400: Pin non valido o non scrivibile
+**Status codes:**
+- 200: Operation successful
+- 400: Invalid or non-writable pin
 
-## Esempi di utilizzo
+## Usage Examples
 
-### Controllo GPIO con Python
+### GPIO Control with Python
 
 ```python
 import requests
 
 BASE_URL = "http://localhost:5000/api/gpio"
 
-# Ottenere lo stato di tutti i pin
+# Get status of all pins
 response = requests.get(f"{BASE_URL}")
-print("Stato attuale:", response.json())
+print("Current status:", response.json())
 
-# Accendere il pin 17
+# Turn on pin 17
 response = requests.post(f"{BASE_URL}/17/on")
-print("Risposta accensione:", response.status_code)
+print("Turn on response:", response.status_code)
 ```
 
-## Risorse utili
+## Useful Resources
 
-- [Sito ufficiale Raspberry Pi](https://www.raspberrypi.org/)
-- [Documentazione Python](https://www.python.org/)
+- [Official Raspberry Pi Website](https://www.raspberrypi.org/)
+- [Python Documentation](https://www.python.org/)
