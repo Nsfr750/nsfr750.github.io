@@ -21,7 +21,7 @@ Hi there! I'm Nsfr750, a passionate developer and open-source enthusiast. This i
 
 {% endfor %}
 
-[View all posts](/blog) | [Browse by category](/categories)
+[View all posts](blog) | [Browse by category](categories)
 
 ## Featured Projects
 
@@ -31,14 +31,14 @@ Here are some of my most popular open-source projects:
 - [CDE550 Simulator](https://github.com/Nsfr750/CDE550-sim) - Simulator for Nidec CDE550 motor controller
 - [Email Duplicate Cleaner](https://github.com/Nsfr750/EmailDuplicateCleaner) - Clean up duplicate emails efficiently
 
-[View all projects](/projects)
+[View all projects](projects)
 
 ## Get in Touch
 
-- [About Me](/about) - Learn more about my work and interests
-- [Documentation](/docs) - Detailed guides for my projects
-- [Support](/support) - Like my work? Consider supporting me
-- [Contact](/contact) - Reach out for collaborations or questions
+- [About Me](about) - Learn more about my work and interests
+- [Documentation](docs) - Detailed guides for my projects
+- [Support](support) - Like my work? Consider supporting me
+- [Contact](contact) - Reach out for collaborations or questions
 
 ---
 

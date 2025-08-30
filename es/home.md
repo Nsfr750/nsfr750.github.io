@@ -21,7 +21,7 @@ title: 'Inicio'
 
 {% endfor %}
 
-[Ver todas las publicaciones](/blog) | [Explorar por categoría](/categories)
+[Ver todas las publicaciones](blog) | [Explorar por categoría](categories)
 
 ## Proyectos Destacados
 
@@ -31,14 +31,14 @@ Aquí tienes algunos de mis proyectos de código abierto más populares:
 - [Simulador CDE550](https://github.com/Nsfr750/CDE550-sim) - Simulador para el controlador de motor Nidec CDE550
 - [Email Duplicate Cleaner](https://github.com/Nsfr750/EmailDuplicateCleaner) - Elimina correos electrónicos duplicados de manera eficiente
 
-[Ver todos los proyectos](/projects)
+[Ver todos los proyectos](projects)
 
 ## Contáctame
 
-- [Sobre Mí](/about) - Conoce más sobre mi trabajo e intereses
-- [Documentación](/docs) - Guías detalladas de mis proyectos
-- [Apoyo](/support) - ¿Te gusta mi trabajo? Considera apoyarme
-- [Contacto](/contact) - Escríbeme para colaboraciones o preguntas
+- [Sobre Mí](about) - Conoce más sobre mi trabajo e intereses
+- [Documentación](docs) - Guías detalladas de mis proyectos
+- [Apoyo](support) - ¿Te gusta mi trabajo? Considera apoyarme
+- [Contacto](contact) - Escríbeme para colaboraciones o preguntas
 
 ---
 

@@ -21,7 +21,7 @@ title: '首页'
 
 {% endfor %}
 
-[查看所有文章](/blog) | [按分类浏览](/categories)
+[查看所有文章](blog) | [按分类浏览](categories)
 
 ## 精选项目
 
@@ -31,14 +31,14 @@ title: '首页'
 - [CDE550 Simulator（CDE550模拟器）](https://github.com/Nsfr750/CDE550-sim) - Nidec CDE550电机控制器模拟器
 - [Email Duplicate Cleaner（邮件去重清理工具）](https://github.com/Nsfr750/EmailDuplicateCleaner) - 高效清理重复邮件
 
-[查看所有项目](/projects)
+[查看所有项目](projects)
 
 ## 联系我
 
-- [关于我](/about) - 了解我的工作和兴趣
-- [文档](/docs) - 项目的详细指南
-- [支持](/support) - 喜欢我的作品？请考虑支持我
-- [联系](/contact) - 合作或提问
+- [关于我](about) - 了解我的工作和兴趣
+- [文档](docs) - 项目的详细指南
+- [支持](support) - 喜欢我的作品？请考虑支持我
+- [联系](contact) - 合作或提问
 
 ---
 
