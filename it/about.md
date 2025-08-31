@@ -8,11 +8,11 @@ title: 'Chi Sono'
 
 # Chi Sono
 
-Ciao, sono Nsfr750! Sono uno sviluppatore appassionato con un grande amore per il software open-source e la creazione di strumenti utili per la comunità.
+Ciao, sono Nsfr750! Sono uno sviluppatore appassionato con un grande amore per il software open-source e la creazione di strumenti utili.
 
 ## Il Mio Percorso
 
-Programmo da oltre un decennio, lavorando su tutto, dalle applicazioni web ai sistemi embedded. Il mio viaggio nella tecnologia è stato guidato dalla curiosità e dal desiderio di risolvere problemi del mondo reale attraverso il codice.
+Programmo da 30 anni, lavorando su tutto, dalle applicazioni web ai sistemi embedded. Il mio viaggio nella tecnologia è stato guidato dalla curiosità e dal desiderio di risolvere problemi del mondo reale attraverso il codice.
 
 ## Competenze Tecniche
 
@@ -37,12 +37,4 @@ Ho creato diversi progetti open-source di cui vado orgoglioso:
 - [Raspberry Pi Utilities](https://github.com/Nsfr750/raspy_utility) - Vari strumenti per Raspberry Pi
 - [Weather](https://github.com/Nsfr750/weather) - Un'applicazione meteorologica semplice
 - [Credit Card Stripe Parser](https://github.com/Nsfr750/credit_card_stripe_parser) - Uno strumento per analizzare i dati delle strisce delle carte di credito
-
-## Filosofia
-
-Credo nel potere del software open-source per rendere la tecnologia accessibile a tutti. Mi impegno a creare strumenti ben documentati e facili da usare che risolvano problemi reali.
-- Ricevere feedback e suggerimenti
-
-Non esitare a [contattarmi](contact) se vuoi metterti in contatto!
-
-Ultimo aggiornamento: {{ site.time | date: "%d/%m/%Y" }}
+- [Benchmark](https://github.com/Nsfr750/benchmark) - Uno strumento per il benchmark del tuo sistema

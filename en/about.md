@@ -13,7 +13,7 @@ Hi, I'm Nsfr750! I'm a passionate developer with a love for open-source software
 
 ## My Journey
 
-I've been programming for over a decade, working on everything from web applications to embedded systems. My journey in technology has been driven by curiosity and a desire to solve real-world problems through code.
+I have been programming for 30 years, working on everything from web applications to embedded systems. My journey in technology has been driven by curiosity and a desire to solve real-world problems through code.
 
 ## Technical Expertise
 
@@ -38,12 +38,4 @@ I've created several open-source projects that I'm proud of:
 - [Raspberry Pi Utilities](https://github.com/Nsfr750/raspy_utility) - Various tools for Raspberry Pi
 - [Weather](https://github.com/Nsfr750/weather) - A simple weather application
 - [Credit Card Stripe Parser](https://github.com/Nsfr750/credit_card_stripe_parser) - A tool to parse credit card stripe data
-
-## Philosophy
-
-I believe in the power of open-source software to make technology accessible to everyone. I strive to create well-documented, easy-to-use tools that solve real problems.
-- Receiving feedback and suggestions
-
-Feel free to [contact me](contact) if you'd like to get in touch!
-
-Last updated: {{ site.time | date: "%B %-d, %Y" }}
+- [Benchmark](https://github.com/Nsfr750/benchmark) - A tool to benchmark your system

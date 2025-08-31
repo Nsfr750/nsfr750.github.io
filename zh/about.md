@@ -3,16 +3,16 @@ lang: zh
 lang-niv: fonto
 lang-ref: 006-jbk
 layout: page
-title: '关于'
+title: '关于我'
 ---
 
 # 关于我
 
-你好，我是Nsfr750！我是一位充满激情的开发者，热爱开源软件并为社区创建实用工具。
+你好，我是Nsfr750！我是一位热衷于开源软件和创建实用工具的开发人员。
 
-## 我的旅程
+## 我的经历
 
-我从事编程已有十多年，从Web应用程序到嵌入式系统都有涉猎。我的技术之旅由好奇心驱动，渴望通过代码解决现实世界的问题。
+我从事编程已有30年，从Web应用程序到嵌入式系统都有涉猎。我的技术之旅由好奇心和通过代码解决实际问题的渴望驱动。
 
 ## 技术专长
 
@@ -24,25 +24,17 @@ title: '关于'
 
 我创建了多个引以为豪的开源项目：
 
-- [3D Filament Manager](https://github.com/Nsfr750/3D_Filament_Manager) - 管理3D打印线材的工具
-- [CDE550 Simulator](https://github.com/Nsfr750/CDE550-sim) - Nidec CDE550电机控制器模拟器
-- [Email Duplicate Cleaner](https://github.com/Nsfr750/EmailDuplicateCleaner) - 通过删除重复项清理电子邮件
-- [Images Deduplicator](https://github.com/Nsfr750/Images-Deduplicator) - 从电脑中删除重复图片的工具
+- [3D线材管理器](https://github.com/Nsfr750/3D_Filament_Manager) - 管理3D打印线材的工具
+- [CDE550模拟器](https://github.com/Nsfr750/CDE550-sim) - Nidec CDE550电机控制器模拟器
+- [邮件去重清理工具](https://github.com/Nsfr750/EmailDuplicateCleaner) - 通过删除重复邮件清理收件箱
+- [图片去重工具](https://github.com/Nsfr750/Images-Deduplicator) - 从电脑中删除重复图片的工具
 - [MSR605](https://github.com/Nsfr750/MSR605) - 用于MSR605磁条阅读器的软件
 - [NFC](https://github.com/Nsfr750/NFC) - 用于NFC技术的工具集合
 - [Nidec Commander CDE](https://github.com/Nsfr750/Nidec_CommanderCDE) - 控制Nidec CDE电机控制器的工具
-- [OpenPGP](https://github.com/Nsfr750/OpenPGP) - OpenPGP加密工具和实用程序
-- [PDF Finder](https://github.com/Nsfr750/PDF_Finder) - 搜索和组织PDF文件的实用程序
+- [OpenPGP](https://github.com/Nsfr750/OpenPGP) - 用于OpenPGP加密的工具和实用程序
+- [PDF查找器](https://github.com/Nsfr750/PDF_Finder) - 搜索和组织PDF文件的实用程序
 - [PySnoop](https://github.com/Nsfr750/PySnoop) - Python调试工具
-- [Raspberry Pi Utilities](https://github.com/Nsfr750/raspy_utility) - 适用于树莓派的各种工具
-- [Weather](https://github.com/Nsfr750/weather) - 简单的天气应用程序
-- [Credit Card Stripe Parser](https://github.com/Nsfr750/credit_card_stripe_parser) - 解析信用卡磁条数据的工具
-
-## 理念
-
-我相信开源软件的力量，它能让技术对每个人来说都触手可及。我致力于创建文档完善、易于使用的工具来解决实际问题。
-- 接收反馈和建议
-
-如果您想联系我，请随时[联系我](contact)！
-
-最后更新：{{ site.time | date: "%Y年%-m月%-d日" }}
+- [树莓派工具集](https://github.com/Nsfr750/raspy_utility) - 多种树莓派工具
+- [天气应用](https://github.com/Nsfr750/weather) - 简单的天气应用程序
+- [信用卡磁条解析器](https://github.com/Nsfr750/credit_card_stripe_parser) - 解析信用卡磁条数据的工具
+- [性能测试](https://github.com/Nsfr750/benchmark) - 测试系统性能的工具

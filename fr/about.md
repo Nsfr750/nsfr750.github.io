@@ -1,48 +1,40 @@
 ---
 lang: fr
-lang-niv: source
+lang-niv: fonto
 lang-ref: 006-jbk
 layout: page
-title: 'À Propos'
+title: 'À propos'
 ---
 
-# À Propos de Moi
+# À propos de moi
 
-Bonjour, je suis Nsfr750 ! Je suis un développeur passionné, amoureux des logiciels libres et de la création d'outils utiles pour la communauté.
+Bonjour, je suis Nsfr750 ! Je suis un développeur passionné par les logiciels libres et la création d'outils utiles pour la communauté.
 
-## Mon Parcours
+## Mon parcours
 
-Je programme depuis plus de dix ans, travaillant sur tout, des applications web aux systèmes embarqués. Mon parcours dans la technologie est guidé par la curiosité et le désir de résoudre des problèmes concrets grâce au code.
+Je programme depuis 30 ans, travaillant sur des projets variés allant des applications web aux systèmes embarqués. Mon parcours dans la technologie a été guidé par la curiosité et le désir de résoudre des problèmes concrets grâce au code.
 
-## Compétences Techniques
+## Compétences techniques
 
-- **Langages de Programmation** : Python, C++, JavaScript, et plus encore
-- **Technologies** : Développement Web, Analyse de Données, Automatisation, Impression 3D
+- **Langages de programmation** : Python, C++, JavaScript et plus
+- **Technologies** : Développement web, Analyse de données, Automatisation, Impression 3D
 - **Outils** : Git, Docker, Linux, VS Code
 
-## Mes Projets
+## Mes projets
 
 J'ai créé plusieurs projets open source dont je suis fier :
 
-- [3D Filament Manager](https://github.com/Nsfr750/3D_Filament_Manager) - Un outil pour gérer vos filaments d'impression 3D
-- [Simulateur CDE550](https://github.com/Nsfr750/CDE550-sim) - Simulateur pour contrôleur de moteur Nidec CDE550
-- [Email Duplicate Cleaner](https://github.com/Nsfr750/EmailDuplicateCleaner) - Nettoyez vos e-mails en supprimant les doublons
-- [Images Deduplicator](https://github.com/Nsfr750/Images-Deduplicator) - Un outil pour supprimer les images en double de votre ordinateur
-- [MSR605](https://github.com/Nsfr750/MSR605) - Logiciel pour travailler avec le lecteur de bande magnétique MSR605
+- [Gestionnaire de filaments 3D](https://github.com/Nsfr750/3D_Filament_Manager) - Un outil pour gérer vos filaments d'impression 3D
+- [Simulateur CDE550](https://github.com/Nsfr750/CDE550-sim) - Simulateur pour le contrôleur de moteur Nidec CDE550
+- [Nettoyeur d'emails en double](https://github.com/Nsfr750/EmailDuplicateCleaner) - Nettoyez vos emails en supprimant les doublons
+- [Dédoublonneur d'images](https://github.com/Nsfr750/Images-Deduplicator) - Un outil pour supprimer les images en double de votre ordinateur
+- [MSR605](https://github.com/Nsfr750/MSR605) - Logiciel pour travailler avec le lecteur de bandes magnétiques MSR605
 - [NFC](https://github.com/Nsfr750/NFC) - Une collection d'outils pour travailler avec la technologie NFC
 - [Nidec Commander CDE](https://github.com/Nsfr750/Nidec_CommanderCDE) - Un outil pour contrôler les contrôleurs de moteur Nidec CDE
 - [OpenPGP](https://github.com/Nsfr750/OpenPGP) - Outils et utilitaires pour le chiffrement OpenPGP
-- [PDF Finder](https://github.com/Nsfr750/PDF_Finder) - Un utilitaire pour rechercher et organiser des fichiers PDF
+- [Chercheur de PDF](https://github.com/Nsfr750/PDF_Finder) - Un utilitaire pour rechercher et organiser les fichiers PDF
 - [PySnoop](https://github.com/Nsfr750/PySnoop) - Un outil de débogage Python
 - [Utilitaires Raspberry Pi](https://github.com/Nsfr750/raspy_utility) - Divers outils pour Raspberry Pi
-- [Weather](https://github.com/Nsfr750/weather) - Une application météo simple
-- [Credit Card Stripe Parser](https://github.com/Nsfr750/credit_card_stripe_parser) - Un outil pour analyser les données de piste magnétique des cartes de crédit
-
-## Philosophie
-
-Je crois au pouvoir des logiciels libres pour rendre la technologie accessible à tous. Je m'efforce de créer des outils bien documentés et faciles à utiliser qui résolvent de vrais problèmes.
-- Réception des commentaires et suggestions
-
-N'hésitez pas à [me contacter](contact) si vous souhaitez échanger !
-
-Dernière mise à jour : {{ site.time | date: "%d/%m/%Y" }}
+- [Météo](https://github.com/Nsfr750/weather) - Une application météo simple
+- [Analyseur de pistes de cartes bancaires](https://github.com/Nsfr750/credit_card_stripe_parser) - Un outil pour analyser les données des pistes magnétiques des cartes de crédit
+- [Benchmark](https://github.com/Nsfr750/benchmark) - Un outil pour évaluer les performances de votre système

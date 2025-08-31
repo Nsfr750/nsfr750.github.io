@@ -1,6 +1,6 @@
 ---
 lang: pt
-lang-niv: fonte
+lang-niv: fonto
 lang-ref: 006-jbk
 layout: page
 title: 'Sobre'
@@ -8,15 +8,15 @@ title: 'Sobre'
 
 # Sobre Mim
 
-Olá, eu sou o Nsfr750! Sou um desenvolvedor apaixonado com um grande amor por software de código aberto e por criar ferramentas úteis para a comunidade.
+Olá, eu sou o Nsfr750! Sou um desenvolvedor apaixonado por software de código aberto e por criar ferramentas úteis para a comunidade.
 
 ## Minha Jornada
 
-Tenho programado há mais de uma década, trabalhando em tudo, desde aplicações web até sistemas embarcados. Minha jornada na tecnologia tem sido impulsionada pela curiosidade e pelo desejo de resolver problemas do mundo real através do código.
+Estou programando há 30 anos, trabalhando em diversos projetos, desde aplicações web até sistemas embarcados. Minha jornada na tecnologia tem sido guiada pela curiosidade e pelo desejo de resolver problemas do mundo real através de código.
 
 ## Habilidades Técnicas
 
-- **Linguagens de Programação**: Python, C++, JavaScript e mais
+- **Linguagens de Programação**: Python, C++, JavaScript e outras
 - **Tecnologias**: Desenvolvimento Web, Análise de Dados, Automação, Impressão 3D
 - **Ferramentas**: Git, Docker, Linux, VS Code
 
@@ -24,25 +24,17 @@ Tenho programado há mais de uma década, trabalhando em tudo, desde aplicaçõe
 
 Criei vários projetos de código aberto dos quais me orgulho:
 
-- [3D Filament Manager](https://github.com/Nsfr750/3D_Filament_Manager) - Uma ferramenta para gerenciar seus filamentos de impressão 3D
+- [Gerenciador de Filamento 3D](https://github.com/Nsfr750/3D_Filament_Manager) - Uma ferramenta para gerenciar seus filamentos de impressão 3D
 - [Simulador CDE550](https://github.com/Nsfr750/CDE550-sim) - Simulador para o controlador de motor Nidec CDE550
-- [Email Duplicate Cleaner](https://github.com/Nsfr750/EmailDuplicateCleaner) - Limpe seus e-mails removendo duplicatas
-- [Images Deduplicator](https://github.com/Nsfr750/Images-Deduplicator) - Uma ferramenta para remover imagens duplicadas do seu computador
+- [Limpeza de E-mails Duplicados](https://github.com/Nsfr750/EmailDuplicateCleaner) - Limpe seu e-mail removendo mensagens duplicadas
+- [Removedor de Imagens Duplicadas](https://github.com/Nsfr750/Images-Deduplicator) - Uma ferramenta para remover imagens duplicadas do seu computador
 - [MSR605](https://github.com/Nsfr750/MSR605) - Software para trabalhar com o leitor de tarja magnética MSR605
 - [NFC](https://github.com/Nsfr750/NFC) - Uma coleção de ferramentas para trabalhar com tecnologia NFC
 - [Nidec Commander CDE](https://github.com/Nsfr750/Nidec_CommanderCDE) - Uma ferramenta para controlar controladores de motor Nidec CDE
 - [OpenPGP](https://github.com/Nsfr750/OpenPGP) - Ferramentas e utilitários para criptografia OpenPGP
-- [PDF Finder](https://github.com/Nsfr750/PDF_Finder) - Um utilitário para pesquisar e organizar arquivos PDF
+- [Localizador de PDF](https://github.com/Nsfr750/PDF_Finder) - Um utilitário para pesquisar e organizar arquivos PDF
 - [PySnoop](https://github.com/Nsfr750/PySnoop) - Uma ferramenta de depuração para Python
 - [Utilitários para Raspberry Pi](https://github.com/Nsfr750/raspy_utility) - Várias ferramentas para Raspberry Pi
-- [Weather](https://github.com/Nsfr750/weather) - Uma aplicação meteorológica simples
-- [Credit Card Stripe Parser](https://github.com/Nsfr750/credit_card_stripe_parser) - Uma ferramenta para analisar dados de tarja magnética de cartões de crédito
-
-## Filosofia
-
-Acredito no poder do software de código aberto para tornar a tecnologia acessível a todos. Me esforço para criar ferramentas bem documentadas e fáceis de usar que resolvam problemas reais.
-- Recebendo feedback e sugestões
-
-Sinta-se à vontade para [entrar em contato](contact) se quiser conversar!
-
-Última atualização: {{ site.time | date: "%d/%m/%Y" }}
+- [Previsão do Tempo](https://github.com/Nsfr750/weather) - Um aplicativo simples de previsão do tempo
+- [Analisador de Tarja de Cartão](https://github.com/Nsfr750/credit_card_stripe_parser) - Uma ferramenta para analisar dados de tarja magnética de cartões de crédito
+- [Benchmark](https://github.com/Nsfr750/benchmark) - Uma ferramenta para avaliar o desempenho do seu sistema
