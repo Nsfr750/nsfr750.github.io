@@ -11,7 +11,7 @@ baseurl: ""
 auxtoro: Nsfr750
 laborlingvo: en # cambia nella tua lingua
 ne_afisxoj: "false" # false nasconde menu "tutti i post"
-ne_docs: "true" # set false to disable docs menu
+ne_docs: "false" # set false to disable docs menu
 ne_googlesearch: "true" # false nasconde menu "cerca con google"
 gh_uzanto: "Nsfr750" # utente github per i commenti
 #ga_tag: "G-XXXXXXXXXX" # Google Analytics tag
