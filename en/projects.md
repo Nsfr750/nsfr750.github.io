@@ -45,7 +45,7 @@ Here are some of the projects I've been working on. All of them are open-source 
 ## Development Tools
 
 - [**Neural Network Creator**](NeuralNetworkApp) - Neural Network Creator
-- 
+
 - [**Raspberry Pi Utilities**](https://github.com/Nsfr750/raspy_utility) - A collection of utilities for Raspberry Pi.
 
 - [**Weather App**](https://github.com/Nsfr750/weather) - A weather application with various features.
