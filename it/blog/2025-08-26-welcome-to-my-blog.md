@@ -15,4 +15,4 @@ I'll be using this space to share my projects, tutorials, and thoughts on techno
 - Tutorials and how-to guides
 - Tech insights and opinions
 
-Stay tuned for more content. In the meantime, feel free to check out my [GitHub](https://github.com/Nsfr750) or join my [Discord](https://discord.gg/ryqNeuRYjD) community.
+Stay tuned for more content. In the meantime, feel free to check out my [GitHub](https://github.com/Nsfr750).

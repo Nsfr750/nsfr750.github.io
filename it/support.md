@@ -19,12 +19,6 @@ Grazie per aver considerato di supportare i miei progetti open-source. Il tuo so
 
 ## Modi per Supportare
 
-### Supporto Ricorrente (Patreon)
-
-[![Diventa un Patron](https://img.shields.io/badge/Supportami_su_Patreon-F96854?style=for-the-badge&logo=patreon&logoColor=white)](https://www.patreon.com/Nsfr750)
-
-Unisciti alla mia community su Patreon per ottenere l'accesso anticipato alle nuove funzionalità, aggiornamenti esclusivi e contenuti dietro le quinte.
-
 ### Donazioni Una Tantum
 
 [![Dona con PayPal](https://img.shields.io/badge/Dona_con_PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/3dmega)

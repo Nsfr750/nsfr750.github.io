@@ -6,10 +6,6 @@ layout: page
 title: 'Home'
 ---
 
-# Benvenuti nel Mio Hub di Progetti
-
-Ciao! Sono Nsfr750, uno sviluppatore appassionato e sostenitore dell'open-source. Qui condivido i miei progetti, pensieri e scoperte con il mondo.
-
 ## Ultimi Articoli del Blog
 
 {% for post in site.posts limit:3 %}

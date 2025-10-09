@@ -14,11 +14,6 @@ Sarò felice di sentirti! Che tu abbia una domanda, un suggerimento o voglia sem
 
 - **Email**: [nsfr750@yandex.com](mailto:nsfr750@yandex.com)
 - **GitHub**: [Nsfr750](https://github.com/Nsfr750)
-- **Discord**: [Unisciti al mio server](https://discord.gg/ryqNeuRYjD)
-
-## Altri Modi per Contattarmi
-
-- **Patreon**: [patreon.com/Nsfr750](https://www.patreon.com/Nsfr750)
 
 ## Tempi di Risposta
 

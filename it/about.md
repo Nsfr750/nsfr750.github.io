@@ -12,17 +12,17 @@ Ciao, sono Nsfr750! Sono uno sviluppatore appassionato con un grande amore per i
 
 ## Il Mio Percorso
 
-Programmo da 30 anni, lavorando su tutto, dalle applicazioni web ai sistemi embedded. Il mio viaggio nella tecnologia è stato guidato dalla curiosità e dal desiderio di risolvere problemi del mondo reale attraverso il codice.
+Programmo da più di 30 anni, lavorando su tutto, dalle applicazioni web ai sistemi embedded. Il mio viaggio nella tecnologia è stato guidato dalla curiosità e dal desiderio di risolvere problemi del mondo reale attraverso il codice.
 
 ## Competenze Tecniche
 
-- **Linguaggi di Programmazione**: Python, C++, JavaScript e altri
+- **Linguaggi di Programmazione**: Python, C++, JavaScript, clipper, Java, Delphy, e altri
 - **Tecnologie**: Sviluppo Web, Analisi Dati, Automazione, Stampa 3D
 - **Strumenti**: Git, Docker, Linux, VS Code
 
 ## I Miei Progetti
 
-Ho creato diversi progetti open-source di cui vado orgoglioso:
+Ho creato diversi progetti open-source:
 
 - [3D Filament Manager](https://github.com/Nsfr750/3D_Filament_Manager) - Uno strumento per gestire i tuoi filamenti per la stampa 3D
 - [Simulatore CDE550](https://github.com/Nsfr750/CDE550-sim) - Simulatore per il controller motore Nidec CDE550

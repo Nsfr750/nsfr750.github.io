@@ -14,11 +14,6 @@ I'd love to hear from you! Whether you have a question, suggestion, or just want
 
 - **Email**: [nsfr750@yandex.com](mailto:nsfr750@yandex.com)
 - **GitHub**: [Nsfr750](https://github.com/Nsfr750)
-- **Discord**: [Join my server](https://discord.gg/ryqNeuRYjD)
-
-## Other Ways to Connect
-
-- **Patreon**: [patreon.com/Nsfr750](https://www.patreon.com/Nsfr750)
 
 ## Response Time
 
