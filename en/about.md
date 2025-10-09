@@ -13,11 +13,11 @@ Hi, I'm Nsfr750! I'm a passionate developer with a love for open-source software
 
 ## My Journey
 
-I have been programming for 30 years, working on everything from web applications to embedded systems. My journey in technology has been driven by curiosity and a desire to solve real-world problems through code.
+I have been programming for over 30 years, working on everything from web applications to embedded systems. My journey in technology has been driven by curiosity and a desire to solve real-world problems through code.
 
 ## Technical Expertise
 
-- **Programming Languages**: Python, C++, JavaScript, and more
+- **Programming Languages**: Python, C++, JavaScript, clipper, Java, Delphy, and more
 - **Technologies**: Web Development, Data Analysis, Automation, 3D Printing
 - **Tools**: Git, Docker, Linux, VS Code
 

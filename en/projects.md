@@ -70,7 +70,6 @@ All of my projects are open-source and contributions are welcome! If you'd like 
 
 If you find any of my projects useful, consider supporting me:
 
-- [Become a Patron](https://www.patreon.com/Nsfr750)
 - [One-time donation via PayPal](https://paypal.me/3dmega)
 - Monero: `47Jc6MC47WJVFhiQFYwHyBNQP5BEsjUPG6tc8R37FwcTY8K5Y3LvFzveSXoGiaDQSxDrnCUBJ5WBj6Fgmsfix8VPD4w3gXF`
 

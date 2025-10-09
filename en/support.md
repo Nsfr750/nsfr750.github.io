@@ -20,12 +20,6 @@ Your support helps me continue developing and maintaining high-quality software 
 
 ## Ways to Support
 
-### Recurring Support (Patreon)
-
-[![Become a Patron](https://img.shields.io/badge/Support_on_Patreon-F96854?style=for-the-badge&logo=patreon&logoColor=white)](https://www.patreon.com/Nsfr750)
-
-Join my Patreon community to get early access to new features, exclusive updates, and behind-the-scenes content.
-
 ### One-Time Donations
 
 [![Donate with PayPal](https://img.shields.io/badge/Donate_with_PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/3dmega)
