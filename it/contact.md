@@ -12,7 +12,7 @@ Sarò felice di sentirti! Che tu abbia una domanda, un suggerimento o voglia sem
 
 ## Metodi di Contatto Preferiti
 
-- **Email**: [nsfr750@yandex.com](mailto:nsfr750@yandex.com)
+- **Email**: [Nsfr750](mailto:nsfr750@yandex.com)
 - **GitHub**: [Nsfr750](https://github.com/Nsfr750)
 
 ## Tempi di Risposta
@@ -23,8 +23,6 @@ Cerco di rispondere a tutti i messaggi entro 48 ore. Se mi contatti per segnalar
 - I passaggi per riprodurlo
 - Eventuali messaggi di errore rilevanti
 - Dettagli sul tuo ambiente
-
-Non vedo l'ora di sentirti.
 
 ---
 
